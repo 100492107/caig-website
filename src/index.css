@@ -667,7 +667,7 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.05em; line-height: 1.06; }
   grid-template-columns: 1fr 1.08fr;
   gap: 64px;
   align-items: center;
-  padding: 40px 0 56px;
+  padding: 0 0 56px;
   position: relative;
   z-index: 1;
 }
