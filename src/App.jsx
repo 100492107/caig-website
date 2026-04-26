@@ -372,72 +372,60 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-bg">
-        <div className="hero-grid" />
         <div className="hero-orb hero-orb-1" />
         <div className="hero-orb hero-orb-2" />
-        <div className="hero-orb hero-orb-3" />
       </div>
 
       <div className="container">
-        <div className="hero-split">
-          {/* Left: copy */}
-          <div className="hero-copy">
-            <motion.h1
-              className="hero-h1"
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-            >
-              Your team is spending<br />
-              <span className="hl">20 hours a week</span><br />
-              on tasks AI does in minutes
-            </motion.h1>
+        <div className="hero-center">
+          <motion.h1
+            className="hero-h1"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          >
+            The AI systems your<br />
+            <span className="hl">competitors wish</span><br />
+            they had first
+          </motion.h1>
 
-            <motion.p
-              className="hero-sub"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.38, duration: 0.55 }}
-            >
-              We identify exactly which workflows are bleeding you dry — then build
-              the AI system that eliminates them. Live in 6 weeks.
-            </motion.p>
+          <motion.p
+            className="hero-sub"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.32, duration: 0.55 }}
+          >
+            We build custom AI that eliminates your most expensive manual workflows —
+            designed around your business, owned by you.
+          </motion.p>
 
-            <motion.div
-              className="hero-ctas"
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.52, duration: 0.5 }}
-            >
-              <a href="#contact" className="btn btn-amber btn-lg breathe">
-                Get My Free AI Audit
-                <Icon.ArrowRight size={16} />
-              </a>
-              <a href="#testimonials" className="btn btn-ghost btn-lg">
-                See Client Results
-              </a>
-            </motion.div>
+          <motion.div
+            className="hero-ctas"
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.48, duration: 0.5 }}
+          >
+            <a href="#contact" className="btn btn-amber btn-lg breathe">
+              Book a Free AI Audit
+              <Icon.ArrowRight size={16} />
+            </a>
+            <a href="#services" className="btn btn-ghost btn-lg">
+              See What We Build
+            </a>
+          </motion.div>
 
-            <motion.div
-              className="hero-trust"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.85, duration: 0.6 }}
-            >
-              <span className="hcard-dot" style={{ background: '#34d8a4', display: 'inline-block', width: 7, height: 7, borderRadius: '50%' }} />
-              18 hrs saved/week avg
-              <span style={{ margin: '0 10px', opacity: 0.3 }}>·</span>
-              <span className="hcard-dot" style={{ background: '#f5a623', display: 'inline-block', width: 7, height: 7, borderRadius: '50%' }} />
-              5-week payback avg
-              <span style={{ margin: '0 10px', opacity: 0.3 }}>·</span>
-              Zero lock-in
-            </motion.div>
-          </div>
-
-          {/* Right: animated dashboard */}
-          <div className="hero-visual">
-            <HeroDashboard />
-          </div>
+          <motion.div
+            className="hero-trust"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.75, duration: 0.6 }}
+          >
+            <span style={{ color: 'var(--t3)' }}>Trusted by operations teams across the UK</span>
+            <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
+            No lock-in contracts
+            <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
+            You own everything we build
+          </motion.div>
         </div>
       </div>
     </section>
