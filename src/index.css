@@ -193,9 +193,10 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.05em; line-height: 1.06; }
 
 /* ── HERO ───────────────────────────────────── */
 .hero {
-  position: relative; min-height: 100vh;
+  position: relative;
   display: flex; align-items: center; overflow: hidden;
   padding-top: var(--nav-h);
+  min-height: calc(100vh - var(--nav-h));
 }
 .hero-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
 
@@ -249,8 +250,8 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.05em; line-height: 1.06; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.45;transform:scale(.72)} }
 
 .hero-h1 {
-  font-size: clamp(36px, 4.8vw, 68px); font-weight: 900;
-  letter-spacing: -.055em; line-height: 1.05; margin-bottom: 28px;
+  font-size: clamp(28px, 3.4vw, 52px); font-weight: 900;
+  letter-spacing: -.055em; line-height: 1.06; margin-bottom: 24px;
   background: linear-gradient(160deg, #fff 0%, #d8d4ff 35%, #a09af0 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
@@ -667,7 +668,7 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.05em; line-height: 1.06; }
   grid-template-columns: 1fr 1.08fr;
   gap: 64px;
   align-items: center;
-  padding: 72px 0 88px;
+  padding: 40px 0 56px;
   position: relative;
   z-index: 1;
 }
