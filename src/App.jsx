@@ -401,7 +401,6 @@ function Hero() {
             >
               We identify exactly which workflows are bleeding you dry — then build
               the AI system that eliminates them. Live in 6 weeks.
-              ROI in 30 days or we keep working until it is.
             </motion.p>
 
             <motion.div
