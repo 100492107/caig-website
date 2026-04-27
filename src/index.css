@@ -500,7 +500,8 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.05em; line-height: 1.06; }
   display: flex; align-items: center; justify-content: center;
   color: var(--green); flex-shrink: 0; margin-top: 1px;
 }
-@media (max-width: 900px) { .svc-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .svc-grid { grid-template-columns: 1fr 1fr; gap: 12px; } }
+@media (max-width: 540px)  { .svc-grid { grid-template-columns: 1fr; } }
 
 /* ── HOW IT WORKS ───────────────────────────── */
 .hiw-section { background: var(--s1); border-top: 1px solid var(--b2); border-bottom: 1px solid var(--b2); }
@@ -652,6 +653,23 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.05em; line-height: 1.06; }
 .footer-bl a:hover { color: var(--t2); }
 @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+
+/* ── MOBILE OVERRIDES ────────────────────────── */
+@media (max-width: 600px) {
+  .container { padding: 0 18px; }
+  .section    { padding: 72px 0; }
+  .section-sm { padding: 52px 0; }
+  .hero-center { padding: 36px 0 64px; }
+  .hero-h1    { font-size: clamp(30px, 8vw, 48px); }
+  .hero-ctas  { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn { justify-content: center; }
+  .hero-trust { flex-direction: column; gap: 4px; text-align: center; }
+  .hero-trust span[style] { display: none; } /* hide pipe separators */
+  .cform { padding: 28px 20px; }
+  .testi-featured { padding: 28px 20px; }
+  .urgency-inner { padding: 56px 20px; }
+  .sh { margin-bottom: 40px; }
+}
 
 /* ── ANIMATIONS ─────────────────────────────── */
 @keyframes amber-breathe {
