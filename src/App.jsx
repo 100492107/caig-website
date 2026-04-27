@@ -384,9 +384,9 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            The AI systems your<br />
-            <span className="hl">competitors wish</span><br />
-            they had first
+            Your team is doing work<br />
+            <span className="hl">a machine should</span><br />
+            be doing instead
           </motion.h1>
 
           <motion.p
@@ -395,8 +395,8 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.32, duration: 0.55 }}
           >
-            We build custom AI that eliminates your most expensive manual workflows —
-            designed around your business, owned by you.
+            We build custom AI systems that eliminate your most expensive manual workflows.
+            Scoped upfront, built fast, owned by you forever.
           </motion.p>
 
           <motion.div
@@ -420,11 +420,11 @@ function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.75, duration: 0.6 }}
           >
-            <span style={{ color: 'var(--t3)' }}>Trusted by operations teams across the UK</span>
+            <span style={{ color: 'var(--t3)' }}>Built for UK consulting, agency, and professional services firms</span>
             <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
-            No lock-in contracts
+            Fixed-fee. No lock-in.
             <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
-            You own everything we build
+            You own the code
           </motion.div>
         </div>
       </div>
@@ -464,17 +464,17 @@ const problems = [
   {
     icon: <Icon.Clock />,
     title: "You're paying salaries to do a machine's job",
-    body: "The average 10-person team spends 8,000 to 15,000 pounds a month on tasks that can be automated — content creation, proposal writing, data entry, reporting. That is not overhead. That is waste. And it compounds every single month you do not act.",
+    body: "The average 10-person professional services firm spends £8,000–£15,000 a month on tasks that can be automated. That is not overhead. That is waste — and it compounds every month you do not act.",
   },
   {
     icon: <Icon.TrendingDown />,
-    title: "Your competitors already made the move",
-    body: "Right now, businesses like yours are quietly automating their most expensive workflows. The ones who moved first are operating on 40% less overhead. The ones who wait are playing catch-up — at twice the cost, because the gap between you widens every week.",
+    title: "Your competitors are already pulling ahead",
+    body: "Firms like yours are quietly automating their most expensive workflows right now. The ones who moved first are operating leaner, pitching faster, and winning on margin. The gap widens every week.",
   },
   {
     icon: <Icon.AlertCircle />,
-    title: "Every 'we'll look at it later' costs you money today",
-    body: "You already know which tasks are eating your team alive. You have probably said 'we should automate this' at least twice. Every month you delay is another month of salary costs, tired staff doing repetitive work, and ROI compounding against you.",
+    title: "You already know which tasks are the problem",
+    body: "You have probably said 'we should automate this' at least twice. Every month you delay is another month of salary cost, burnt-out staff doing repetitive work, and a competitor getting further ahead.",
   },
 ]
 
@@ -485,9 +485,9 @@ function Problem() {
         <FadeUp>
           <div className="sh c">
             <div className="badge"><span className="badge-dot" />The Real Cost</div>
-            <h2 className="section-title">You already know something<br />needs to change</h2>
+            <h2 className="section-title">You know something<br />is costing you too much</h2>
             <p className="section-sub">
-              Manual workflows do not just waste time. They drain morale, cap your growth, and hand your competitors an advantage they will not give back.
+              Manual workflows do not just waste time. They erode margins, burn out good people, and hand your competitors a structural advantage.
             </p>
           </div>
         </FadeUp>
@@ -516,11 +516,11 @@ function Problem() {
 
 /* ── SOLUTION ────────────────────────────────────────────────── */
 const solutions = [
-  { icon: <Icon.Target size={18} />, title: 'Free audit — identify the highest-value target', body: 'Before you spend a penny, we map your workflow and pinpoint the single automation that will pay for itself fastest. Most clients are shocked by how obvious it is once someone looks.' },
-  { icon: <Icon.Layers size={18} />, title: 'Built from scratch around your workflow', body: 'Not ChatGPT with a custom prompt. Not a Zapier chain dressed up as AI. Your tool is engineered specifically for how your business operates — your language, your edge cases, your standards.' },
-  { icon: <Icon.BarChart size={18} />, title: 'You will have the numbers to prove it', body: 'We baseline your current time cost before we start. After launch, we track savings week by week. You will have clear ROI data to justify the spend internally and plan the next build.' },
-  { icon: <Icon.RefreshCw size={18} />, title: 'Delivered in weeks — not a six-month project', body: 'No waterfall. No committee sign-offs. No slide decks. A lean engineer-led process that gets working software into your hands in 6 weeks or less — then keeps improving it.' },
-  { icon: <Icon.Shield size={18} />, title: 'You own everything. No subscriptions. No lock-in.', body: 'Full IP transfer on completion. The code is yours. You can take it in-house, modify it, or run it forever without paying us another penny. We earn repeat business by being worth it.' },
+  { icon: <Icon.Target size={18} />, title: 'Free audit — we find the highest-value target first', body: 'Before you spend a penny, we map your workflow and identify the single automation with the fastest payback. Most clients are surprised by how obvious it is once someone actually looks.' },
+  { icon: <Icon.Layers size={18} />, title: 'Engineered for your business — not a generic template', body: 'Not ChatGPT with a custom prompt. Not a Zapier chain dressed up as AI. A system built around your workflow, your clients, your brand voice, and your edge cases.' },
+  { icon: <Icon.BarChart size={18} />, title: 'ROI is tracked from day one — you will have the numbers', body: 'We baseline your current time cost before we start. After launch, we track savings week by week. You will have hard data to justify the spend internally and plan the next build.' },
+  { icon: <Icon.RefreshCw size={18} />, title: 'Fast, lean delivery — no committees, no slide decks', body: 'Engineer-led from first call to launch. Weekly demos in a live environment. You talk directly to the person building it. If something needs changing, it gets changed that week.' },
+  { icon: <Icon.Shield size={18} />, title: 'Full IP ownership on delivery — no subscriptions ever', body: 'The code is yours from day one. Take it in-house, modify it, or run it forever without paying us again. We earn repeat business by being worth it — not by locking you in.' },
 ]
 
 function Solution() {
@@ -530,9 +530,9 @@ function Solution() {
         <div className="sol-grid">
           <FadeUp>
             <div className="badge"><span className="badge-dot" />How We Solve It</div>
-            <h2 className="section-title">The specific AI system<br />your business actually needs</h2>
+            <h2 className="section-title">A custom AI system built<br />around how you actually work</h2>
             <p className="section-sub" style={{ marginBottom: '36px' }}>
-              Not generic AI. Not off-the-shelf SaaS. A custom-built tool engineered around your exact workflow — scoped and delivered before you have time to second-guess it.
+              Not generic AI. Not off-the-shelf SaaS. A system scoped around your workflow and built to run without hand-holding.
             </p>
             <a href="#contact" className="btn btn-amber btn-lg">
               Start with a Free Audit <Icon.ArrowRight />
@@ -762,6 +762,7 @@ function Comparison() {
 const tiers = [
   {
     name: 'AI Audit',
+    price: 'From £495',
     time: '5–7 business days',
     featured: false,
     popular: false,
@@ -770,13 +771,14 @@ const tiers = [
       'Automation opportunity map',
       'Tool recommendation & tech stack report',
       'Full build roadmap with scoped estimates',
-      'Delivered as working prototype',
-      'Full IP handover on completion',
+      'Delivered as a working document or prototype',
+      'Credited toward your build if you proceed',
     ],
     cta: 'Book Audit Call',
   },
   {
     name: 'Custom AI Build',
+    price: 'From £3,500',
     time: '4–6 weeks',
     featured: true,
     popular: true,
@@ -785,23 +787,24 @@ const tiers = [
       'Full custom tool development',
       'Gemini 2.5 Pro / GPT-4o / Claude integration',
       'Internal dashboard and team controls',
-      '30 days of post-launch support',
-      'Team onboarding and handover session',
+      '30 days of post-launch support included',
+      'Team onboarding and full IP handover',
     ],
     cta: 'Start Your Build',
   },
   {
     name: 'Monthly Retainer',
+    price: 'From £1,200/mo',
     time: 'Ongoing — cancel anytime',
     featured: false,
     popular: false,
     feats: [
       'Dedicated monthly engineering hours',
-      'Continuous tool iteration and new features',
+      'Continuous iteration and new features',
       'New automations added each sprint',
       'Priority support via direct Slack access',
       'Monthly ROI and usage reporting',
-      'No minimum term — cancel with 30 days notice',
+      'No minimum term — 30 days notice to cancel',
     ],
     cta: 'Discuss Retainer',
   },
@@ -814,9 +817,9 @@ function Services() {
         <FadeUp>
           <div className="sh c">
             <div className="badge"><span className="badge-dot" />Services</div>
-            <h2 className="section-title">Structured delivery.<br />No surprises. No lock-in.</h2>
+            <h2 className="section-title">Three ways to work<br />with us. All fixed-fee.</h2>
             <p className="section-sub">
-              Every engagement is scoped upfront. You will know the exact timeline and deliverables before you commit to anything — no hourly billing, no scope creep.
+              No hourly billing. No retainer traps. You know the exact cost and deliverables before you commit to anything.
             </p>
           </div>
         </FadeUp>
@@ -826,6 +829,7 @@ function Services() {
               <div className={`svc-card${t.featured ? ' feat' : ''}`}>
                 {t.popular && <div className="svc-popular">Most Popular</div>}
                 <div className="svc-name">{t.name}</div>
+                <div className="svc-price">{t.price}</div>
                 <div className="svc-time">
                   <span className="svc-time-dot" />{t.time}
                 </div>
@@ -888,9 +892,9 @@ function HowItWorks() {
         <div className="hiw-layout">
           <FadeUp>
             <div className="badge"><span className="badge-dot" />The Process</div>
-            <h2 className="section-title">From first call<br />to live tool<br />in 6 weeks</h2>
+            <h2 className="section-title">From first call<br />to live system —<br />without the theatre</h2>
             <p className="section-sub" style={{ marginTop: '18px', marginBottom: '36px' }}>
-              A lean, engineer-led process with no fluff in the middle. You talk to the person building your tool from day one to go-live.
+              No account managers, no strategy decks, no weekly status calls that go nowhere. You talk to the engineer building your tool from day one.
             </p>
             <a href="#contact" className="btn btn-outline-amber btn-lg">
               Book the first call <Icon.ArrowRight />
@@ -1065,7 +1069,7 @@ function Contact() {
                 <div className="c-slot-icon"><Icon.Mail size={17} /></div>
                 <div>
                   <div className="c-slot-title">Prefer Email?</div>
-                  <div className="c-slot-sub">hello@yourdomain.com &mdash; we reply within one business day, always from a real person.</div>
+                  <div className="c-slot-sub">hello@cornerstoneaigroup.com &mdash; we reply within one business day, always from a real person.</div>
                 </div>
               </div>
               <div className="c-slot">
@@ -1161,7 +1165,7 @@ function Footer() {
               <Logo size={20} sub={null} />
             </div>
             <p className="footer-tagline">
-              UK-based AI engineering studio. Custom automation tools that eliminate your most expensive manual workflows.
+              Custom AI systems for consulting, agency, and professional services firms. Built to spec. Owned by you.
             </p>
           </div>
           <div>
