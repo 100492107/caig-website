@@ -828,36 +828,52 @@ const tiers = [
     cta: 'Book Strategy Call',
   },
   {
-    name: 'Content System Build',
-    price: 'From £3,500',
-    time: '4–6 weeks',
-    featured: true,
-    popular: true,
-    feats: [
-      'Full custom AI content system for your creators',
-      'Trained on each creator\'s voice, niche, and pillars',
-      'Hook, caption, brief, and hashtag generation',
-      'Brand partnership proposal generator',
-      'Creator ops dashboard — one place, everything',
-      'Team onboarding + full IP handover on delivery',
-    ],
-    cta: 'Start Your Build',
-  },
-  {
-    name: 'Growth Retainer',
-    price: 'From £1,200/mo',
-    time: 'Ongoing — cancel anytime',
+    name: 'Starter',
+    price: '£2,000/mo',
+    time: '£2,500 setup · up to 5 creators',
     featured: false,
     popular: false,
     feats: [
-      'Dedicated monthly engineering hours',
-      'New automations added every sprint',
-      'New creator personas onboarded to the system',
-      'Brand outreach pipeline iterations',
-      'Priority support via direct Slack access',
-      'No minimum term — 30 days notice to cancel',
+      'Full AI content system for up to 5 creators',
+      'Trained on each creator\'s voice, niche, and pillars',
+      'Hook, caption, brief, and hashtag generation',
+      'Brand partnership proposal generator',
+      'Creator ops portal — one place, everything',
+      'Monthly performance reports',
     ],
-    cta: 'Discuss Retainer',
+    cta: 'Get Started',
+  },
+  {
+    name: 'Growth',
+    price: '£3,500/mo',
+    time: '£2,500 setup · up to 15 creators',
+    featured: true,
+    popular: true,
+    feats: [
+      'Everything in Starter',
+      'Up to 15 creators on the system',
+      'Brand deal pipeline tracker',
+      'Priority support and monthly strategy call',
+      'New personas and automations added each month',
+      'Client portal for your team with live dashboards',
+    ],
+    cta: 'Start Growth Plan',
+  },
+  {
+    name: 'Agency',
+    price: '£6,000/mo',
+    time: '£2,500 setup · unlimited creators',
+    featured: false,
+    popular: false,
+    feats: [
+      'Everything in Growth',
+      'Unlimited creator roster',
+      'Dedicated account manager',
+      'Bespoke automation sprints each month',
+      'White-label portal option',
+      'Direct Slack access to the engineering team',
+    ],
+    cta: 'Talk to Us',
   },
 ]
 
@@ -868,10 +884,10 @@ function Services() {
         <FadeUp>
           <div className="sh c">
             <div className="badge"><span className="badge-dot" />Services</div>
-            <h2 className="section-title">Three ways to work<br />with us. All fixed-fee.</h2>
+            <h2 className="section-title">Simple, transparent<br />retainer pricing.</h2>
             <p className="section-sub">
-              Start free. Build exactly what your agency needs. Keep it forever.
-              No hourly billing. No lock-in. No surprises.
+              One setup fee. One monthly retainer. Cancel with 30 days notice.<br />
+              The system, the IP, and everything built is yours to keep — always.
             </p>
           </div>
         </FadeUp>
@@ -995,12 +1011,12 @@ const faqs = [
     a: "No. The interface is clean, simple, and built for non-technical users. The onboarding session takes 30 minutes for your whole team. After that, the system just works — no prompting expertise, no setup, no tech knowledge required.",
   },
   {
-    q: 'What happens to the system after you deliver it?',
-    a: "You own 100% of the code and IP from day one. We include 30 days of post-launch support in every build. After that, you can move to a monthly growth retainer for ongoing development, take the codebase in-house, or simply run the system forever without paying us again. There is no lock-in. We earn your repeat business by being worth coming back to.",
+    q: 'What happens to the system after you build it?',
+    a: "Everything built is yours to keep — permanently. The codebase, the IP, the creator personas, the automations. If you ever cancel your retainer, you walk away with the full system intact. We do not hold your data or your tools hostage. Access to the live portal is tied to your active subscription, but the underlying system is always yours.",
   },
   {
     q: 'What is your pricing model?',
-    a: "The strategy call is completely free. All builds are fixed-fee — scoped upfront with a clear deliverable and timeline. You pay 50% to start and 50% on delivery. Retainer clients pay monthly and can cancel with 30 days notice. No hidden fees, no scope creep charges, no surprise invoices.",
+    a: "There is a one-off setup fee of £2,500 for all plans — this covers onboarding, system build, and creator configuration. After that, you pay a monthly retainer based on your creator roster size: Starter (up to 5 creators) at £2,000/mo, Growth (up to 15) at £3,500/mo, or Agency (unlimited) at £6,000/mo. No hidden fees. Cancel with 30 days notice.",
   },
 ]
 
