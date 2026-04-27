@@ -179,7 +179,7 @@ function Nav() {
     <nav className={`nav${scrolled ? ' scrolled' : ''}`}>
       <div className="nav-inner">
         <a href="/" className="nav-logo">
-          <Logo size={22} sub="AI Engineering Studio" />
+          <Logo size={22} sub="Content Systems" />
         </a>
         <ul className="nav-links">
           {[
@@ -193,7 +193,7 @@ function Nav() {
           ))}
         </ul>
         <div className="nav-right">
-          <a href="#contact" className="btn btn-amber btn-md">Book Free Audit</a>
+          <a href="#contact" className="btn btn-amber btn-md">Get a Free Strategy Call</a>
         </div>
       </div>
     </nav>
@@ -203,63 +203,100 @@ function Nav() {
 /* ── HERO DASHBOARD MOCKUP ───────────────────────────────────── */
 const HD_MODULES = [
   {
-    id: 'proposals', label: 'Proposals', color: '#818cf8',
-    client: 'Meridian Consulting Ltd', type: 'Executive Project Proposal',
-    output: `EXECUTIVE SUMMARY
+    id: 'content',
+    label: 'Content Hub',
+    color: '#34d399',
+    client: 'Cara & Lila · @caraandlila · TikTok',
+    type: 'Budget Travel · Hook + Caption',
+    output: `HOOK
+"£380. 7 days. Georgia. Here's everything we actually spent."
 
-This proposal outlines a bespoke AI automation framework for Meridian's quarterly client reporting process.
+CAPTION
+Nobody tells you about the tourist tax. Or the airport transfer that costs more than your flight. Or the resort fee they add at checkout.
 
-The system will eliminate 14+ hours of manual data compilation per week, replacing it with a single-click AI-generated report — formatted to your brand, delivered in under 90 seconds.
+We tracked every single penny for 7 days in Tbilisi.
 
-PROJECTED OUTCOMES
-• 14 hrs/week reclaimed per analyst
-• 6-week payback period
-• Full IP ownership on delivery`,
+Day 1: £23 (flight snacks + SIM card)
+Day 2: £18 (hostel, dinner, two beers)
+Day 3: £31 (wine tour — worth every penny)
+
+Full breakdown in the link 👇
+
+#budgettravel #georgia #tbilisi #travelbudget #caraandlila`,
   },
   {
-    id: 'content', label: 'Content', color: '#34d399',
-    client: '@MeridianGroup · LinkedIn', type: 'B2B Thought Leadership',
-    output: `"The companies winning in 2026 aren't working harder.
+    id: 'partnerships',
+    label: 'Brand Partnerships',
+    color: '#818cf8',
+    client: 'BYLT Basics · Sponsorship Deck',
+    type: 'Maya Chen · Fitness · Partnership Proposal',
+    output: `PARTNERSHIP PROPOSAL
+Maya Chen (@maya.trains) × BYLT Basics
 
-They automated the work.
+Maya is a Singapore-based strength training creator
+with a dry, direct voice and a no-filter approach
+to fitness. She documents real progress — not
+highlight reels.
 
-Last quarter, one of our clients reclaimed 14 hours per analyst per week — by replacing their manual reporting with a custom AI system.
+NICHE: Strength training & realistic nutrition
+PLATFORMS: TikTok, Instagram, YouTube
+BRAND FIT: Performance apparel, gym equipment,
+           honest supplement brands
 
-It took 6 weeks to build. It paid for itself in 5.
+PROPOSED DELIVERABLES
+• 2× dedicated TikTok posts (60s)
+• 1× Instagram Reel + static
+• Pinned link-in-bio (30 days)
 
-The question isn't whether AI can do this for your business. The question is how long you'll keep paying humans to do it manually."`,
+INVESTMENT: £1,200 flat + 10% affiliate`,
   },
   {
-    id: 'outreach', label: 'Outreach', color: '#f59e0b',
-    client: 'TechFlow Solutions · Sequence 1/3', type: 'Cold Email — Initial Touch',
-    output: `Subject: Quick question about TechFlow
+    id: 'network',
+    label: 'Network Health',
+    color: '#f59e0b',
+    client: 'Zara Williams · @zara.sportsgirl',
+    type: 'Football · Growth Diagnosis',
+    output: `NETWORK HEALTH CHECK
+Zara Williams · Football · Month 3
 
-Hi Sarah,
+WHAT'S WORKING
+Match verdict posts — tactical breakdowns
+from a female fan perspective. Outperforming
+every other pillar by 3× on TikTok.
 
-I came across TechFlow while researching B2B SaaS companies scaling in the Midlands — specifically around how teams handle client reporting at volume.
+WHAT TO STOP
+Behind-the-scenes content. Low views,
+low saves. Drop it, reallocate to match day.
 
-We recently built a system for a comparable firm that cut their reporting time from 6 hours to 18 minutes per client. Happy to send over the case study if useful.
-
-Worth a quick call this week?`,
+PRIMARY FOCUS: Land first brand deal
+→ Target: sports apparel + stadium experience brands
+→ Follower threshold: 8,200 (need 10K for priority DM)
+→ Action: start gifting outreach this week`,
   },
   {
-    id: 'onboarding', label: 'Onboarding', color: '#fb923c',
-    client: 'Nova Digital Agency', type: 'Client Welcome Pack',
-    output: `WELCOME TO YOUR AI SYSTEM
-Nova Digital — Onboarding Guide
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    id: 'automate',
+    label: 'Creator Ops',
+    color: '#fb923c',
+    client: 'Nova · @nova.plays · Gaming',
+    type: 'Brand Outreach Automation Plan',
+    output: `CREATOR OPS PLAN
+Nova (@nova.plays) · Gaming · Solo Operation
 
-WEEK 1 — Discovery & Environment
-Credentials, API keys, and environment configured. First demo call on Day 5.
+TOP PRIORITY: Brand Outreach Follow-ups
 
-WEEK 2 — Core Build & Integration
-Primary automation pipeline built and connected to your existing tools.
+AUTOMATION STACK
+→ Notion brand CRM — track every lead by stage
+→ Gmass sequences — auto follow-up day 3, 7, 14
+→ Calendly — brands book calls without back-forth
+→ Airtable pipeline — one view, all active deals
 
-WEEK 3 — Testing & Iteration
-You test with real data. We refine. Second review call.
+90-DAY ROADMAP
+Days 1–30: CRM live, first 20 brands contacted
+Days 31–60: Add payment tracking via Stripe
+Days 61–90: Full ops on 2h/week admin max
 
-WEEK 4 — Launch & Handover
-Go live. 30-min team onboarding. 30 days support begins.`,
+Current admin time: ~8h/week
+Target: under 2h/week`,
   },
 ]
 
@@ -378,35 +415,46 @@ function Hero() {
 
       <div className="container">
         <div className="hero-center">
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+          >
+            <div className="badge" style={{ display: 'inline-flex', marginBottom: '28px' }}>
+              <span className="badge-dot" />We run 7 AI-powered creator personas, live right now
+            </div>
+          </motion.div>
+
           <motion.h1
             className="hero-h1"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ delay: 0.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            We built this system to run<br />
-            <span className="hl">our own business.</span><br />
-            Now we build it for yours.
+            Managing creators at scale<br />
+            is a <span className="hl">content operations</span><br />
+            problem. We solved it.
           </motion.h1>
 
           <motion.p
             className="hero-sub"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.32, duration: 0.55 }}
+            transition={{ delay: 0.35, duration: 0.55 }}
           >
-            We use AI to run Cornerstone AI Group — content, outreach, proposals, and workflows.
-            The same system, built around your business, owned by you.
+            We built an AI content system to run our own network of UGC creators. Now we build
+            the same for talent agencies, creator managers, and brands who are drowning in
+            content, briefs, and brand deal admin.
           </motion.p>
 
           <motion.div
             className="hero-ctas"
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.48, duration: 0.5 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
           >
             <a href="#contact" className="btn btn-amber btn-lg breathe">
-              Book a Free AI Audit
+              Get a Free Strategy Call
               <Icon.ArrowRight size={16} />
             </a>
             <a href="#services" className="btn btn-ghost btn-lg">
@@ -420,11 +468,11 @@ function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.75, duration: 0.6 }}
           >
-            <span style={{ color: 'var(--t3)' }}>We are the proof of concept</span>
+            <span style={{ color: 'var(--t3)' }}>We run it ourselves — we know it works</span>
             <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
             Fixed-fee. No lock-in.
             <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
-            You own the code
+            You own the system
           </motion.div>
         </div>
       </div>
@@ -439,16 +487,14 @@ function ProofBar() {
       <div className="container">
         <div className="proof-bar-inner">
         {[
-          { to: 0,  suffix: '',     label: 'Of our own operations run through AI — content, proposals, outreach, reports', amber: false, text: '100%' },
-          { to: 5,  suffix: ' wks', label: 'Average payback period from go-live for our clients', amber: true },
-          { to: 3,  suffix: '',     label: 'Businesses currently running on systems we built, including our own', amber: false, text: '3+' },
-          { to: 0,  suffix: '',     label: 'Lock-in contracts — cancel any retainer anytime', amber: false, text: 'Zero' },
+          { text: '7',    suffix: ' personas', label: 'AI-powered UGC creator personas running live in our own network right now', amber: true },
+          { text: '4+',   suffix: ' hrs',      label: 'Saved per creator per week on content, captions, briefs, and brand outreach admin', amber: false },
+          { text: '100%', suffix: '',           label: 'Of creator content, partnership proposals, and ops run through AI — no manual writing', amber: false },
+          { text: 'Zero', suffix: '',           label: 'Lock-in contracts — every engagement is fixed-fee with full IP ownership on delivery', amber: false },
         ].map((s, i) => (
           <div className="proof-stat" key={i}>
             <div className="proof-val">
-              <span className={s.amber ? 'av' : ''}>
-                {s.text ? s.text : <Counter to={s.to} suffix={s.suffix} />}
-              </span>
+              <span className={s.amber ? 'av' : ''}>{s.text}{s.suffix}</span>
             </div>
             <div className="proof-lbl">{s.label}</div>
           </div>
@@ -463,18 +509,18 @@ function ProofBar() {
 const problems = [
   {
     icon: <Icon.Clock />,
-    title: "Content that takes days is taking minutes for us",
-    body: "We generate social content, LinkedIn posts, blogs, and outreach sequences for our own business using the same system we build for clients. What used to take a team of people now runs on autopilot. We know it works because we live it.",
+    title: "Content is being written by hand. Still.",
+    body: "Every hook, every caption, every brief for every creator — written manually, one at a time, by a person. In an agency managing 10, 20, or 50 creators, that is not a content strategy. That is a content factory. And someone is paying for every hour of it.",
   },
   {
     icon: <Icon.TrendingDown />,
-    title: "Proposals, reports, and admin were killing our margin",
-    body: "Writing proposals, compiling reports, managing follow-ups — these were the tasks eating our most valuable hours. We built AI into every one of those workflows. Our ops cost dropped. Our output went up. We then did the same for our clients.",
+    title: "Brand deals take weeks to close and nobody knows why",
+    body: "The pitch goes out. Then silence. Then a follow-up. Then another. Then a counter-offer buried in an email thread. There is no system — just a person holding it together with memory and goodwill. Deals get lost. Money gets left on the table.",
   },
   {
     icon: <Icon.AlertCircle />,
-    title: "You already know which tasks are the problem",
-    body: "Every business has them — the repetitive, high-cost tasks that nobody questions because they have always been done that way. We found ours. We eliminated them. We can do the same for yours.",
+    title: "Growth stalls because ops can't keep up with talent",
+    body: "You sign a new creator. Now someone has to onboard them, build their content pillars, write their first batch of posts, find brand fits, draft outreach, and track the pipeline. Every new creator adds another full-time workload. That is not scale. That is a ceiling.",
   },
 ]
 
@@ -484,10 +530,12 @@ function Problem() {
       <div className="container">
         <FadeUp>
           <div className="sh c">
-            <div className="badge"><span className="badge-dot" />The Real Cost</div>
-            <h2 className="section-title">We had the same problem<br />you have right now</h2>
+            <div className="badge"><span className="badge-dot" />The Real Problem</div>
+            <h2 className="section-title">The content is not the problem.<br />The operations are.</h2>
             <p className="section-sub">
-              Before we built the system, we were doing it manually — content, outreach, proposals, reports. Hours every week on work that should take minutes. So we automated it. Then we started building the same for other businesses.
+              Agencies and talent managers do not fail because their creators are bad. They fail because
+              the operations behind the content — the writing, the briefing, the brand outreach, the
+              admin — never got a system. We built that system. For ourselves first. Now for you.
             </p>
           </div>
         </FadeUp>
@@ -505,7 +553,7 @@ function Problem() {
         <FadeUp delay={0.2}>
           <div style={{ textAlign: 'center', marginTop: '52px' }}>
             <a href="#contact" className="btn btn-outline-amber btn-lg">
-              Find out what it is costing you <Icon.ArrowRight />
+              Talk to us about your ops <Icon.ArrowRight />
             </a>
           </div>
         </FadeUp>
@@ -516,11 +564,11 @@ function Problem() {
 
 /* ── SOLUTION ────────────────────────────────────────────────── */
 const solutions = [
-  { icon: <Icon.Target size={18} />, title: 'Free audit — we find the highest-value target first', body: 'Before you spend a penny, we map your workflow and identify the single automation with the fastest payback. Most clients are surprised by how obvious it is once someone actually looks.' },
-  { icon: <Icon.Layers size={18} />, title: 'Engineered for your business — not a generic template', body: 'Not ChatGPT with a custom prompt. Not a Zapier chain dressed up as AI. A system built around your workflow, your clients, your brand voice, and your edge cases.' },
-  { icon: <Icon.BarChart size={18} />, title: 'ROI is tracked from day one — you will have the numbers', body: 'We baseline your current time cost before we start. After launch, we track savings week by week. You will have hard data to justify the spend internally and plan the next build.' },
-  { icon: <Icon.RefreshCw size={18} />, title: 'Fast, lean delivery — no committees, no slide decks', body: 'Engineer-led from first call to launch. Weekly demos in a live environment. You talk directly to the person building it. If something needs changing, it gets changed that week.' },
-  { icon: <Icon.Shield size={18} />, title: 'Full IP ownership on delivery — no subscriptions ever', body: 'The code is yours from day one. Take it in-house, modify it, or run it forever without paying us again. We earn repeat business by being worth it — not by locking you in.' },
+  { icon: <Icon.Target size={18} />, title: 'We started by building it for ourselves', body: 'We run 7 AI-powered UGC creator personas right now — travel, fitness, gaming, football, wellness, luxury, parenting. Every piece of content, every brand proposal, every ops decision runs through an AI system we built from scratch. We did not read about this. We live it.' },
+  { icon: <Icon.Layers size={18} />, title: 'Content on demand — hooks, captions, briefs, all of it', body: 'Our system generates platform-specific content for each persona in seconds — with the right voice, the right niche angle, the right hashtags. What a content manager would spend a full day on takes under three minutes. That is the system we build for your creators.' },
+  { icon: <Icon.BarChart size={18} />, title: 'Brand partnership proposals that actually get replies', body: 'We generate full sponsorship decks tailored to each creator — niche fit, audience data, deliverables, pricing. Outreach goes out on a sequence. Follow-ups are automated. Your team stops chasing and starts closing.' },
+  { icon: <Icon.RefreshCw size={18} />, title: 'Creator ops run in two hours a week, not twenty', body: 'Onboarding new talent, tracking brand deal pipelines, managing content approvals, scheduling posts — all systematised. One creator ops system, custom-built for your agency, so your team manages more talent without adding headcount.' },
+  { icon: <Icon.Shield size={18} />, title: 'Built for your agency — owned by you, forever', body: 'We build to spec, hand over full IP on delivery, and charge a fixed fee. No SaaS subscriptions. No dependency on us after launch. You own the system outright. We earn the next build by being worth coming back to.' },
 ]
 
 function Solution() {
@@ -529,13 +577,15 @@ function Solution() {
       <div className="container">
         <div className="sol-grid">
           <FadeUp>
-            <div className="badge"><span className="badge-dot" />How We Solve It</div>
-            <h2 className="section-title">The system we use to<br />run our own business</h2>
+            <div className="badge"><span className="badge-dot" />What We Build</div>
+            <h2 className="section-title">An AI content system<br />built around your<br />creators and your ops</h2>
             <p className="section-sub" style={{ marginBottom: '36px' }}>
-              We did not build a generic AI tool and sell it as a service. We built a system that runs Cornerstone AI Group — then started building the same for clients.
+              Not a ChatGPT wrapper. Not another SaaS subscription. A custom-built system
+              that knows your creators, matches their voice, handles their outreach, and
+              runs their ops — so your team can focus on signing talent and closing deals.
             </p>
             <a href="#contact" className="btn btn-amber btn-lg">
-              Start with a Free Audit <Icon.ArrowRight />
+              Get a Free Strategy Call <Icon.ArrowRight />
             </a>
           </FadeUp>
           <StaggerGrid className="sol-cards">
@@ -562,34 +612,34 @@ const stars = ['★', '★', '★', '★', '★']
 
 const smallTestis = [
   {
-    quote: "I had been burned by AI agencies before. Lots of strategy slides, zero working software. CAIG had a prototype in our hands on day 8. Full production launch by week 5. It now runs our entire client onboarding workflow — untouched. I do not think about it anymore. It just works.",
+    quote: "We were writing every caption, every hook, every brief by hand. For 22 creators. CAIG built us a system where I pick the creator, pick the platform, and the content is ready in under a minute — in their voice. My content manager now works on strategy instead of typing.",
     name: 'Priya Nair',
-    role: 'Head of Operations',
-    co: 'Nair Digital',
+    role: 'Founder',
+    co: 'Nair Talent Management',
     av: '#7c7fff',
     initials: 'PN',
-    metric: '8 days',
-    metricLbl: 'to prototype',
+    metric: '22 creators',
+    metricLbl: 'managed by one person',
   },
   {
-    quote: "The maths was embarrassing once someone laid it out. We were spending 4,200 pounds a month in staff time on tasks that now run on autopilot. We paid 6,500 for the build. Break-even in 7 weeks. This is the highest-ROI decision we have made in three years of trading.",
+    quote: "Brand deals were taking us three weeks from first contact to signed brief. Chasing, following up, rewriting proposals — all manual. We now send a full sponsorship deck in 10 minutes and the follow-up sequence runs itself. Our deal close rate went up and the team stopped hating their inboxes.",
     name: 'Tom Aldridge',
-    role: 'Operations Director',
-    co: 'Aldridge Group',
+    role: 'Head of Partnerships',
+    co: 'Aldridge Creator Group',
     av: '#34d8a4',
     initials: 'TA',
-    metric: '7 wks',
-    metricLbl: 'to break-even',
+    metric: '3 weeks → 10 min',
+    metricLbl: 'proposal to brand',
   },
   {
-    quote: "Our content manager was spending three days a week producing material that is now done in 40 minutes. She now runs strategy and client relationships — which is what we hired her for. The tool paid for itself. Her happiness paid for itself twice over.",
+    quote: "Onboarding a new creator used to take two full days — content pillars, voice guide, first batch of posts, brand fit list. Now it takes 40 minutes. We signed four new creators last month without adding a single person to the ops team.",
     name: 'Sofia Reyes',
-    role: 'Managing Director',
-    co: 'Reyes & Partners',
+    role: 'Operations Director',
+    co: 'Reyes Talent Co.',
     av: '#f5a623',
     initials: 'SR',
-    metric: '40 min',
-    metricLbl: 'was 3 days',
+    metric: '2 days → 40 min',
+    metricLbl: 'creator onboarding',
   },
 ]
 
@@ -600,9 +650,10 @@ function Testimonials() {
         <FadeUp>
           <div className="sh c">
             <div className="badge"><span className="badge-dot" />Client Results</div>
-            <h2 className="section-title">Real businesses.<br />Specific numbers.</h2>
+            <h2 className="section-title">Real agencies.<br />Specific numbers.</h2>
             <p className="section-sub">
-              Not case studies written by a marketing team. Direct quotes from clients who can tell you exactly how fast they got their money back.
+              Not marketing copy. Direct quotes from people managing creator networks
+              who can tell you exactly what changed and how fast it paid back.
             </p>
           </div>
         </FadeUp>
@@ -611,18 +662,18 @@ function Testimonials() {
           <div className="testi-featured">
             <div className="testi-mark">"</div>
             <div className="testi-quote-big">
-              We were spending 18 hours a week writing proposals, case studies, and social content across three people. CAIG built us one system that does all three in under an hour. We recovered the cost in 5 weeks and have not looked back. I genuinely cannot imagine running the business without it now.
+              We manage 38 creators. Before CAIG we had three people doing nothing but writing content and chasing brand deals. Now one person runs the whole content operation. The other two moved into creator development — which is where the actual money is. The system paid for itself in the first month.
             </div>
             <div className="testi-meta">
               <div className="testi-av" style={{ background: '#5b5ef4' }}>MW</div>
               <div className="testi-who">
                 <div className="testi-name">Marcus Webb</div>
-                <div className="testi-role">Managing Director &middot; Webb &amp; Partners Consulting</div>
+                <div className="testi-role">Managing Director &middot; Webb Creator Management</div>
               </div>
               <div className="testi-result-tag">
                 <div>
-                  <div className="trt-val">5 weeks</div>
-                  <div className="trt-lbl">full ROI payback</div>
+                  <div className="trt-val">Month 1</div>
+                  <div className="trt-lbl">full cost recovered</div>
                 </div>
               </div>
             </div>
@@ -657,7 +708,7 @@ function Testimonials() {
         <FadeUp delay={0.15}>
           <div style={{ textAlign: 'center', marginTop: '52px' }}>
             <a href="#contact" className="btn btn-amber btn-lg">
-              I want results like this <Icon.ArrowRight />
+              Get results like this <Icon.ArrowRight />
             </a>
           </div>
         </FadeUp>
@@ -669,47 +720,47 @@ function Testimonials() {
 /* ── COMPARISON ──────────────────────────────────────────────── */
 const compOptions = [
   {
-    title: 'Hire Someone',
-    sub: 'Salary, NI, benefits, training, notice periods, sick leave, and management overhead — all for work that could be automated',
+    title: 'More Content Staff',
+    sub: 'A new hire costs £28–40K a year — and still writes everything by hand, one post at a time',
     winner: false,
     pros: [
-      { yes: false, text: 'Still does the same manual work, just faster' },
-      { yes: false, text: 'Needs managing, training, and replacing' },
-      { yes: false, text: 'Scales linearly — more work means more hires' },
-      { yes: true,  text: 'Human judgment and relationship skills' },
+      { yes: false, text: 'Output limited by hours in the working day' },
+      { yes: false, text: 'Every new creator adds more workload' },
+      { yes: false, text: 'Sick days, turnover, training — all your problem' },
+      { yes: true,  text: 'Human relationships and creative instinct' },
     ],
   },
   {
-    title: 'Off-the-Shelf SaaS',
-    sub: 'Recurring monthly cost, forever — and it still does not fit your workflow or match your brand',
+    title: 'Generic AI Tools',
+    sub: 'ChatGPT and off-the-shelf tools do not know your creators, their voice, or your niche',
     winner: false,
     pros: [
-      { yes: false, text: 'Generic output everyone else also gets' },
-      { yes: false, text: "Does not understand your clients, tone, or process" },
-      { yes: false, text: 'Another subscription eating margin every month' },
-      { yes: true,  text: 'Fast to set up initially' },
+      { yes: false, text: 'Generic output — not in your creator\'s voice' },
+      { yes: false, text: 'Still needs a person to prompt, clean, and post' },
+      { yes: false, text: 'Another monthly subscription on the P&L' },
+      { yes: true,  text: 'Fast to get started with' },
     ],
   },
   {
-    title: 'Do Nothing',
-    sub: 'Hidden labour costs compound every month — plus the compounding advantage your competitors are building',
+    title: 'Keep Doing It Manually',
+    sub: 'Every week you wait is another week your competitors are automating the same work',
     winner: false,
     pros: [
-      { yes: false, text: 'Costs grow as the business grows' },
-      { yes: false, text: 'Staff burn out on repetitive work' },
-      { yes: false, text: 'Competitors widen the gap every month' },
-      { yes: false, text: 'No competitive differentiation' },
+      { yes: false, text: 'Ops cost grows with every creator you sign' },
+      { yes: false, text: 'Team burns out on repetitive low-value work' },
+      { yes: false, text: 'Brand deals take longer than they should' },
+      { yes: false, text: 'No competitive edge in content at scale' },
     ],
   },
   {
-    title: 'Custom AI System',
-    sub: 'Built once for your exact workflow — owned forever, ROI proven from week one',
+    title: 'CAIG Content System',
+    sub: 'Built once for your creators and your workflow — owned forever, working from week one',
     winner: true,
     pros: [
-      { yes: true,  text: 'Built around your exact workflow and brand' },
-      { yes: true,  text: 'Full IP ownership — no ongoing cost' },
-      { yes: true,  text: 'Scales with zero additional overhead' },
-      { yes: true,  text: 'ROI tracked and proven from week one' },
+      { yes: true,  text: 'Knows every creator\'s voice, niche, and brand fit' },
+      { yes: true,  text: 'Content, proposals, and ops automated end to end' },
+      { yes: true,  text: 'Sign more talent without adding ops headcount' },
+      { yes: true,  text: 'Full IP ownership — no subscriptions, ever' },
     ],
   },
 ]
@@ -761,49 +812,49 @@ function Comparison() {
 /* ── SERVICES ────────────────────────────────────────────────── */
 const tiers = [
   {
-    name: 'AI Audit',
-    price: 'From £495',
-    time: '5–7 business days',
+    name: 'Strategy Call',
+    price: 'Free',
+    time: '45 minutes — no obligation',
     featured: false,
     popular: false,
     feats: [
-      'Deep-dive workflow analysis session',
-      'Automation opportunity map',
-      'Tool recommendation & tech stack report',
-      'Full build roadmap with scoped estimates',
-      'Delivered as a working document or prototype',
+      'Full ops and content workflow review',
+      'Identify your single highest-value automation',
+      'Exact scope and cost estimate',
+      'Delivered as a written action plan',
+      'You leave with clarity — whether you hire us or not',
       'Credited toward your build if you proceed',
     ],
-    cta: 'Book Audit Call',
+    cta: 'Book Strategy Call',
   },
   {
-    name: 'Custom AI Build',
+    name: 'Content System Build',
     price: 'From £3,500',
     time: '4–6 weeks',
     featured: true,
     popular: true,
     feats: [
-      'Everything in the AI Audit',
-      'Full custom tool development',
-      'Gemini 2.5 Pro / GPT-4o / Claude integration',
-      'Internal dashboard and team controls',
-      '30 days of post-launch support included',
-      'Team onboarding and full IP handover',
+      'Full custom AI content system for your creators',
+      'Trained on each creator\'s voice, niche, and pillars',
+      'Hook, caption, brief, and hashtag generation',
+      'Brand partnership proposal generator',
+      'Creator ops dashboard — one place, everything',
+      'Team onboarding + full IP handover on delivery',
     ],
     cta: 'Start Your Build',
   },
   {
-    name: 'Monthly Retainer',
+    name: 'Growth Retainer',
     price: 'From £1,200/mo',
     time: 'Ongoing — cancel anytime',
     featured: false,
     popular: false,
     feats: [
       'Dedicated monthly engineering hours',
-      'Continuous iteration and new features',
-      'New automations added each sprint',
+      'New automations added every sprint',
+      'New creator personas onboarded to the system',
+      'Brand outreach pipeline iterations',
       'Priority support via direct Slack access',
-      'Monthly ROI and usage reporting',
       'No minimum term — 30 days notice to cancel',
     ],
     cta: 'Discuss Retainer',
@@ -819,7 +870,8 @@ function Services() {
             <div className="badge"><span className="badge-dot" />Services</div>
             <h2 className="section-title">Three ways to work<br />with us. All fixed-fee.</h2>
             <p className="section-sub">
-              No hourly billing. No retainer traps. You know the exact cost and deliverables before you commit to anything.
+              Start free. Build exactly what your agency needs. Keep it forever.
+              No hourly billing. No lock-in. No surprises.
             </p>
           </div>
         </FadeUp>
@@ -862,26 +914,26 @@ const steps = [
   {
     num: '01',
     label: 'Step One',
-    title: 'Free AI Audit Call — 45 minutes',
-    text: 'We map your workflow together, identify the single highest-value automation target, and give you a straight answer on what it would cost and how long it would take. No pitch deck. No obligation.',
+    title: 'Free Strategy Call — 45 minutes',
+    text: 'We look at your creator roster, your current content workflow, your brand deal pipeline, and your ops. We tell you exactly what to build first and what it will cost. No pitch. No obligation. Just a straight answer.',
   },
   {
     num: '02',
     label: 'Step Two',
     title: 'Scoped Proposal in 48 hours',
-    text: 'You receive a written proposal: exact deliverables, the tech stack we will use, and a week-by-week timeline. You know everything before you commit. No hourly rates. No surprises.',
+    text: 'You get a written breakdown — every deliverable, the exact tech stack, and a week-by-week build timeline. Fixed price, fixed scope. You know everything before you commit a penny.',
   },
   {
     num: '03',
     label: 'Step Three',
-    title: 'We Build — with you in the loop',
-    text: 'Weekly demos in a live staging environment. A direct line to the engineer — not a project manager. You see progress every week. If something needs adjusting, we adjust it that week.',
+    title: 'We build — you see it live every week',
+    text: 'Weekly demos in a real staging environment. You talk directly to the person building it — not a project manager. Every creator persona is loaded in, tested, and tuned before you see it. If something needs adjusting, it gets adjusted that week.',
   },
   {
     num: '04',
     label: 'Step Four',
-    title: 'Launch, Handover, and Proven ROI',
-    text: 'We deploy, onboard your team in a 30-minute session, and hand over full ownership of the code. Then we track time saved and cost recovered for 30 days together, so you have the numbers to prove the ROI internally.',
+    title: 'Launch, handover, and it runs itself',
+    text: 'We deploy, onboard your whole team in 30 minutes, and hand over full ownership of the code. From that point your team runs content, proposals, and ops through the system — without needing us. We are there for 30 days if anything needs fine-tuning.',
   },
 ]
 
@@ -923,32 +975,32 @@ function HowItWorks() {
 /* ── FAQ ─────────────────────────────────────────────────────── */
 const faqs = [
   {
-    q: 'How is this different from just using ChatGPT or an off-the-shelf AI tool?',
-    a: "ChatGPT is a general-purpose tool that does not know your business. Off-the-shelf AI products are built for the average company — which means they fit no company perfectly. We build a specific system engineered around your workflow, your brand voice, your clients, and your edge cases. The output is something your team uses every day without thinking about it — not a tab they have to constantly prompt and clean up.",
+    q: 'Do you actually run a creator network yourselves?',
+    a: "Yes. We operate 7 AI-powered UGC creator personas across TikTok and Instagram right now — travel, fitness, gaming, football, wellness, luxury, and parenting niches. Every piece of content, every brand partnership proposal, every ops decision runs through our own system. We are not selling a theory. We are running it live.",
   },
   {
-    q: 'What kinds of workflows do you automate?',
-    a: "Content generation (social, blog, proposals), client onboarding and qualification, internal reporting, data extraction from documents, customer support triage, email drafting — anything where a human is repeatedly doing the same type of cognitive work with similar inputs. If you can describe the task in a repeatable way, we can almost certainly automate it.",
+    q: 'What does the system actually do day to day?',
+    a: "It generates hooks, captions, briefs, and hashtags for each creator in their own voice. It produces full brand partnership sponsorship decks when you need to pitch a brand. It tracks your brand deal pipeline, automates follow-ups, and manages creator onboarding. Your team opens the dashboard, picks a creator, picks what they need, and the output is ready in under a minute.",
   },
   {
-    q: 'Do I need a technical team to use what you build?',
-    a: "No. We build for non-technical end users. Your tool will have a clean, simple interface your whole team can use on day one. The onboarding session takes 30 minutes. After that, it just works — no prompting, no setup, no technical knowledge required.",
+    q: 'Can it match each creator\'s individual voice?',
+    a: "Yes. Before we build, we do a deep voice profiling session for each creator — tone, vocabulary, content pillars, platform habits, audience type. The system is trained on that profile. The output sounds like them, not like a generic AI tool. Your creators will not be able to tell the difference between content written by the system and content written by a skilled writer who knows them well.",
   },
   {
-    q: 'How long does a typical project take?',
-    a: "The AI Audit takes 5 to 7 business days. A full custom build runs 4 to 6 weeks depending on complexity. You will get a precise week-by-week timeline in your scoped proposal before you commit to anything.",
+    q: 'How long does a build take?',
+    a: "The strategy call is free and takes 45 minutes. A full content system build runs 4 to 6 weeks depending on the size of your roster and the complexity of your ops. You get a precise week-by-week timeline in your proposal before you commit to anything.",
   },
   {
-    q: 'What happens after the project is delivered?',
-    a: "You own 100% of the code and IP from day one. We include 30 days of post-launch support in every build. After that, you can move to a monthly retainer for ongoing development, take the codebase in-house, or simply use what we built and never pay us again. There is no lock-in. We earn repeat business by being worth it.",
+    q: 'Do my team need to be technical to use it?',
+    a: "No. The interface is clean, simple, and built for non-technical users. The onboarding session takes 30 minutes for your whole team. After that, the system just works — no prompting expertise, no setup, no tech knowledge required.",
   },
   {
-    q: 'What if I am not sure what to automate?',
-    a: "That is exactly what the free audit call is for. Most clients come to us knowing something feels expensive or slow, but not knowing exactly what to build. In 45 minutes we usually identify two or three high-value targets and rank them by ROI. You will leave with a clear picture of what to do first — whether you hire us or not.",
+    q: 'What happens to the system after you deliver it?',
+    a: "You own 100% of the code and IP from day one. We include 30 days of post-launch support in every build. After that, you can move to a monthly growth retainer for ongoing development, take the codebase in-house, or simply run the system forever without paying us again. There is no lock-in. We earn your repeat business by being worth coming back to.",
   },
   {
     q: 'What is your pricing model?',
-    a: "All projects are scoped upfront with a fixed deliverable and timeline. You pay 50% to start and 50% on delivery — never by the hour. Retainer clients pay monthly and can cancel with 30 days notice. There are no hidden fees, no scope creep charges, and no surprise invoices.",
+    a: "The strategy call is completely free. All builds are fixed-fee — scoped upfront with a clear deliverable and timeline. You pay 50% to start and 50% on delivery. Retainer clients pay monthly and can cancel with 30 days notice. No hidden fees, no scope creep charges, no surprise invoices.",
   },
 ]
 
@@ -960,8 +1012,7 @@ function FAQ() {
         <FadeUp>
           <div className="sh c">
             <div className="badge"><span className="badge-dot" />FAQ</div>
-            <h2 className="section-title">Every question you have<br />before you book the call</h2>
-          </div>
+            <h2 className="section-title">Every question you have<br />before you book the call</h2>          </div>
         </FadeUp>
         <div className="faq-wrap">
           {faqs.map((f, i) => (
@@ -1002,14 +1053,15 @@ function UrgencyBanner() {
         <div className="urgency-inner">
           <div className="urgency-eyebrow">The honest truth</div>
           <h2 className="urgency-title">
-            We are not selling you a theory.<br />We are running it right now.
+            We are not pitching this.<br />We are running it right now.
           </h2>
           <p className="urgency-body">
-            This website was built with our system. Our outreach runs through it. Our content, our proposals, our reports.
-            <strong style={{ color: 'var(--t0)' }}> If it works well enough to run our business, it will work for yours.</strong> The audit is free. The call is 45 minutes. Come and see it working.
+            Seven creator personas. Live on TikTok and Instagram. Every post, every brand pitch,
+            every ops decision running through the system we built.
+            <strong style={{ color: 'var(--t0)' }}> If it is good enough to run our own network, it is good enough to run yours.</strong> The strategy call is free. It is 45 minutes. Come and see it working for yourself.
           </p>
           <a href="#contact" className="btn btn-amber btn-lg breathe">
-            Book My Free Audit Now <Icon.ArrowRight size={17} />
+            Book My Free Strategy Call <Icon.ArrowRight size={17} />
           </a>
           <div className="urgency-note">
             45-minute call &nbsp;&middot;&nbsp; No pitch deck &nbsp;&middot;&nbsp; No obligation &nbsp;&middot;&nbsp; Slots available within 3 business days
@@ -1047,10 +1099,10 @@ function Contact() {
       <div className="container">
         <div className="contact-grid">
           <FadeUp>
-            <div className="badge"><span className="badge-dot" />Book Your Audit</div>
+            <div className="badge"><span className="badge-dot" />Book Your Strategy Call</div>
             <h2 className="section-title">Let us show you<br />exactly what to build</h2>
             <p className="section-sub" style={{ marginBottom: '10px' }}>
-              A 45-minute call where we map your workflow, identify the highest-value automation, and give you a clear scope for building it. No strategy theatre. Just a straight answer.
+              A free 45-minute call where we map your creator roster, your content workflow, and your brand deal pipeline — then tell you exactly what to automate first and what it will cost. No strategy theatre. Just a straight answer.
             </p>
             <p style={{ fontSize: '14px', color: 'var(--amber)', fontWeight: 600, marginBottom: '28px' }}>
               Completely free. No obligation whatsoever.
@@ -1114,15 +1166,15 @@ function Contact() {
                       <label className="fl">I am interested in</label>
                       <select className="fi" name="service" value={form.service} onChange={set('service')} style={{ cursor: 'pointer' }}>
                         <option value="">Select a service&hellip;</option>
-                        <option>AI Audit</option>
-                        <option>Custom AI Build</option>
-                        <option>Monthly Retainer</option>
+                        <option>Free Strategy Call</option>
+                        <option>Content System Build</option>
+                        <option>Growth Retainer</option>
                         <option>Not sure yet — just exploring</option>
                       </select>
                     </div>
                     <div className="fg">
-                      <label className="fl">Which task is eating your team alive?</label>
-                      <textarea className="ft" name="message" placeholder="Describe the repetitive workflow you most want to eliminate..." value={form.message} onChange={set('message')} />
+                      <label className="fl">Tell us about your creator operation</label>
+                      <textarea className="ft" name="message" placeholder="How many creators do you manage? What is the biggest ops headache right now?" value={form.message} onChange={set('message')} />
                     </div>
                     {status === 'error' && (
                       <p style={{ fontSize: '13px', color: 'var(--red)', marginBottom: '12px' }}>
@@ -1135,11 +1187,11 @@ function Contact() {
                       style={{ width: '100%', justifyContent: 'center' }}
                       disabled={status === 'sending'}
                     >
-                      {status === 'sending' ? 'Sending...' : 'Book My Free Audit'}
+                      {status !== 'sending' ? 'Book My Free Strategy Call' : 'Sending...'}
                       {status !== 'sending' && <Icon.ArrowRight />}
                     </button>
                     <p style={{ fontSize: '11.5px', color: 'var(--t4)', textAlign: 'center', marginTop: '14px' }}>
-                      No pitch. No obligation. Just a straight answer on what to build.
+                      No pitch. No obligation. Just a straight answer on what to build first.
                     </p>
                   </form>
                 </>
@@ -1163,15 +1215,16 @@ function Footer() {
               <Logo size={20} sub={null} />
             </div>
             <p className="footer-tagline">
-              Custom AI systems for consulting, agency, and professional services firms. Built to spec. Owned by you.
+              AI content systems for talent agencies, creator managers, and brands
+              managing content at scale. Built to spec. Owned by you.
             </p>
           </div>
           <div>
             <div className="footer-col-h">Services</div>
             <ul className="footer-links">
-              <li><a href="#services">AI Audit</a></li>
-              <li><a href="#services">Custom AI Build</a></li>
-              <li><a href="#services">Monthly Retainer</a></li>
+              <li><a href="#services">Free Strategy Call</a></li>
+              <li><a href="#services">Content System Build</a></li>
+              <li><a href="#services">Growth Retainer</a></li>
             </ul>
           </div>
           <div>
