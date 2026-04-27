@@ -458,7 +458,7 @@ function Hero() {
               <Icon.ArrowRight size={16} />
             </a>
             <a href="#services" className="btn btn-ghost btn-lg">
-              See What We Build
+              See Pricing
             </a>
           </motion.div>
 
@@ -470,9 +470,9 @@ function Hero() {
           >
             <span style={{ color: 'var(--t3)' }}>We run it ourselves — we know it works</span>
             <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
-            Fixed-fee. No lock-in.
+            One setup fee. Monthly retainer.
             <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
-            You own the system
+            Cancel with 30 days notice
           </motion.div>
         </div>
       </div>
@@ -568,7 +568,7 @@ const solutions = [
   { icon: <Icon.Layers size={18} />, title: 'Content on demand — hooks, captions, briefs, all of it', body: 'Our system generates platform-specific content for each persona in seconds — with the right voice, the right niche angle, the right hashtags. What a content manager would spend a full day on takes under three minutes. That is the system we build for your creators.' },
   { icon: <Icon.BarChart size={18} />, title: 'Brand partnership proposals that actually get replies', body: 'We generate full sponsorship decks tailored to each creator — niche fit, audience data, deliverables, pricing. Outreach goes out on a sequence. Follow-ups are automated. Your team stops chasing and starts closing.' },
   { icon: <Icon.RefreshCw size={18} />, title: 'Creator ops run in two hours a week, not twenty', body: 'Onboarding new talent, tracking brand deal pipelines, managing content approvals, scheduling posts — all systematised. One creator ops system, custom-built for your agency, so your team manages more talent without adding headcount.' },
-  { icon: <Icon.Shield size={18} />, title: 'Built for your agency — owned by you, forever', body: 'We build to spec, hand over full IP on delivery, and charge a fixed fee. No SaaS subscriptions. No dependency on us after launch. You own the system outright. We earn the next build by being worth coming back to.' },
+  { icon: <Icon.Shield size={18} />, title: 'The system is yours — no matter what', body: 'Everything we build for you is yours to keep. The creator personas, the automations, the content logic — permanently. Access to the live portal runs on your retainer, but the underlying system never disappears. Cancel any time with 30 days notice and walk away with everything intact.' },
 ]
 
 function Solution() {
@@ -754,13 +754,13 @@ const compOptions = [
   },
   {
     title: 'CAIG Content System',
-    sub: 'Built once for your creators and your workflow — owned forever, working from week one',
+    sub: 'Running from week one — your creators, your workflow, your system to keep.',
     winner: true,
     pros: [
       { yes: true,  text: 'Knows every creator\'s voice, niche, and brand fit' },
       { yes: true,  text: 'Content, proposals, and ops automated end to end' },
       { yes: true,  text: 'Sign more talent without adding ops headcount' },
-      { yes: true,  text: 'Full IP ownership — no subscriptions, ever' },
+      { yes: true,  text: 'System is yours to keep — even if you ever cancel' },
     ],
   },
 ]
@@ -774,7 +774,7 @@ function Comparison() {
             <div className="badge"><span className="badge-dot" />The Alternatives</div>
             <h2 className="section-title">What is the alternative?</h2>
             <p className="section-sub">
-              Every business has four options when it comes to repetitive workflows. Three of them keep costing you money indefinitely.
+              Every agency has four options. Three of them scale poorly — or keep costing more the bigger you grow.
             </p>
           </div>
         </FadeUp>
