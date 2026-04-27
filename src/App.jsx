@@ -384,9 +384,9 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            Your team is doing work<br />
-            <span className="hl">a machine should</span><br />
-            be doing instead
+            We built this system to run<br />
+            <span className="hl">our own business.</span><br />
+            Now we build it for yours.
           </motion.h1>
 
           <motion.p
@@ -395,8 +395,8 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.32, duration: 0.55 }}
           >
-            We build custom AI systems that eliminate your most expensive manual workflows.
-            Scoped upfront, built fast, owned by you forever.
+            We use AI to run Cornerstone AI Group — content, outreach, proposals, and workflows.
+            The same system, built around your business, owned by you.
           </motion.p>
 
           <motion.div
@@ -420,7 +420,7 @@ function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.75, duration: 0.6 }}
           >
-            <span style={{ color: 'var(--t3)' }}>Built for UK consulting, agency, and professional services firms</span>
+            <span style={{ color: 'var(--t3)' }}>We are the proof of concept</span>
             <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
             Fixed-fee. No lock-in.
             <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
@@ -439,9 +439,9 @@ function ProofBar() {
       <div className="container">
         <div className="proof-bar-inner">
         {[
-          { to: 18, suffix: ' hrs', label: 'Avg. hours saved per week, per client', amber: true },
-          { to: 5,  suffix: ' wks', label: 'Average payback period from go-live',  amber: true },
-          { to: 6,  suffix: ' wks', label: 'From first call to live in production', amber: false },
+          { to: 0,  suffix: '',     label: 'Of our own operations run through AI — content, proposals, outreach, reports', amber: false, text: '100%' },
+          { to: 5,  suffix: ' wks', label: 'Average payback period from go-live for our clients', amber: true },
+          { to: 3,  suffix: '',     label: 'Businesses currently running on systems we built, including our own', amber: false, text: '3+' },
           { to: 0,  suffix: '',     label: 'Lock-in contracts — cancel any retainer anytime', amber: false, text: 'Zero' },
         ].map((s, i) => (
           <div className="proof-stat" key={i}>
@@ -463,18 +463,18 @@ function ProofBar() {
 const problems = [
   {
     icon: <Icon.Clock />,
-    title: "You're paying salaries to do a machine's job",
-    body: "The average 10-person professional services firm spends £8,000–£15,000 a month on tasks that can be automated. That is not overhead. That is waste — and it compounds every month you do not act.",
+    title: "Content that takes days is taking minutes for us",
+    body: "We generate social content, LinkedIn posts, blogs, and outreach sequences for our own business using the same system we build for clients. What used to take a team of people now runs on autopilot. We know it works because we live it.",
   },
   {
     icon: <Icon.TrendingDown />,
-    title: "Your competitors are already pulling ahead",
-    body: "Firms like yours are quietly automating their most expensive workflows right now. The ones who moved first are operating leaner, pitching faster, and winning on margin. The gap widens every week.",
+    title: "Proposals, reports, and admin were killing our margin",
+    body: "Writing proposals, compiling reports, managing follow-ups — these were the tasks eating our most valuable hours. We built AI into every one of those workflows. Our ops cost dropped. Our output went up. We then did the same for our clients.",
   },
   {
     icon: <Icon.AlertCircle />,
     title: "You already know which tasks are the problem",
-    body: "You have probably said 'we should automate this' at least twice. Every month you delay is another month of salary cost, burnt-out staff doing repetitive work, and a competitor getting further ahead.",
+    body: "Every business has them — the repetitive, high-cost tasks that nobody questions because they have always been done that way. We found ours. We eliminated them. We can do the same for yours.",
   },
 ]
 
@@ -485,9 +485,9 @@ function Problem() {
         <FadeUp>
           <div className="sh c">
             <div className="badge"><span className="badge-dot" />The Real Cost</div>
-            <h2 className="section-title">You know something<br />is costing you too much</h2>
+            <h2 className="section-title">We had the same problem<br />you have right now</h2>
             <p className="section-sub">
-              Manual workflows do not just waste time. They erode margins, burn out good people, and hand your competitors a structural advantage.
+              Before we built the system, we were doing it manually — content, outreach, proposals, reports. Hours every week on work that should take minutes. So we automated it. Then we started building the same for other businesses.
             </p>
           </div>
         </FadeUp>
@@ -530,9 +530,9 @@ function Solution() {
         <div className="sol-grid">
           <FadeUp>
             <div className="badge"><span className="badge-dot" />How We Solve It</div>
-            <h2 className="section-title">A custom AI system built<br />around how you actually work</h2>
+            <h2 className="section-title">The system we use to<br />run our own business</h2>
             <p className="section-sub" style={{ marginBottom: '36px' }}>
-              Not generic AI. Not off-the-shelf SaaS. A system scoped around your workflow and built to run without hand-holding.
+              We did not build a generic AI tool and sell it as a service. We built a system that runs Cornerstone AI Group — then started building the same for clients.
             </p>
             <a href="#contact" className="btn btn-amber btn-lg">
               Start with a Free Audit <Icon.ArrowRight />
@@ -1002,13 +1002,11 @@ function UrgencyBanner() {
         <div className="urgency-inner">
           <div className="urgency-eyebrow">The honest truth</div>
           <h2 className="urgency-title">
-            If you have read this far,<br />you already know you need this
+            We are not selling you a theory.<br />We are running it right now.
           </h2>
           <p className="urgency-body">
-            The only question is whether you act on it this week — or in six months, after
-            <strong style={{ color: 'var(--t0)' }}> months more of avoidable labour costs</strong> and
-            watching a competitor launch the system you kept putting off.
-            The audit is free. The call is 45 minutes. The ROI is documented.
+            This website was built with our system. Our outreach runs through it. Our content, our proposals, our reports.
+            <strong style={{ color: 'var(--t0)' }}> If it works well enough to run our business, it will work for yours.</strong> The audit is free. The call is 45 minutes. Come and see it working.
           </p>
           <a href="#contact" className="btn btn-amber btn-lg breathe">
             Book My Free Audit Now <Icon.ArrowRight size={17} />
