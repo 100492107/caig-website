@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { Logo } from './Logo'
+import { Logo, LogoMark } from './Logo'
 import Privacy from './Privacy'
 import Terms from './Terms'
 
@@ -347,10 +347,7 @@ function HeroDashboard() {
         {/* Sidebar */}
         <div className="hd-sidebar">
           <div className="hd-sidebar-gem">
-            <svg viewBox="0 0 24 24" width="14" height="14">
-              <path d="M3 3 L15 3 L21 9 L21 21 L3 21 Z" fill="#F59E0B"/>
-              <path d="M15 3 L21 9 L15 9 Z" fill="rgba(0,0,0,0.22)"/>
-            </svg>
+            <LogoMark size={22} />
           </div>
           <div className="hd-sidebar-div" />
           {HD_MODULES.map((m, i) => (
@@ -411,69 +408,80 @@ function Hero() {
       <div className="hero-bg">
         <div className="hero-orb hero-orb-1" />
         <div className="hero-orb hero-orb-2" />
+        <div className="hero-orb hero-orb-3" />
       </div>
 
       <div className="container">
-        <div className="hero-center">
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-          >
-            <div className="badge" style={{ display: 'inline-flex', marginBottom: '28px' }}>
-              <span className="badge-dot" />We run 7 AI-powered creator personas, live right now
+        <div className="hero-split">
+          {/* ── LEFT: copy ── */}
+          <div className="hero-copy">
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+            >
+              <div className="badge" style={{ display: 'inline-flex', marginBottom: '28px' }}>
+                <span className="badge-dot" />We run 7 AI-powered creator personas, live right now
+              </div>
+            </motion.div>
+
+            <motion.h1
+              className="hero-h1"
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            >
+              Managing creators at scale<br />
+              hits an <span className="hl">operations ceiling.</span><br />
+              We remove it.
+            </motion.h1>
+
+            <motion.p
+              className="hero-sub"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35, duration: 0.55 }}
+            >
+              Most creator agencies plateau around 10–20 creators — not because demand drops,
+              but because ops can't keep up. We built an AI system to run our own creator network.
+              Now we build and manage the same for agencies who are ready to scale past that ceiling.
+            </motion.p>
+
+            <motion.div
+              className="hero-ctas"
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              <a href="#contact" className="btn btn-amber btn-lg breathe">
+                Get a Free Strategy Call
+                <Icon.ArrowRight size={16} />
+              </a>
+              <a href="#services" className="btn btn-ghost btn-lg">
+                See Pricing
+              </a>
+            </motion.div>
+
+            <motion.div
+              className="hero-trust"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.75, duration: 0.6 }}
+            >
+              <span style={{ color: 'var(--t3)' }}>We run it ourselves — we know it works</span>
+              <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
+              Take on more creators without hiring
+              <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
+              Cancel with 30 days notice
+            </motion.div>
+          </div>
+
+          {/* ── RIGHT: animated mockup ── */}
+          <div className="hero-visual">
+            <div className="hd-float-wrap">
+              <HeroDashboard />
             </div>
-          </motion.div>
-
-          <motion.h1
-            className="hero-h1"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          >
-            Managing creators at scale<br />
-            hits an <span className="hl">operations ceiling.</span><br />
-            We remove it.
-          </motion.h1>
-
-          <motion.p
-            className="hero-sub"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35, duration: 0.55 }}
-          >
-            Most creator agencies plateau around 10–20 creators — not because demand drops,
-            but because ops can't keep up. We built an AI system to run our own creator network.
-            Now we build and manage the same for agencies who are ready to scale past that ceiling.
-          </motion.p>
-
-          <motion.div
-            className="hero-ctas"
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-          >
-            <a href="#contact" className="btn btn-amber btn-lg breathe">
-              Get a Free Strategy Call
-              <Icon.ArrowRight size={16} />
-            </a>
-            <a href="#services" className="btn btn-ghost btn-lg">
-              See Pricing
-            </a>
-          </motion.div>
-
-          <motion.div
-            className="hero-trust"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.75, duration: 0.6 }}
-          >
-            <span style={{ color: 'var(--t3)' }}>We run it ourselves — we know it works</span>
-            <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
-            Take on more creators without hiring
-            <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
-            Cancel with 30 days notice
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
