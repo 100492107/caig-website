@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CAIG CEO Blueprint v2.0</title>
+<style>
+  body {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #1a1a1a;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 40px 80px;
+    background: #fff;
+  }
+  h1 { font-size: 26pt; font-weight: 700; margin: 32px 0 4px; color: #111; }
+  h2 { font-size: 18pt; font-weight: 700; margin: 40px 0 10px; color: #111; border-bottom: 2px solid #f5a623; padding-bottom: 6px; }
+  h3 { font-size: 13pt; font-weight: 700; margin: 24px 0 8px; color: #222; }
+  h4 { font-size: 11pt; font-weight: 700; margin: 18px 0 6px; color: #333; }
+  p  { margin: 0 0 10px; }
+  ul, ol { margin: 6px 0 12px 24px; }
+  li { margin-bottom: 5px; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 14px 0 20px;
+    font-size: 10pt;
+  }
+  th {
+    background: #f5a623;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+  }
+  td {
+    padding: 7px 12px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #fafafa; }
+  code, pre {
+    font-family: 'Courier New', monospace;
+    font-size: 9.5pt;
+    background: #f5f5f5;
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+  pre { padding: 12px 16px; display: block; margin: 10px 0; white-space: pre-wrap; }
+  .cover { text-align: center; padding: 60px 0 40px; border-bottom: 3px solid #f5a623; margin-bottom: 40px; }
+  .cover h1 { font-size: 32pt; margin-bottom: 8px; }
+  .cover .subtitle { font-size: 15pt; color: #555; margin-bottom: 6px; font-style: italic; }
+  .cover .meta { font-size: 10pt; color: #888; margin-top: 18px; }
+  .cover .confidential { display: inline-block; background: #f5a623; color: #fff; font-weight: 700; font-size: 9pt; letter-spacing: 0.08em; padding: 4px 14px; border-radius: 3px; margin-bottom: 18px; }
+  .toc { background: #fffbf2; border: 1px solid #f5d08a; border-radius: 6px; padding: 20px 28px; margin-bottom: 40px; }
+  .toc h3 { margin-top: 0; color: #b07800; }
+  .toc ol { margin-left: 18px; }
+  .toc li { margin-bottom: 4px; font-size: 10.5pt; }
+  .section-divider { border: none; border-top: 1px solid #e0e0e0; margin: 40px 0; }
+  .callout {
+    background: #fffbf2;
+    border-left: 4px solid #f5a623;
+    padding: 12px 18px;
+    margin: 14px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .callout p { margin: 0; }
+  .callout-red {
+    background: #fff5f5;
+    border-left: 4px solid #e05555;
+    padding: 12px 18px;
+    margin: 14px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .callout-red p { margin: 0; }
+  .callout-green {
+    background: #f2fff8;
+    border-left: 4px solid #34d8a4;
+    padding: 12px 18px;
+    margin: 14px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .callout-green p { margin: 0; }
+  .proof-box {
+    background: #13131f;
+    color: #f4f2ff;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .proof-box h4 { color: #f5a623; margin-top: 0; }
+  .proof-box p, .proof-box li { color: #cac7e8; }
+  .proof-box ul { margin-left: 20px; }
+  .objection-block {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 16px 22px;
+    margin: 12px 0;
+  }
+  .objection-block h4 { margin-top: 0; color: #333; }
+  .appendix-block {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 16px 22px;
+    margin: 14px 0;
+  }
+  .vs-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 10pt; }
+  .vs-table th { padding: 8px 12px; text-align: left; border: 1px solid #ddd; }
+  .vs-table td { padding: 7px 12px; border: 1px solid #ddd; }
+  .bad  { background: #fff5f5; color: #c0392b; }
+  .good { background: #f2fff8; color: #1a7a55; }
+  @media print {
+    body { margin: 20px; padding: 0; }
+    .page-break { page-break-before: always; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover">
+  <div class="confidential">CONFIDENTIAL — INTERNAL DOCUMENT</div>
+  <h1>CORNERSTONE AI GROUP</h1>
+  <div class="subtitle">CEO Blueprint v2.0</div>
+  <div class="subtitle">Company Vision, Operating Manual &amp; Growth Playbook</div>
+  <div class="meta">
+    <strong>Prepared by:</strong> Joseph &nbsp;|&nbsp; Founder &amp; CEO<br/>
+    <strong>Last Updated:</strong> April 2026 &nbsp;|&nbsp; <strong>Version:</strong> 2.0
+  </div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <h3>Contents</h3>
+  <ol>
+    <li>The Core Pitch (Read This First)</li>
+    <li>Vision, Mission &amp; Positioning</li>
+    <li>Market Opportunity</li>
+    <li>The Problem We Solve</li>
+    <li>Our Solution &amp; System Architecture</li>
+    <li>Proof: What We've Already Built &amp; Run</li>
+    <li>Business Model &amp; Pricing</li>
+    <li>Product: The Client Portal</li>
+    <li>Operations: How We Deliver</li>
+    <li>Technology Stack</li>
+    <li>Sales &amp; Growth Strategy</li>
+    <li>First Client Strategy (Critical)</li>
+    <li>Lead Management System</li>
+    <li>Cold Outreach Playbooks</li>
+    <li>Objection Handling</li>
+    <li>Content &amp; Brand Strategy</li>
+    <li>Financial Model &amp; Unit Economics</li>
+    <li>Client Success &amp; Retention</li>
+    <li>Team &amp; Hiring Roadmap</li>
+    <li>Legal, IP &amp; Contractual Structure</li>
+    <li>12-Month Roadmap</li>
+    <li>Long-Term Vision: The CAIG Group</li>
+  </ol>
+</div>
+
+<hr class="section-divider" />
+
+<!-- SECTION 1 — THE CORE PITCH -->
+<h2>1. The Core Pitch (Read This First)</h2>
+
+<div class="callout">
+  <p style="font-size:13pt; font-weight:700; color:#b07800;">
+    "Most creator agencies stop growing at 10–20 creators. Not because demand dries up — because operations break. We fix that."
+  </p>
+</div>
+
+<p>Cornerstone AI Group removes the operational ceiling that stops creator agencies scaling. We build AI content and deal management systems and run them on a monthly retainer — so agencies can take on more creators, handle more brand deals, and grow revenue without hiring.</p>
+
+<p>We are not a software company. We are not a freelance agency. We are a <strong>managed AI operations partner</strong>. Clients pay a setup fee to build their system and a monthly retainer to keep it running. They never own the system. If they stop paying, access is revoked. The IP remains ours permanently.</p>
+
+<h3>The Buyer's Question We Must Answer</h3>
+<p>Every prospect is silently asking one thing:</p>
+<div class="callout-red"><p><strong>"Will this directly make or save me serious money?"</strong></p></div>
+<p>Everything in our messaging, sales conversations, and delivery must answer that question. Not with features. With outcomes.</p>
+
+<h3>Outcome-First Messaging (Use This Always)</h3>
+<table class="vs-table">
+  <tr><th class="bad">Don't say (feature-led)</th><th class="good">Say this instead (outcome-led)</th></tr>
+  <tr><td class="bad">"We generate content and manage ops"</td><td class="good">"We increase creator output and help you handle more brand deals without hiring"</td></tr>
+  <tr><td class="bad">"You get a dashboard and reporting"</td><td class="good">"You see exactly where every deal is, every week, without chasing your team"</td></tr>
+  <tr><td class="bad">"We run your content pipeline"</td><td class="good">"We remove the bottleneck that stops you adding the next 10 creators"</td></tr>
+  <tr><td class="bad">"Automated weekly reports"</td><td class="good">"Your clients and creators get professional reports every Monday — without you writing them"</td></tr>
+</table>
+
+<hr class="section-divider" />
+
+<!-- SECTION 2 -->
+<h2>2. Vision, Mission &amp; Positioning</h2>
+
+<h3>Vision</h3>
+<p>To become the operating infrastructure behind the world's most efficient creator agencies — the invisible engine that powers content at scale. In ten years, the best talent agencies will not have content teams. They will have CAIG.</p>
+
+<h3>Mission</h3>
+<p>To remove the operational ceiling on creator agencies by replacing manual content processes with AI-powered systems that run themselves — managed, maintained, and continuously improved by us.</p>
+
+<h3>Positioning</h3>
+<ul>
+  <li><strong>Category:</strong> Managed AI Content Operations</li>
+  <li><strong>For:</strong> UGC creator agencies, talent managers, creator-led brands</li>
+  <li><strong>Against:</strong> Hiring in-house, freelance content managers, generic AI tools</li>
+  <li><strong>Differentiator:</strong> We don't sell software. We build and run the system. You get outcomes, not tools to manage.</li>
+</ul>
+
+<div class="callout">
+  <p><em>"We help creator agencies scale past their operational limit by running their content and deal infrastructure for them — on a monthly retainer, with a live portal they access any time."</em></p>
+</div>
+
+<h3>Why This Positioning Holds</h3>
+<p>Most competitors in this space are either selling tools (crowded, race to the bottom on price) or offering vague "AI automation." We've drawn a hard line: we run the system. That single distinction:</p>
+<ul>
+  <li>Justifies a retainer (vs. a one-off project or tool fee)</li>
+  <li>Removes DIY comparison ("why don't I just use ChatGPT?")</li>
+  <li>Positions us closer to infrastructure and professional services than to marketing agencies</li>
+</ul>
+<p><strong>Do not dilute this.</strong> The moment we say "we also do strategy" or "we also do posting" without a clear framework, we become a generic agency and lose the premium positioning.</p>
+
+<h3>Our Real Moat (It Is Not Technology)</h3>
+<div class="callout-red">
+  <p><strong>Important:</strong> The tech stack is replicable. Anyone can copy our tools. Our actual moat is:</p>
+</div>
+<ul>
+  <li><strong>Execution speed</strong> — we have already built and are running this system</li>
+  <li><strong>Operator knowledge</strong> — we understand creator agency workflows because we run one</li>
+  <li><strong>System quality</strong> — the depth of the content engine, pipeline, and reporting is months ahead of a new entrant</li>
+  <li><strong>Proof</strong> — we can show a working system, live output, and real metrics</li>
+</ul>
+<p>If we lean too hard on "AI system" in our pitch, we get compared to tools. If we lead with operator credibility and outcomes, we get compared to hires — and win that comparison easily.</p>
+
+<h3>Brand Personality</h3>
+<ul>
+  <li><strong>Direct.</strong> No fluff. We show results, not promises.</li>
+  <li><strong>Premium.</strong> We operate at the intersection of technology and high-performance business.</li>
+  <li><strong>Operator-first.</strong> We built this for ourselves. We know it works because we live it.</li>
+  <li><strong>Long-term.</strong> We build retained relationships, not projects.</li>
+</ul>
+
+<hr class="section-divider" />
+
+<!-- SECTION 3 -->
+<h2>3. Market Opportunity</h2>
+
+<h3>The Problem Is Specific, Not Abstract</h3>
+<p>Forget global creator economy figures. What matters to a prospect is: <em>are businesses like mine buying this?</em></p>
+
+<p>Here is the specific scenario that repeats across hundreds of creator agencies right now:</p>
+
+<div class="proof-box">
+  <h4>The Typical CAIG Prospect</h4>
+  <ul>
+    <li>Running a UGC agency with 8–25 creators</li>
+    <li>Generating £10,000–£80,000/month in brand deal commissions</li>
+    <li>Managing content briefs, approvals, posting schedules, and deal admin across WhatsApp, Notion, and spreadsheets</li>
+    <li>Has tried hiring a content coordinator — it helped for 3 months, then the coordinator left or couldn't keep up</li>
+    <li>Has looked at AI tools — knows they exist, doesn't have time to build a system from them</li>
+    <li>Cannot take on more creators right now because the ops would collapse</li>
+  </ul>
+</div>
+
+<h3>Market Size (Grounded)</h3>
+<p>The global creator economy is valued at over $250 billion and growing toward $480 billion by 2027 (Goldman Sachs, 2023). Within this, the management layer — agencies, talent managers, multi-creator networks — is the operational backbone.</p>
+
+<p><strong>Our serviceable niche:</strong> UGC creator agencies with 5–100 creators and £5,000+/month in brand deal revenue. Estimated count: 5,000–12,000 businesses across UK, EU, and US. Penetrating 0.1% of this market (5–12 clients) generates £120,000–£720,000 ARR.</p>
+
+<h3>Why Now</h3>
+<ul>
+  <li>AI content generation has crossed the quality threshold for professional use</li>
+  <li>Creator agencies are scaling creator rosters faster than their operations can keep up</li>
+  <li>The "managed AI ops" category does not yet have a dominant player — first-mover advantage is available</li>
+  <li>The cost comparison is increasingly favourable: one mid-level hire costs more than our Agency tier</li>
+</ul>
+
+<hr class="section-divider" />
+
+<!-- SECTION 4 -->
+<h2>4. The Problem We Solve</h2>
+
+<h3>The Operational Ceiling</h3>
+<p>Creator agencies hit a growth ceiling that has nothing to do with demand for their services or the quality of their creators. It is a pure operations problem — and it appears consistently around 10–20 creators.</p>
+
+<div class="callout">
+  <p><strong>The ceiling manifests as:</strong> "We can't take on any more creators right now." Not because of lack of demand — because the ops would break.</p>
+</div>
+
+<h3>The 5 Root Causes</h3>
+
+<h4>1. Content Volume Without Infrastructure</h4>
+<p>A 15-creator agency needs 75–300 pieces of content coordinated per month across multiple platforms and brand partners. There is no system. It is all manual. It breaks as the roster grows.</p>
+
+<h4>2. Brand Deal Pipeline Is Unmanaged</h4>
+<p>Deals move through 5–7 stages (outreach, negotiation, contract, live, reporting, payment). Tracking this for 10+ creators in a spreadsheet is a full-time job done badly. Deals fall through. Payments are missed. Brands don't come back.</p>
+
+<h4>3. Reporting Is Manual, Inconsistent, and Late</h4>
+<p>Reporting to creators, to brands, and internally takes hours every week. It is done differently each time, often late, and erodes trust on all sides.</p>
+
+<h4>4. AI Tools Exist But No One Has Built the System</h4>
+<p>Agency owners know ChatGPT, Notion AI, and similar tools exist. They have tried them. They do not have 40 hours to architect a working system from scattered tools — and they shouldn't have to.</p>
+
+<h4>5. Hiring Doesn't Scale Below a Certain Revenue Threshold</h4>
+<p>A content operations hire costs £28,000–£45,000/year in salary alone, plus recruitment, oncosts, management time, and turnover risk. For an agency doing £20,000–£60,000/month in revenue, this hire is viable — but fragile. One resignation sets operations back by months.</p>
+
+<div class="callout-green">
+  <p><strong>The result of removing these five constraints:</strong> An agency that was stuck at 12 creators can scale to 25 or 40 — without a proportional increase in headcount or operational stress. That is the revenue impact our retainer needs to be measured against.</p>
+</div>
+
+<hr class="section-divider" />
+
+<!-- SECTION 5 -->
+<h2>5. Our Solution &amp; System Architecture</h2>
+
+<h3>What We Build and Run</h3>
+<p>For each client, we build a bespoke AI content operations system and manage it ongoing. The system covers five interconnected components:</p>
+
+<ol>
+  <li><strong>Creator Content Engine</strong> — AI-generated content for each creator, personalised by niche, platform, and voice. Scripts, captions, hooks, repurposing suggestions. Output: 5–10 pieces per creator per week.</li>
+  <li><strong>Brand Deal Pipeline</strong> — structured deal tracking from outreach to payment, visible in real time. No deal is missed. No stage is forgotten.</li>
+  <li><strong>Content Queue</strong> — all generated content organised by creator, platform, and status. Clients review and approve directly in the portal.</li>
+  <li><strong>Automated Reporting</strong> — weekly email reports sent to the agency every Monday morning. Content output, deals in progress, network summary. Zero manual work.</li>
+  <li><strong>Client Portal Access</strong> — a live, professional dashboard. Always available. Revoked immediately if the retainer lapses.</li>
+</ol>
+
+<h3>What We Don't Do (And Why)</h3>
+<ul>
+  <li><strong>We don't post content on behalf of creators</strong> — this creates platform liability; it is a natural expansion path once trust is established</li>
+  <li><strong>We don't guarantee brand deal revenue</strong> — we can't control brands; we can control the pipeline quality and tracking</li>
+  <li><strong>We implement and optimise alongside the client's existing strategy</strong> — we are not replacing strategic direction, we are removing the operational friction that stops strategy from executing</li>
+</ul>
+
+<hr class="section-divider" />
+
+<!-- SECTION 6 — PROOF -->
+<h2>6. Proof: What We've Already Built &amp; Run</h2>
+
+<p>This is not a concept. We built this system for our own internal use before selling it to anyone. That is the foundation of every sales conversation.</p>
+
+<div class="proof-box">
+  <h4>Our Internal Network — Live Now</h4>
+  <ul>
+    <li><strong>7 AI creator personas</strong> running across multiple platforms</li>
+    <li>Content generated daily — scripts, captions, hooks, platform-native formats</li>
+    <li>Brand deal pipeline active and tracked in the same system we sell to clients</li>
+    <li>Automated weekly reports sent internally every Monday</li>
+    <li>Full client portal available as a live demo at any point</li>
+  </ul>
+</div>
+
+<h3>How to Use This Proof in Sales</h3>
+<p>When a prospect asks "does it work?" or "can I see an example?" — the answer is not a case study PDF. It is:</p>
+<div class="callout">
+  <p><em>"Yes — let me show you the live system we use for our own network. I'll walk you through content we generated this week, the pipeline we track, and a report that went out Monday. Then we can talk about how we'd set this up for your roster."</em></p>
+</div>
+
+<h3>Metrics to Track and Surface Over Time</h3>
+<p>As we operate the internal network and onboard clients, we must capture these numbers to build the proof layer:</p>
+<table>
+  <tr><th>Metric</th><th>Why It Matters in Sales</th></tr>
+  <tr><td>Content pieces generated per creator per week</td><td>Makes output volume tangible</td></tr>
+  <tr><td>Hours saved per week vs. manual process</td><td>Answers "why not hire?"</td></tr>
+  <tr><td>Deals tracked / closed through pipeline</td><td>Revenue impact proxy</td></tr>
+  <tr><td>Report delivery rate (automated)</td><td>Reliability proof</td></tr>
+  <tr><td>Client portal logins per week</td><td>Engagement and value perception</td></tr>
+</table>
+
+<hr class="section-divider" />
+
+<!-- SECTION 7 -->
+<h2>7. Business Model &amp; Pricing</h2>
+<p><strong>One-time setup fee + monthly retainer. No equity. No revenue share. No project work.</strong></p>
+
+<table>
+  <tr><th>Tier</th><th>Creators Managed</th><th>Setup Fee</th><th>Monthly Retainer</th><th>Annual Value</th></tr>
+  <tr><td>Starter</td><td>Up to 5</td><td>£2,500</td><td>£2,000/mo</td><td>£24,000</td></tr>
+  <tr><td>Growth</td><td>Up to 15</td><td>£2,500</td><td>£3,500/mo</td><td>£42,000</td></tr>
+  <tr><td>Agency</td><td>Unlimited</td><td>£2,500</td><td>£6,000/mo</td><td>£72,000</td></tr>
+  <tr><td>Enterprise</td><td>Custom</td><td>TBD</td><td>Custom</td><td>TBD</td></tr>
+</table>
+
+<h3>The Pricing Justification (Always Have This Ready)</h3>
+<p>The retainer only needs to justify itself against the alternatives. At £2,000/month:</p>
+<table>
+  <tr><th>Alternative</th><th>Cost</th><th>vs. CAIG Starter</th></tr>
+  <tr><td>Part-time content coordinator</td><td>£18,000–£24,000/yr (£1,500–£2,000/mo)</td><td>Same cost, no system, high turnover risk</td></tr>
+  <tr><td>Freelance content manager</td><td>£1,500–£3,000/mo</td><td>Same cost, no portal, no pipeline, no automation</td></tr>
+  <tr><td>Building in-house with tools</td><td>40+ hours of setup + ongoing management time</td><td>100x more of your time, no guarantee of quality</td></tr>
+  <tr><td>Doing nothing</td><td>"Free" — but capped at current creator count forever</td><td>Opportunity cost of creators you can't add</td></tr>
+</table>
+
+<h3>Why This Model Is Structurally Correct</h3>
+<ul>
+  <li><strong>Setup fee:</strong> Covers build time and acts as a commitment filter — eliminates tyre-kickers</li>
+  <li><strong>Monthly retainer:</strong> Predictable on both sides; aligns incentives (we have to keep delivering)</li>
+  <li><strong>Access revocation:</strong> The system remains CAIG's IP permanently — non-payment = immediate access removal</li>
+</ul>
+
+<h3>Revenue Scenarios</h3>
+<table>
+  <tr><th>Scenario</th><th>Clients (End Yr 1)</th><th>MRR</th><th>ARR</th></tr>
+  <tr><td>Conservative</td><td>3</td><td>£9,000</td><td>£108,000</td></tr>
+  <tr><td>Base case</td><td>6</td><td>£21,000</td><td>£252,000</td></tr>
+  <tr><td>Optimistic</td><td>10</td><td>£38,000</td><td>£456,000</td></tr>
+</table>
+
+<h3>Gross Margin</h3>
+<p>Current operating costs (infrastructure, APIs): £200–£400/month. Gross margin at any client count: approximately <strong>95%</strong>. The constraint on growth is sales capacity, not cost.</p>
+
+<hr class="section-divider" />
+
+<!-- SECTION 8 -->
+<h2>8. Product: The Client Portal</h2>
+
+<h3>Client-Facing Features</h3>
+
+<h4>Dashboard (Overview Tab)</h4>
+<ul>
+  <li>Live network statistics: total creators, active deals, content generated this week</li>
+  <li>Recent activity feed — shows clients things are moving without them asking</li>
+</ul>
+
+<h4>Content Hub (Content Tab)</h4>
+<ul>
+  <li>All AI-generated content organised by creator and platform</li>
+  <li>Status tags: Draft / Ready / Scheduled / Posted</li>
+  <li>Client reviews and approves content directly — no email chains</li>
+</ul>
+
+<h4>Deal Pipeline (Deals Tab)</h4>
+<ul>
+  <li>All brand deals for the client's creators</li>
+  <li>Stage tracking: Outreach → Negotiation → Contract → Live → Payment → Complete</li>
+  <li>Deal values visible — clients can see the money moving</li>
+</ul>
+
+<h4>Automated Weekly Reports</h4>
+<ul>
+  <li>Sent every Monday at 8am UTC — no manual trigger, no human error</li>
+  <li>Covers content output, deals in progress, network summary</li>
+  <li>Sent from hello@cornerstoneaigroup.com via Resend</li>
+</ul>
+
+<h4>Onboarding Flow</h4>
+<ul>
+  <li>First login triggers a 3-step welcome modal — sets expectations immediately</li>
+  <li>Sets <code>onboarded = true</code> in database on completion</li>
+</ul>
+
+<h3>Admin Panel (Internal Only)</h3>
+<ul>
+  <li><strong>Client Management:</strong> create / enable / disable accounts; access revoked instantly on non-payment</li>
+  <li><strong>Creator Management:</strong> add creators, configure niche, platform, voice</li>
+  <li><strong>Content Generation:</strong> generate content batches; auto-syncs to client's portal</li>
+  <li><strong>Lead Tracker:</strong> 8-stage pipeline, notes, LinkedIn/email links, live MRR counter</li>
+  <li><strong>Weekly Reports:</strong> manual copy-paste templates for custom or ad hoc reports</li>
+</ul>
+
+<hr class="section-divider" />
+
+<!-- SECTION 9 -->
+<h2>9. Operations: How We Deliver</h2>
+
+<h3>Client Lifecycle</h3>
+<ol>
+  <li><strong>Lead</strong> — enters Lead Tracker via LinkedIn or inbound</li>
+  <li><strong>Discovery call</strong> — qualify, understand their roster and pain points, demo the live system</li>
+  <li><strong>Proposal</strong> — send tailored proposal tied to their specific outcomes (number of creators, deal volume)</li>
+  <li><strong>Onboarding</strong> — setup fee paid, account created, creators added, first content batch generated and reviewed together</li>
+  <li><strong>Active retainer</strong> — weekly content generation, pipeline maintenance, automated Monday reports</li>
+  <li><strong>Expansion</strong> — at 3 months, conversation about adding creators or upgrading tier</li>
+</ol>
+
+<h3>Weekly Operating Rhythm</h3>
+<table>
+  <tr><th>Day</th><th>Activity</th></tr>
+  <tr><td>Monday</td><td>Automated reports sent. Verify delivery. Check Lead Tracker. Review any client messages.</td></tr>
+  <tr><td>Tuesday</td><td>LinkedIn outreach (20 connects). Follow up on pending sequences.</td></tr>
+  <tr><td>Wednesday</td><td>Content generation batch for active clients. LinkedIn post.</td></tr>
+  <tr><td>Thursday</td><td>LinkedIn outreach. Respond to leads. Admin and pipeline updates.</td></tr>
+  <tr><td>Friday</td><td>LinkedIn post. Weekly review: pipeline, MRR, content output, churn risk.</td></tr>
+</table>
+
+<h3>Content Generation Process (Step-by-Step)</h3>
+<ol>
+  <li>Open admin panel → Content Hub</li>
+  <li>Select creator from list</li>
+  <li>Set platform (TikTok / Instagram / YouTube / LinkedIn / Twitter)</li>
+  <li>Generate content batch (5–10 pieces)</li>
+  <li>Review output for quality — reject and regenerate anything below standard</li>
+  <li>Mark as Ready — appears automatically in client's portal</li>
+</ol>
+
+<hr class="section-divider" />
+
+<!-- SECTION 10 -->
+<h2>10. Technology Stack</h2>
+
+<table>
+  <tr><th>Component</th><th>Tool</th><th>Monthly Cost</th></tr>
+  <tr><td>Frontend — app</td><td>React + Vite</td><td>Free</td></tr>
+  <tr><td>Frontend — website</td><td>React + Vite</td><td>Free</td></tr>
+  <tr><td>Hosting (both)</td><td>Vercel (free tier)</td><td>£0</td></tr>
+  <tr><td>Database + Auth</td><td>Supabase (free tier)</td><td>£0</td></tr>
+  <tr><td>Email delivery</td><td>Resend (free tier)</td><td>£0</td></tr>
+  <tr><td>Domain</td><td>Squarespace DNS</td><td>~£1/mo</td></tr>
+  <tr><td>AI content generation</td><td>OpenAI API</td><td>Pay per use (~£20–£80/mo at scale)</td></tr>
+</table>
+
+<p><strong>Total monthly infrastructure cost: £0–£100.</strong> Gross margin remains near 95% at any client volume.</p>
+
+<h3>Key Technical Decisions</h3>
+<ul>
+  <li><strong>RLS (Row Level Security):</strong> Clients cannot see each other's data — protected at the database level</li>
+  <li><strong>Content syncs to Supabase:</strong> Generated content written to <code>content_queue</code> — clients see it in real time without any localStorage dependency</li>
+  <li><strong>Automated email via pg_cron:</strong> <code>0 8 * * 1</code> fires every Monday 8am UTC — no manual trigger ever needed</li>
+  <li><strong>is_admin() security definer:</strong> Admin RLS policies use a security definer function to prevent recursion and ensure clean access control</li>
+</ul>
+
+<h3>Database Schema</h3>
+<table>
+  <tr><th>Table</th><th>Purpose</th></tr>
+  <tr><td>profiles</td><td>User accounts, role (admin/client), is_active, onboarded flag</td></tr>
+  <tr><td>creators</td><td>Creator profiles, niche, platform, audience, linked to client</td></tr>
+  <tr><td>deals</td><td>Brand deal pipeline, stage, value, linked to creator</td></tr>
+  <tr><td>content_queue</td><td>All generated content pieces, status, linked to creator</td></tr>
+</table>
+
+<hr class="section-divider" />
+
+<!-- SECTION 11 -->
+<h2>11. Sales &amp; Growth Strategy</h2>
+
+<h3>Phase 1 — Founder-Led Cold Outreach (Now → Month 6)</h3>
+<p>The fastest path to first revenue is direct, personalised LinkedIn outreach to decision-makers at UGC creator agencies. No paid ads. No events. No waiting for inbound.</p>
+<ul>
+  <li><strong>Daily target:</strong> 20 LinkedIn connection requests — targeted, not random</li>
+  <li><strong>Weekly target:</strong> 100 new connections, 3–5 replied conversations, 1–2 discovery calls booked</li>
+  <li><strong>Conversion target:</strong> 1 closed client per 6–8 weeks (conservative; based on zero social proof)</li>
+</ul>
+
+<h3>Phase 2 — Case Study &amp; Referral Engine (Month 3–9)</h3>
+<p>First 1–3 clients are the most important thing we will ever close. Once results exist:</p>
+<ul>
+  <li>Request a written testimonial and permission to document the outcome as a case study</li>
+  <li>Add to the website proof bar, testimonial section, and LinkedIn content</li>
+  <li>Ask explicitly: <em>"Do you know any other agencies who'd benefit from this?"</em></li>
+  <li>The creator economy is a small, well-connected world — one referral unlocks a cluster</li>
+</ul>
+
+<h3>Phase 3 — Inbound via LinkedIn Authority (Month 2–12)</h3>
+<p>Posting 3x per week on LinkedIn with the 4-angle content strategy (Section 16) builds compounding inbound. At 3–6 months of consistent posting, inbound enquiries begin supplementing cold outreach and the cost of acquisition drops significantly.</p>
+
+<h3>Phase 4 — Partnerships (Month 6+)</h3>
+<p>Identify referral partners who serve the same clients: creator economy lawyers, talent agency consultants, creator analytics platforms (Modash, Social Blade), accountants who work with creator businesses. Offer 10% of first month's retainer for qualified introductions.</p>
+
+<hr class="section-divider" />
+
+<!-- SECTION 12 — FIRST CLIENT STRATEGY -->
+<h2>12. First Client Strategy (Critical)</h2>
+
+<div class="callout-red">
+  <p><strong>This is the most important section in the document.</strong> Everything changes after the first paying client. Without proof, every sales conversation is harder than it needs to be. Getting client 1 is the only priority.</p>
+</div>
+
+<h3>The Reality of Pre-Proof Sales</h3>
+<p>Right now, every prospect will silently think:</p>
+<ul>
+  <li><em>"Does this actually work?"</em></li>
+  <li><em>"Is this business established?"</em></li>
+  <li><em>"What happens if it doesn't deliver?"</em></li>
+</ul>
+<p>We have strong answers to all three — we have a live system, a live network, and a live portal. But without a client success story, we are asking them to be first. That requires extra trust-building.</p>
+
+<h3>The Pilot Framing</h3>
+<p>For the first 1–2 clients, frame the engagement as a <strong>founding client programme</strong> rather than a standard retainer. This does two things: it reduces perceived risk and it creates a sense of exclusivity.</p>
+
+<div class="callout">
+  <p><em>"We're onboarding our first three agency partners at a founding rate — £1,500/month instead of £2,000, locked in for 6 months. In return, we ask for a case study and a testimonial if you're happy with the results. We're selective about who we take on at this stage."</em></p>
+</div>
+
+<h3>Overdeliver Heavily on the First Client</h3>
+<p>The first client is not just a revenue event. It is a proof event. Treat it accordingly:</p>
+<ul>
+  <li>Generate more content than contracted</li>
+  <li>Check in more frequently than required</li>
+  <li>Flag anything in their pipeline proactively — don't wait to be asked</li>
+  <li>At 30 days, send a written summary of everything delivered with metrics</li>
+  <li>At 60 days, start the case study conversation</li>
+</ul>
+
+<h3>The First Client Changes Everything</h3>
+<p>After the first paying client:</p>
+<ul>
+  <li>Sales conversations open with proof instead of concept</li>
+  <li>Objections shift from "does this work?" to "how much?" — a tractable problem</li>
+  <li>LinkedIn content becomes operator reporting instead of positioning — more credible and more effective</li>
+  <li>Closing the second client takes roughly half the effort of closing the first</li>
+</ul>
+
+<hr class="section-divider" />
+
+<!-- SECTION 13 -->
+<h2>13. Lead Management System</h2>
+
+<h3>Pipeline Stages</h3>
+<table>
+  <tr><th>Stage</th><th>Definition</th></tr>
+  <tr><td>New Lead</td><td>Added to tracker, not yet contacted</td></tr>
+  <tr><td>Contacted</td><td>Message 1 sent (LinkedIn connect or email)</td></tr>
+  <tr><td>Responded</td><td>They replied — interest confirmed or neutral</td></tr>
+  <tr><td>Discovery</td><td>Discovery call booked or completed</td></tr>
+  <tr><td>Proposal</td><td>Proposal/deck sent</td></tr>
+  <tr><td>Negotiation</td><td>Active back-and-forth on terms or pricing</td></tr>
+  <tr><td>Closed Won</td><td>Contract signed, setup fee invoiced</td></tr>
+  <tr><td>Closed Lost</td><td>Dead — record the reason for future learning</td></tr>
+  <tr><td>Nurture</td><td>Not ready now — follow up in 60–90 days</td></tr>
+</table>
+
+<h3>Lead Qualification Criteria</h3>
+<p>Pursue a lead if they meet 3 of 4:</p>
+<ol>
+  <li><strong>Agency size:</strong> They manage 3+ creators</li>
+  <li><strong>Revenue signal:</strong> Brand deal commissions, agency fees, or similar recurring revenue</li>
+  <li><strong>Pain signal:</strong> Posts about content ops challenges, team stress, or scaling difficulty</li>
+  <li><strong>Decision-maker:</strong> Founder, CEO, Head of Talent, or equivalent</li>
+</ol>
+
+<hr class="section-divider" />
+
+<!-- SECTION 14 -->
+<h2>14. Cold Outreach Playbooks</h2>
+
+<h3>LinkedIn 3-Message Sequence</h3>
+
+<h4>Message 1 — Connection Request Note</h4>
+<div class="callout">
+  <p><em>"Hi [First Name] — I run an AI content ops company specifically for creator agencies. Thought it might be worth connecting."</em></p>
+</div>
+
+<h4>Message 2 — Value Drop (3–5 days after acceptance)</h4>
+<div class="callout">
+  <p><em>Hey [First Name] — thanks for connecting.</em></p>
+  <br/>
+  <p><em>Quick context: I build AI content systems for creator agencies and run them on a monthly retainer. The goal is simple — more creator output, brand deals tracked end-to-end, and automated weekly reports — without you having to hire for it.</em></p>
+  <br/>
+  <p><em>We built and run the same system for our own network of creators, so I can show you exactly how it works — not a demo, a live system.</em></p>
+  <br/>
+  <p><em>Are content ops challenges something you're dealing with as you scale? Happy to jump on a quick call if it's relevant.</em></p>
+</div>
+
+<h4>Message 3 — Soft Close (5–7 days after Message 2, if no reply)</h4>
+<div class="callout">
+  <p><em>[First Name] — appreciate you're probably busy.</em></p>
+  <br/>
+  <p><em>One more message in case this lands at a better time. Most agencies I speak to hit the same ceiling around 10–20 creators — not because of demand, but because ops can't keep up. That's specifically what we fix.</em></p>
+  <br/>
+  <p><em>If that's relevant right now, I'd love 20 minutes to show you how this would work for your roster. If not, no worries — happy to stay connected.</em></p>
+</div>
+
+<h3>Cold Email 3-Message Sequence</h3>
+
+<h4>Email 1 — Subject: "Scaling [Agency Name] past [X] creators"</h4>
+<div class="callout">
+  <p><em>Hi [First Name],</em></p>
+  <br/>
+  <p><em>Found [Agency Name] while researching UGC agencies in [niche/region] — impressive roster.</em></p>
+  <br/>
+  <p><em>I run Cornerstone AI Group. We help creator agencies break through the operational ceiling that stops them scaling past 10–20 creators. Specifically: we build and run AI content systems on a monthly retainer — content generation for every creator, brand deal pipeline tracked end-to-end, and automated weekly reports. One system. No hiring.</em></p>
+  <br/>
+  <p><em>We built and run this for our own creator network first, so I can show you a live system — not a slide deck.</em></p>
+  <br/>
+  <p><em>Worth 20 minutes to see how this would work for [Agency Name]?</em></p>
+  <br/>
+  <p><em>Best,<br/>Joseph<br/>Cornerstone AI Group<br/>cornerstoneaigroup.com</em></p>
+</div>
+
+<h4>Email 2 — Subject: Re: Scaling [Agency Name] past [X] creators (5 days later)</h4>
+<div class="callout">
+  <p><em>Hi [First Name],</em></p>
+  <br/>
+  <p><em>Following up in case this got buried.</em></p>
+  <br/>
+  <p><em>The part I didn't mention: every client gets a live portal — content for all their creators, deal stages, weekly reports — accessible any time, without chasing their team or ours.</em></p>
+  <br/>
+  <p><em>If scaling without hiring is on your radar, happy to walk you through it. 20 minutes, see exactly how it would work for your agency.</em></p>
+  <br/>
+  <p><em>Joseph</em></p>
+</div>
+
+<h4>Email 3 — Subject: Last one from me (7 days later)</h4>
+<div class="callout">
+  <p><em>Hi [First Name],</em></p>
+  <br/>
+  <p><em>Last email — I promise.</em></p>
+  <br/>
+  <p><em>If the timing's wrong, completely understood. If scaling content ops ever becomes a priority, we're at cornerstoneaigroup.com or just reply here.</em></p>
+  <br/>
+  <p><em>Best, Joseph</em></p>
+</div>
+
+<hr class="section-divider" />
+
+<!-- SECTION 15 — OBJECTION HANDLING -->
+<h2>15. Objection Handling</h2>
+<p>Every prospect will raise one or more of these objections. Have a clean, confident answer ready.</p>
+
+<div class="objection-block">
+  <h4>Objection 1: "Why wouldn't I just hire someone?"</h4>
+  <p><strong>Answer:</strong> "A content coordinator costs £24,000–£40,000 a year before you factor in recruitment, oncosts, and management time. They get sick, leave, and need constant direction. With us, you pay less, get a complete system with a live portal and automated reporting, and nothing breaks when someone resigns. We're also available month to month — you're not locked into an employment contract."</p>
+</div>
+
+<div class="objection-block">
+  <h4>Objection 2: "How is this different from just using ChatGPT?"</h4>
+  <p><strong>Answer:</strong> "ChatGPT is a tool. We're a system that runs itself — content generation tuned for each of your creators, a pipeline that tracks every deal, reports that go out every Monday without you touching anything, and a portal your team can check any time. Using ChatGPT yourself is like owning a hammer versus hiring a construction company. We build and manage the whole thing."</p>
+</div>
+
+<div class="objection-block">
+  <h4>Objection 3: "What results can we actually expect?"</h4>
+  <p><strong>Answer:</strong> "The direct outputs are: 5–10 content pieces per creator per week, every brand deal tracked from outreach to payment, and a weekly report on all of it sent automatically. The business outcome those unlock is: you can take on more creators without adding headcount, and you have visibility on every deal without chasing anyone. We can show you the live system we use for our own network before you commit to anything."</p>
+</div>
+
+<div class="objection-block">
+  <h4>Objection 4: "Do you have case studies or proof this works?"</h4>
+  <p><strong>Answer (pre-first client):</strong> "We don't have a client case study yet — we're onboarding our first agency partners now. What we do have is a live system we've built and run for our own creator network, which I can walk you through right now. You'd be seeing real content, a real pipeline, real reports — not a concept. We're also offering a founding client rate to the first three agencies we take on."</p>
+</div>
+
+<div class="objection-block">
+  <h4>Objection 5: "What happens if we want to cancel?"</h4>
+  <p><strong>Answer:</strong> "30 days' notice, that's it. We don't lock you in. The system itself remains ours — that's how we keep the price this low — but you're never trapped. Most clients stay because the output is consistent and the value is clear, not because of a contract."</p>
+</div>
+
+<div class="objection-block">
+  <h4>Objection 6: "£2,000/month feels expensive"</h4>
+  <p><strong>Answer:</strong> "Compare it to what it replaces: a part-time hire costs the same or more, delivers less, and comes with employment risk. The question is whether the output justifies it — and the best way to answer that is to see the live system and decide if you'd use it. Want to spend 20 minutes doing that before making any decision?"</p>
+</div>
+
+<hr class="section-divider" />
+
+<!-- SECTION 16 -->
+<h2>16. Content &amp; Brand Strategy</h2>
+
+<h3>LinkedIn Posting Strategy: 3x Per Week</h3>
+<p>LinkedIn is the primary brand-building channel. The goal is not vanity metrics — it is to become recognisable to the 500–2,000 people who could buy from us, so when they're ready to buy, we are the first name they think of.</p>
+
+<h3>The 4 Content Angles</h3>
+
+<h4>Angle 1 — The Operator Post</h4>
+<p>Share what we're actually doing inside CAIG. What we built, tested, broke, fixed. Credibility through transparency and specificity.</p>
+<p><strong>Example hooks:</strong></p>
+<ul>
+  <li>"We ran 7 AI creator personas for 30 days. Here's the output data."</li>
+  <li>"How we automated our entire weekly reporting process — and what it replaced."</li>
+  <li>"We built a brand deal pipeline tracker from scratch. Here's why off-the-shelf tools didn't work."</li>
+</ul>
+
+<h4>Angle 2 — The Pain Point Post</h4>
+<p>Call out the specific experiences of agency owners. Make them feel seen before you make an offer.</p>
+<p><strong>Example hooks:</strong></p>
+<ul>
+  <li>"Creator agencies don't have a content problem. They have an operations problem."</li>
+  <li>"You added 3 new creators this month. Your content process just got 3x harder."</li>
+  <li>"The reason most creator agencies plateau at 10–20 creators has nothing to do with talent."</li>
+</ul>
+
+<h4>Angle 3 — The Insight Post</h4>
+<p>Teach something genuinely useful. Builds authority and attracts the right audience.</p>
+<p><strong>Example hooks:</strong></p>
+<ul>
+  <li>"5 things AI can actually replace in your content workflow (and 3 it can't)."</li>
+  <li>"The difference between using AI tools and running an AI system."</li>
+  <li>"Why the next 18 months will separate agencies that scale from those that stay stuck."</li>
+</ul>
+
+<h4>Angle 4 — The Proof Post</h4>
+<p>Real numbers, real output, real results. Even internal network data counts here. This is the conversion angle.</p>
+<p><strong>Example hooks:</strong></p>
+<ul>
+  <li>"We generated 47 pieces of content across 7 creator personas last week. Here's how."</li>
+  <li>"Our automated reporting sent 12 weekly reports this Monday. Zero manual work."</li>
+  <li>"[Client name] went from 8 to 14 creators in 6 weeks without hiring. Here's what changed." (once client proof exists)</li>
+</ul>
+
+<h3>Posting Schedule</h3>
+<table>
+  <tr><th>Day</th><th>Angle</th><th>Format</th></tr>
+  <tr><td>Monday</td><td>Pain Point</td><td>Short-form text (5–8 lines, punchy)</td></tr>
+  <tr><td>Wednesday</td><td>Operator</td><td>Medium-form text + screenshot of real output</td></tr>
+  <tr><td>Friday</td><td>Insight or Proof</td><td>Carousel or medium-form text</td></tr>
+</table>
+
+<h3>Engagement Rules</h3>
+<ul>
+  <li>Reply to every comment within 24 hours — every comment is a public signal of engagement</li>
+  <li>Comment meaningfully on 5–10 posts per day from target audience — this drives profile views</li>
+  <li>Connect with everyone who engages with your posts</li>
+  <li>DM anyone who leaves a comment with a direct question or strong interest signal</li>
+</ul>
+
+<hr class="section-divider" />
+
+<!-- SECTION 17 -->
+<h2>17. Financial Model &amp; Unit Economics</h2>
+
+<h3>Unit Economics Per Client</h3>
+<table>
+  <tr><th>Metric</th><th>Starter</th><th>Growth</th><th>Agency</th></tr>
+  <tr><td>Setup Fee</td><td>£2,500</td><td>£2,500</td><td>£2,500</td></tr>
+  <tr><td>Monthly Retainer</td><td>£2,000</td><td>£3,500</td><td>£6,000</td></tr>
+  <tr><td>Gross Margin</td><td>~95%</td><td>~95%</td><td>~95%</td></tr>
+  <tr><td>LTV (24 months)</td><td>£50,500</td><td>£86,500</td><td>£146,500</td></tr>
+  <tr><td>LTV (36 months)</td><td>£74,500</td><td>£128,500</td><td>£218,500</td></tr>
+</table>
+
+<h3>12-Month Revenue Projections (Base Case)</h3>
+<table>
+  <tr><th>Month</th><th>New Clients</th><th>Total Clients</th><th>MRR</th><th>Cumulative Revenue</th></tr>
+  <tr><td>1</td><td>0</td><td>0</td><td>£0</td><td>£0</td></tr>
+  <tr><td>2</td><td>1</td><td>1</td><td>£2,000</td><td>£4,500</td></tr>
+  <tr><td>3</td><td>1</td><td>2</td><td>£4,000</td><td>£11,000</td></tr>
+  <tr><td>4</td><td>0</td><td>2</td><td>£4,000</td><td>£15,000</td></tr>
+  <tr><td>5</td><td>1</td><td>3</td><td>£6,000</td><td>£23,500</td></tr>
+  <tr><td>6</td><td>1</td><td>4</td><td>£9,500</td><td>£35,500</td></tr>
+  <tr><td>7</td><td>1</td><td>5</td><td>£13,000</td><td>£51,000</td></tr>
+  <tr><td>8</td><td>0</td><td>5</td><td>£13,000</td><td>£64,000</td></tr>
+  <tr><td>9</td><td>1</td><td>6</td><td>£15,500</td><td>£82,000</td></tr>
+  <tr><td>10</td><td>1</td><td>7</td><td>£19,000</td><td>£103,500</td></tr>
+  <tr><td>11</td><td>1</td><td>8</td><td>£22,500</td><td>£128,500</td></tr>
+  <tr><td>12</td><td>1</td><td>9</td><td>£26,000</td><td>£157,000</td></tr>
+</table>
+
+<div class="callout"><p><strong>Year 1 revenue (base case): ~£150,000–£180,000 &nbsp;|&nbsp; Operating costs: ~£5,000–£10,000 &nbsp;|&nbsp; Profit: ~£140,000–£170,000</strong></p></div>
+
+<h3>Break-Even</h3>
+<p>Break-even is achieved at <strong>1 paying client</strong>. Setup fee alone covers months of infrastructure costs. This is an extremely low-risk business model with no meaningful fixed cost base until the first hire.</p>
+
+<hr class="section-divider" />
+
+<!-- SECTION 18 -->
+<h2>18. Client Success &amp; Retention</h2>
+
+<h3>The Retention Problem to Solve</h3>
+<p>Our model depends on long LTV and low churn. The risk is clients treating CAIG as a "nice-to-have ops layer" rather than a revenue-critical system. The antidote is making our output visibly tied to business outcomes every single month.</p>
+
+<div class="callout-red">
+  <p><strong>Important:</strong> Clients will not think "content ops issue" when things go wrong. They will think "this isn't working." We must pre-empt that by consistently surfacing wins — not just output.</p>
+</div>
+
+<h3>What "Visible Wins" Looks Like</h3>
+<ul>
+  <li>"We generated X pieces of content this week — here's what's ready for review"</li>
+  <li>"This brand deal moved from Negotiation to Contract — here's the timeline"</li>
+  <li>"Your Monday report went out to all 3 creators automatically — here's a copy"</li>
+  <li>"You now have 14 content pieces queued across 3 creators — enough for 2 weeks of posting"</li>
+</ul>
+<p>Wins should be surfaced in the portal, in the automated reports, and proactively in check-in messages. Never wait to be asked.</p>
+
+<h3>Churn Warning Signs</h3>
+<ul>
+  <li>Client hasn't logged into the portal in 3+ weeks</li>
+  <li>Client is slow to respond to check-in messages</li>
+  <li>Client questions pricing without prompting</li>
+  <li>Client mentions "reviewing costs" or "reassessing tools"</li>
+</ul>
+<p><strong>Response:</strong> Proactively reach out within 48 hours. Offer a brief call. Present a written summary of recent output. If necessary, offer a temporary 20% discount rather than losing the retainer — recovering a client costs 10x more than retaining one.</p>
+
+<h3>Retention Mechanics</h3>
+<ul>
+  <li><strong>Monthly check-in call</strong> (Growth and Agency tiers): 20 minutes, show output, plan next month</li>
+  <li><strong>Quarterly system review:</strong> Identify new capabilities to add, explore expansion to additional creators</li>
+  <li><strong>Case study at 6 months:</strong> Clients who agree to a case study are significantly less likely to churn — they are invested in the relationship and the narrative</li>
+</ul>
+
+<h3>Per-Client Metrics to Track</h3>
+<table>
+  <tr><th>Metric</th><th>Target</th></tr>
+  <tr><td>Content pieces generated per creator per week</td><td>≥5</td></tr>
+  <tr><td>Portal logins per month</td><td>≥4</td></tr>
+  <tr><td>Active deals in pipeline</td><td>≥3</td></tr>
+  <tr><td>Report delivery</td><td>Every Monday, automated — zero failures</td></tr>
+  <tr><td>Response time to client messages</td><td>&lt;4 hours</td></tr>
+  <tr><td>Monthly "visible win" sent proactively</td><td>≥1 per client</td></tr>
+</table>
+
+<hr class="section-divider" />
+
+<!-- SECTION 19 -->
+<h2>19. Team &amp; Hiring Roadmap</h2>
+
+<h3>Current State — Sole Founder</h3>
+<p>All roles held by one person: CEO, Product, Operations, Sales, Marketing. Sustainable to approximately £15,000–£20,000 MRR with tight systems and the weekly operating rhythm defined in Section 9.</p>
+
+<h3>First Hire — Operations Manager (Month 6–9)</h3>
+<ul>
+  <li><strong>Trigger:</strong> 5+ active clients; founder spending more than 50% of time on delivery rather than sales</li>
+  <li><strong>Role:</strong> Day-to-day content generation, portal updates, weekly report QA, client check-in scheduling</li>
+  <li><strong>Cost:</strong> £24,000–£32,000/year (UK, part-time or full-time)</li>
+  <li><strong>Impact:</strong> Frees founder entirely for sales and product — directly accelerates revenue growth</li>
+</ul>
+
+<h3>Second Hire — Sales Development Representative (Month 9–12)</h3>
+<ul>
+  <li><strong>Trigger:</strong> £15,000+ MRR; founder has proven and documented the sales process</li>
+  <li><strong>Role:</strong> LinkedIn outreach, initial qualification, discovery call booking</li>
+  <li><strong>Cost:</strong> £22,000–£28,000/year base + commission</li>
+  <li><strong>Impact:</strong> Doubles or triples top-of-funnel volume without founder time investment</li>
+</ul>
+
+<h3>Third Hire — Senior AI Operator (Month 12–18)</h3>
+<ul>
+  <li><strong>Trigger:</strong> 10+ clients; content quality oversight becomes a full-time concern</li>
+  <li><strong>Role:</strong> AI system quality, creator persona management, content pipeline optimisation</li>
+  <li><strong>Cost:</strong> £35,000–£45,000/year</li>
+</ul>
+
+<hr class="section-divider" />
+
+<!-- SECTION 20 -->
+<h2>20. Legal, IP &amp; Contractual Structure</h2>
+
+<h3>Company Structure</h3>
+<p>Operate as a <strong>UK Limited Company (Ltd)</strong>. Incorporate via Companies House (£50, same-day online). Provides limited liability, VAT registration capability, and professional credibility with clients.</p>
+
+<h3>Intellectual Property — The Non-Negotiable</h3>
+<div class="callout-red">
+  <p><strong>We own the system. Permanently. Without exception. This must be in every contract.</strong></p>
+</div>
+<ul>
+  <li>The AI system, workflows, prompts, portal, and infrastructure built for the client remain CAIG's intellectual property</li>
+  <li>The client is purchasing <strong>access to a managed service</strong> — not a deliverable, not a product, not a licence</li>
+  <li>Access is contingent on active retainer payments</li>
+  <li>Termination: 30-day notice (client-initiated) or immediate (non-payment or material breach)</li>
+</ul>
+
+<h3>Master Services Agreement (MSA)</h3>
+<p>Required before any client signs. Have it drafted by a UK commercial solicitor (cost: £500–£1,500). Must cover:</p>
+<ul>
+  <li>Scope of service and deliverables</li>
+  <li>IP ownership (as above — in plain language, not buried in boilerplate)</li>
+  <li>Payment terms (setup fee upfront; monthly retainer by standing order)</li>
+  <li>Termination conditions and notice period</li>
+  <li>Confidentiality obligations on both sides</li>
+  <li>Data processing and GDPR compliance</li>
+  <li>Limitation of liability</li>
+</ul>
+
+<h3>GDPR Requirements</h3>
+<ul>
+  <li>Privacy Policy on website (legally required — currently linked in footer)</li>
+  <li>Terms of Service / Client Agreement on website</li>
+  <li>Basic Record of Processing Activities (ROPA) — document what data we process and why</li>
+  <li>Ensure Supabase data is processed in EU or UK region</li>
+</ul>
+
+<hr class="section-divider" />
+
+<!-- SECTION 21 -->
+<h2>21. 12-Month Roadmap</h2>
+
+<h3>Q1 (Months 1–3) — First Client Above All Else</h3>
+<p><strong>Goal: Close first paying client. Everything else is secondary.</strong></p>
+<ul>
+  <li>Begin LinkedIn outreach immediately: 20 connects/day, Message 1 on accept</li>
+  <li>Post 3x/week on LinkedIn using the 4-angle strategy</li>
+  <li>Add first 10 prospects to Lead Tracker with qualification notes</li>
+  <li>Book 3+ discovery calls using the live system as the demo</li>
+  <li>Close first client using founding client framing if needed</li>
+  <li>Overdeliver on first client — every output metric above contracted level</li>
+  <li>Incorporate as UK Ltd</li>
+  <li>Engage solicitor for MSA — do not skip this</li>
+</ul>
+<p><strong>Revenue target end Q1: £4,500–£9,000</strong></p>
+
+<h3>Q2 (Months 4–6) — Prove the Model, Build Proof Layer</h3>
+<p><strong>Goal: 3–5 paying clients. First case study. Outreach systemised.</strong></p>
+<ul>
+  <li>Scale outreach to 30–40 connects/day</li>
+  <li>Request written testimonial from initial client at 60 days</li>
+  <li>Document first case study (with consent) — metrics, before/after, quote</li>
+  <li>Add case study and testimonial to website and LinkedIn</li>
+  <li>Begin referral conversations with existing clients</li>
+  <li>Explore partnership introductions with adjacent service providers</li>
+</ul>
+<p><strong>Revenue target end Q2: £12,000–£21,000 MRR</strong></p>
+
+<h3>Q3 (Months 7–9) — Team and Operations Infrastructure</h3>
+<p><strong>Goal: 6–8 clients. First hire. Documented processes.</strong></p>
+<ul>
+  <li>Hire part-time Operations Manager</li>
+  <li>Document every delivery process as a handover-ready playbook</li>
+  <li>Build and publish first public case study</li>
+  <li>Launch formal referral programme</li>
+  <li>Increase LinkedIn post production value — longer-form, data-led content</li>
+</ul>
+<p><strong>Revenue target end Q3: £20,000–£30,000 MRR</strong></p>
+
+<h3>Q4 (Months 10–12) — Scale Toward £50K MRR</h3>
+<p><strong>Goal: 10+ clients. Predictable engine. First SDR hire.</strong></p>
+<ul>
+  <li>Hire SDR — hand off LinkedIn outreach volume to free founder for larger deals</li>
+  <li>Launch Agency tier actively — begin targeting larger agencies (20+ creators)</li>
+  <li>CAIG becomes a recognisable name in creator economy circles on LinkedIn</li>
+  <li>Year-end review: financial performance, team structure, product roadmap for Year 2</li>
+</ul>
+<p><strong>Revenue target end Q4: £35,000–£50,000 MRR</strong></p>
+
+<hr class="section-divider" />
+
+<!-- SECTION 22 -->
+<h2>22. Long-Term Vision: The CAIG Group</h2>
+
+<h3>The 5-Year Vision</h3>
+<p>Cornerstone AI Group is the first brand within a broader group of AI-powered managed service businesses. The long-term model mirrors a professional services group — multiple specialised divisions under one holding company, each serving a distinct niche with managed AI operations. One set of infrastructure. Multiple markets. Compounding revenue.</p>
+
+<h3>CAIG Group Structure (Target: Year 3–5)</h3>
+<table>
+  <tr><th>Division</th><th>Market</th><th>Core Problem Solved</th></tr>
+  <tr><td>Cornerstone AI Group</td><td>Creator Agencies</td><td>Content ops ceiling (current)</td></tr>
+  <tr><td>Division 2</td><td>E-commerce Brands</td><td>AI content + CX operations</td></tr>
+  <tr><td>Division 3</td><td>B2B Companies</td><td>AI sales ops + outreach infrastructure</td></tr>
+  <tr><td>Division 4</td><td>Real Estate / Property</td><td>AI marketing and listing operations</td></tr>
+</table>
+
+<p>Each division follows the same model: build it internally first, productise, enter the market as a managed service on a retainer, own the IP permanently.</p>
+
+<h3>The Acquisition Thesis</h3>
+<p>At £500,000–£1,000,000 ARR across divisions, CAIG Group is a credible acquisition target for AI services holding companies, private equity firms targeting the creator economy, or large agencies seeking to bring AI operations in-house.</p>
+
+<div class="callout">
+  <p><strong>At 3–5x ARR multiple (conservative for recurring revenue businesses): £1.5M–£5M exit within 5 years from a standing start, with minimal fixed cost base and near-zero capital requirement to build.</strong></p>
+</div>
+
+<hr class="section-divider" />
+
+<!-- APPENDIX A -->
+<h2>Appendix A — Key Infrastructure &amp; Credentials</h2>
+<p><em>Internal reference only — do not share externally or commit to version control.</em></p>
+<div class="appendix-block">
+<table>
+  <tr><th>Item</th><th>Value</th></tr>
+  <tr><td>Supabase Project URL</td><td>https://zvyioxhwdyocaanzcgqf.supabase.co</td></tr>
+  <tr><td>Admin Login</td><td>hello@cornerstoneaigroup.com</td></tr>
+  <tr><td>App Portal</td><td>app.cornerstoneaigroup.com</td></tr>
+  <tr><td>Marketing Site</td><td>cornerstoneaigroup.com</td></tr>
+  <tr><td>Edge Function</td><td>weekly-report (deployed, Supabase)</td></tr>
+  <tr><td>Cron Schedule</td><td>0 8 * * 1 — Monday 8am UTC</td></tr>
+  <tr><td>Email Sends From</td><td>hello@cornerstoneaigroup.com (Resend)</td></tr>
+</table>
+</div>
+
+<!-- APPENDIX B -->
+<h2>Appendix B — Glossary</h2>
+<table>
+  <tr><th>Term</th><th>Definition</th></tr>
+  <tr><td>MRR</td><td>Monthly Recurring Revenue — total value of active monthly retainers</td></tr>
+  <tr><td>ARR</td><td>Annual Recurring Revenue — MRR × 12</td></tr>
+  <tr><td>LTV</td><td>Lifetime Value — total expected revenue from one client over their relationship with CAIG</td></tr>
+  <tr><td>Churn</td><td>A client who cancels their retainer</td></tr>
+  <tr><td>RLS</td><td>Row Level Security — Supabase database-level access control</td></tr>
+  <tr><td>UGC</td><td>User Generated Content — creator-made content used by brands</td></tr>
+  <tr><td>MSA</td><td>Master Services Agreement — the legal contract between CAIG and each client</td></tr>
+  <tr><td>SDR</td><td>Sales Development Representative — responsible for outreach and lead qualification</td></tr>
+  <tr><td>ROPA</td><td>Record of Processing Activities — GDPR compliance document</td></tr>
+  <tr><td>Pilot / Founding Client</td><td>A discounted or reduced-scope first engagement used to generate proof and case study material</td></tr>
+</table>
+
+<hr class="section-divider" />
+<p style="text-align:center; color:#999; font-size:9pt; margin-top:40px;">
+  End of Document — Cornerstone AI Group CEO Blueprint v2.0<br/>
+  Confidential. Internal use only.
+</p>
+
+</body>
+</html>
