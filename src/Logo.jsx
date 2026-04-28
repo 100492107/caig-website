@@ -1,47 +1,79 @@
-/* ── CAIG LOGO MARK ─────────────────────────────────────────────
-   Geometric cornerstone mark — a pentagon (square with beveled
-   top-right corner) referencing both a cornerstone/foundation stone
-   and AI precision. Works at any size, amber on dark or light.
+/* ── CAIG LOGO ──────────────────────────────────────────────────
+   C+A monogram mark — interlocking letterforms on a gold gradient
+   square. C arc left, A strokes right, shared vertical rhythm.
+   Works at 20px–80px. Gold on dark or light.
 ──────────────────────────────────────────────────────────────── */
 
-export function LogoMark({ size = 24 }) {
+export function LogoMark({ size = 32 }) {
+  const id = 'caig-grad'
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 40 40"
       width={size}
       height={size}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ flexShrink: 0 }}
     >
-      {/* Main pentagon (cornerstone body) */}
-      <path d="M3 3 L15 3 L21 9 L21 21 L3 21 Z" fill="#F59E0B" />
-      {/* Beveled corner triangle — depth effect */}
-      <path d="M15 3 L21 9 L15 9 Z" fill="rgba(0,0,0,0.22)" />
-      {/* Horizontal bisector */}
-      <line x1="3" y1="12" x2="21" y2="12" stroke="rgba(0,0,0,0.14)" strokeWidth="1" />
-      {/* Vertical bisector */}
-      <line x1="12" y1="3" x2="12" y2="21" stroke="rgba(0,0,0,0.14)" strokeWidth="1" />
+      <defs>
+        <linearGradient id={id} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#F7B034" />
+          <stop offset="100%" stopColor="#C97A00" />
+        </linearGradient>
+      </defs>
+
+      {/* Background square */}
+      <rect width="40" height="40" rx="10" fill={`url(#${id})`} />
+
+      {/* Subtle inner highlight */}
+      <rect width="40" height="40" rx="10" fill="url(#caig-shine)" opacity="0.18" />
+      <defs>
+        <linearGradient id="caig-shine" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#fff" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#fff" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+
+      {/* C — arc open to the right, left half */}
+      <path
+        d="M22 11 C14 11 10 14.5 10 20 C10 25.5 14 29 22 29"
+        stroke="white"
+        strokeWidth="3"
+        strokeLinecap="round"
+        fill="none"
+      />
+
+      {/* A — two diagonal strokes meeting at apex, right half */}
+      {/* Left leg of A */}
+      <line x1="22" y1="29" x2="29" y2="11" stroke="white" strokeWidth="3" strokeLinecap="round" />
+      {/* Right leg of A — shared apex at 29,11 */}
+      <line x1="29" y1="11" x2="36" y2="29" stroke="white" strokeWidth="3" strokeLinecap="round" />
+      {/* Crossbar */}
+      <line x1="25" y1="22" x2="33" y2="22" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
     </svg>
   )
 }
 
 export function Logo({
-  size = 24,
+  size = 32,
   showWordmark = true,
-  sub = 'AI Engineering Studio',
+  sub = 'AI Content Systems',
   className = '',
 }) {
   return (
-    <div className={`caig-logo ${className}`} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+    <div
+      className={`caig-logo ${className}`}
+      style={{ display: 'flex', alignItems: 'center', gap: 10 }}
+    >
       <LogoMark size={size} />
       {showWordmark && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
           <span
             style={{
               fontWeight: 700,
-              fontSize: size * 0.625,
+              fontSize: size * 0.5,
               letterSpacing: '-0.03em',
-              color: 'var(--t0)',
+              color: 'var(--t0, #fff)',
               lineHeight: 1,
               whiteSpace: 'nowrap',
             }}
@@ -51,8 +83,8 @@ export function Logo({
           {sub && (
             <span
               style={{
-                fontSize: size * 0.42,
-                color: 'var(--t3)',
+                fontSize: size * 0.34,
+                color: 'var(--t3, rgba(255,255,255,0.45))',
                 letterSpacing: '0.01em',
                 lineHeight: 1,
                 fontWeight: 400,
