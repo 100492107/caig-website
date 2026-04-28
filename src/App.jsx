@@ -1146,7 +1146,7 @@ function UrgencyBanner() {
 
 /* ── CONTACT ─────────────────────────────────────────────────── */
 function Contact() {
-  const [form, setForm] = useState({ name: '', company: '', email: '', service: '', message: '' })
+   const [form, setForm] = useState({ name: '', company: '', email: '', phone: '', service: '', message: '' })
   const [status, setStatus] = useState('idle')
 
   const set = (k) => (e) => setForm(f => ({ ...f, [k]: e.target.value }))
@@ -1224,16 +1224,22 @@ function Contact() {
                     <div className="frow">
                       <div className="fg">
                         <label className="fl">Full Name</label>
-                        <input className="fi" name="name" placeholder="Jane Smith" value={form.name} onChange={set('name')} required />
+                        <input className="fi" name="name" placeholder="Jane Smith" value={form.name} onChange={set('name')} />
                       </div>
                       <div className="fg">
                         <label className="fl">Company</label>
                         <input className="fi" name="company" placeholder="Acme Ltd" value={form.company} onChange={set('company')} />
                       </div>
                     </div>
-                    <div className="fg">
-                      <label className="fl">Work Email</label>
-                      <input className="fi" type="email" name="email" placeholder="jane@company.com" value={form.email} onChange={set('email')} required />
+                    <div className="frow">
+                      <div className="fg">
+                        <label className="fl">Work Email</label>
+                        <input className="fi" type="email" name="email" placeholder="jane@company.com" value={form.email} onChange={set('email')} />
+                      </div>
+                      <div className="fg">
+                        <label className="fl">Phone Number</label>
+                        <input className="fi" type="tel" name="phone" placeholder="+44 7700 900000" value={form.phone} onChange={set('phone')} />
+                      </div>
                     </div>
                     <div className="fg">
                       <label className="fl">I am interested in</label>
