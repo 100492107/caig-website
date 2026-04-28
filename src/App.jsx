@@ -472,7 +472,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.55 }}
           >
-            Most creator agencies plateau around 10–20 creators — not because demand drops,
+            Most creator agencies hit an ops ceiling from 3+ creators — not because demand drops,
             but because ops can't keep up. We built an AI system to run our own creator network.
             Now we build and manage the same for agencies ready to scale past that ceiling.
           </motion.p>
@@ -506,6 +506,28 @@ function Hero() {
           </motion.div>
         </div>
       </div>
+
+      {/* ── Proof stats ── */}
+      <motion.div
+        className="hero-stats"
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.9, duration: 0.6 }}
+      >
+        {[
+          { val: '7',    suf: ' personas', lbl: 'AI-powered UGC creator personas live in our own network right now', amber: true },
+          { val: '4+',   suf: ' hrs',      lbl: 'Saved per creator per week on content, captions, briefs, and brand outreach', amber: false },
+          { val: '100%', suf: '',           lbl: 'Of creator content and partnership proposals run through AI — no manual writing', amber: false },
+          { val: '30',   suf: ' days',      lbl: 'Notice to cancel — no contracts, no lock-in, no penalty', amber: false },
+        ].map((s, i) => (
+          <div className="hero-stat" key={i}>
+            <div className="hero-stat-val">
+              <span style={{ color: s.amber ? 'var(--amber)' : 'var(--t0)' }}>{s.val}{s.suf}</span>
+            </div>
+            <div className="hero-stat-lbl">{s.lbl}</div>
+          </div>
+        ))}
+      </motion.div>
 
       <HeroTicker />
     </section>
@@ -1312,7 +1334,6 @@ function MainSite() {
       <Nav />
       <main>
         <Hero />
-        <ProofBar />
         <Problem />
         <Solution />
         <Testimonials />
