@@ -39,7 +39,7 @@ export default async function handler(req) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: 'CAIG Website <onboarding@resend.dev>',
+      from: 'Cornerstone AI Group <onboarding@resend.dev>',
       to: ['hello@cornerstoneaigroup.com'],
       reply_to: email,
       subject: `New enquiry from ${name}${company ? ` — ${company}` : ''}`,
