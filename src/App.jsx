@@ -179,12 +179,12 @@ function Nav() {
     <nav className={`nav${scrolled ? ' scrolled' : ''}`}>
       <div className="nav-inner">
         <a href="/" className="nav-logo">
-          <Logo size={22} sub="AI Systems" />
+          <Logo size={22} sub="Content Group" />
         </a>
         <ul className="nav-links">
           {[
             ['#problem', 'The Problem'],
-            ['#services', 'What We Build'],
+            ['#services', 'What You Get'],
             ['#how-it-works', 'How It Works'],
             ['#testimonials', 'Results'],
             ['#faq', 'FAQ'],
@@ -193,7 +193,7 @@ function Nav() {
           ))}
         </ul>
         <div className="nav-right">
-          <a href="#contact" className="btn btn-amber btn-md">Book a Free Call</a>
+          <a href="#contact" className="btn btn-amber btn-md">Get Started</a>
         </div>
       </div>
     </nav>
@@ -204,7 +204,7 @@ function Nav() {
 const HD_MODULES = [
   {
     id: 'content',
-    label: 'Content Hub',
+    label: 'Content Engine',
     color: '#34d399',
     client: 'Cara & Lila · @caraandlila · TikTok',
     type: 'Budget Travel · Hook + Caption',
@@ -226,7 +226,7 @@ Full breakdown in the link 👇
   },
   {
     id: 'partnerships',
-    label: 'Brand Partnerships',
+    label: 'Brand Proposals',
     color: '#818cf8',
     client: 'BYLT Basics · Sponsorship Deck',
     type: 'Maya Chen · Fitness · Partnership Proposal',
@@ -251,52 +251,56 @@ PROPOSED DELIVERABLES
 INVESTMENT: £1,200 flat + 10% affiliate`,
   },
   {
-    id: 'network',
-    label: 'Network Health',
+    id: 'strategy',
+    label: 'Content Strategy',
     color: '#f59e0b',
     client: 'Zara Williams · @zara.sportsgirl',
-    type: 'Football · Growth Diagnosis',
-    output: `NETWORK HEALTH CHECK
-Zara Williams · Football · Month 3
+    type: 'Football · Monthly Content Plan',
+    output: `CONTENT STRATEGY — MONTH 3
+Zara Williams · Football Content Creator
 
 WHAT'S WORKING
 Match verdict posts — tactical breakdowns
 from a female fan perspective. Outperforming
 every other pillar by 3× on TikTok.
 
-WHAT TO STOP
-Behind-the-scenes content. Low views,
-low saves. Drop it, reallocate to match day.
+DOUBLE DOWN THIS MONTH
+→ Post every match day by 10pm
+→ Add 60s "hot take" format alongside recap
+→ Test pre-match prediction format
 
-PRIMARY FOCUS: Land first brand deal
-→ Target: sports apparel + stadium experience brands
-→ Follower threshold: 8,200 (need 10K for priority DM)
-→ Action: start gifting outreach this week`,
+CONTENT CALENDAR
+Week 1: 4 posts (2 match day, 1 opinion, 1 behind scenes)
+Week 2: 4 posts (2 match day, 1 opinion, 1 collab pitch)
+Week 3: 5 posts (Champions League week)
+Week 4: 3 posts + monthly wrap`,
   },
   {
-    id: 'automate',
-    label: 'Creator Ops',
+    id: 'captions',
+    label: 'Caption Library',
     color: '#fb923c',
     client: 'Nova · @nova.plays · Gaming',
-    type: 'Brand Outreach Automation Plan',
-    output: `CREATOR OPS PLAN
-Nova (@nova.plays) · Gaming · Solo Operation
+    type: 'Weekly Caption Batch · 8 posts',
+    output: `CAPTION BATCH — WEEK 14
+Nova (@nova.plays) · Gaming · 8 posts ready
 
-TOP PRIORITY: Brand Outreach Follow-ups
+POST 1 — NEW GAME DROP
+"Stayed up until 4am for this.
+Zero regrets. Full review incoming."
 
-AUTOMATION STACK
-→ Notion brand CRM — track every lead by stage
-→ Gmass sequences — auto follow-up day 3, 7, 14
-→ Calendly — brands book calls without back-forth
-→ Airtable pipeline — one view, all active deals
+POST 2 — RANKED GRIND
+"Climbed 400 LP in 6 hours.
+My hands are shaking. I need water."
 
-90-DAY ROADMAP
-Days 1–30: CRM live, first 20 brands contacted
-Days 31–60: Add payment tracking via Stripe
-Days 61–90: Full ops on 2h/week admin max
+POST 3 — COMMUNITY POLL
+"Hot take incoming — drop your answer below
+before I say something controversial."
 
-Current admin time: ~8h/week
-Target: under 2h/week`,
+POST 4 — BRAND COLLAB (Secretlab)
+"Finally upgraded the setup.
+The difference is actually unreal — details below."
+
+[+ 4 more captions ready to schedule]`,
   },
 ]
 
@@ -403,14 +407,14 @@ function HeroDashboard() {
 
 /* ── HERO TICKER ──────────────────────────────────────────────── */
 const TICKER_ITEMS = [
-  { icon: '↑', text: 'Stop paying staff to do work a system should handle' },
-  { icon: '⚡', text: 'Leads responded to in seconds — not hours' },
-  { icon: '✓', text: 'Fully managed — we build it, we run it, you see results' },
-  { icon: '↑', text: 'Cut ops overhead without cutting output' },
-  { icon: '★', text: 'Built on systems we run in our own business first' },
-  { icon: '⚡', text: 'One system replaces three manual processes' },
+  { icon: '✓', text: 'Scripts, hooks, and captions written and delivered every week' },
+  { icon: '↑', text: 'Your creators post consistently — without briefing anyone' },
+  { icon: '★', text: 'Brand proposals written and sent on your behalf' },
+  { icon: '⚡', text: 'Content produced by AI, quality-checked by our team' },
   { icon: '✓', text: 'Cancel with 30 days notice — no lock-in ever' },
-  { icon: '↑', text: 'More revenue. Less time spent running the machine.' },
+  { icon: '↑', text: 'More output. Less time spent writing.' },
+  { icon: '★', text: 'Everything delivered via your private client portal' },
+  { icon: '⚡', text: 'We write it. You approve it. Your creators post it.' },
 ]
 
 function HeroTicker() {
@@ -452,7 +456,7 @@ function Hero() {
               transition={{ delay: 0.1, duration: 0.5 }}
             >
               <div className="badge" style={{ display: 'inline-flex', marginBottom: '28px' }}>
-                <span className="badge-dot" />We build and run AI systems for businesses — live, right now
+                <span className="badge-dot" />Done-for-you AI content creation for creator agencies
               </div>
             </motion.div>
           </div>
@@ -463,9 +467,9 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            Your business is losing hours every day<br />
-            to work that <span className="hl">a system should be doing.</span><br />
-            We build that system.
+            Your creators need content.<br />
+            <span className="hl">We write it, deliver it,</span><br />
+            and keep it coming.
           </motion.h1>
 
           <motion.p
@@ -474,7 +478,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.55 }}
           >
-            You are spending money on staff doing work that should be automated. You are losing leads because no system is catching them. You are making decisions blind because nobody has built you the infrastructure to run clearly. We fix that. We build bespoke AI systems that run your operations — so you can run your business.
+            CAIG produces AI-powered scripts, hooks, captions, and brand proposals for your creator roster — every week, without you writing a word. You manage the relationships. We produce the content. Your creators stay consistent, on-brand, and posting.
           </motion.p>
 
           <motion.div
@@ -484,11 +488,11 @@ function Hero() {
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             <a href="#contact" className="btn btn-amber btn-lg breathe">
-              Book a Free Strategy Call
+              See How It Works
               <Icon.ArrowRight size={16} />
             </a>
             <a href="#services" className="btn btn-ghost btn-lg">
-              See What We Build
+              View Pricing
             </a>
           </motion.div>
 
@@ -498,9 +502,9 @@ function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.75, duration: 0.6 }}
           >
-            <span style={{ color: 'var(--t3)' }}>We run it ourselves first — we know it works</span>
+            <span style={{ color: 'var(--t3)' }}>Content delivered weekly to your private portal</span>
             <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
-            Fully managed — we build it and run it for you
+            Written by AI, reviewed by our team
             <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
             Cancel with 30 days notice
           </motion.div>
@@ -515,10 +519,10 @@ function Hero() {
         transition={{ delay: 0.9, duration: 0.6 }}
       >
         {[
-          { val: '80%',  suf: '',        lbl: 'Of tasks business owners do manually could be significantly reduced with the right AI systems in place', amber: true },
-          { val: '£28K', suf: '+',       lbl: 'Average annual cost of a single ops hire — before NI, benefits, management time, and sick days', amber: false },
-          { val: '6×',   suf: '',        lbl: 'More leads responded to when an AI intake system handles enquiries instantly vs a human checking email', amber: false },
-          { val: '30',   suf: ' days',   lbl: 'Notice to cancel — no contracts, no lock-in, no penalty. We keep clients because the system works.', amber: false },
+          { val: '4+',   suf: ' hrs',   lbl: 'Saved per creator per week — no more briefing, writing, or chasing content', amber: true },
+          { val: '20',   suf: '+',      lbl: 'Pieces of content produced per creator per month on our Foundation plan', amber: false },
+          { val: '100%', suf: '',       lbl: 'Of content written and delivered by CAIG — you review, approve, and post', amber: false },
+          { val: '30',   suf: ' days',  lbl: 'Notice to cancel — no contracts, no lock-in, no penalty. Ever.', amber: false },
         ].map((s, i) => (
           <div className="hero-stat" key={i}>
             <div className="hero-stat-val">
@@ -541,10 +545,10 @@ function ProofBar() {
       <div className="container">
         <div className="proof-bar-inner">
         {[
-          { text: '7',    suffix: ' personas', label: 'AI-powered UGC creator personas running live in our own network right now', amber: true },
-          { text: '4+',   suffix: ' hrs',      label: 'Saved per creator per week on content, captions, briefs, and brand outreach admin', amber: false },
-           { text: '100%', suffix: '',           label: 'Of content, proposals, and ops are guided by AI — built and managed by our team', amber: false },
-          { text: '30',   suffix: ' days',      label: 'Notice to cancel — no long-term contracts, no lock-in, no penalty', amber: false },
+          { text: '20+',  suffix: ' pieces',  label: 'Of content produced per creator per month on Foundation — scripts, hooks, captions', amber: true },
+          { text: '4+',   suffix: ' hrs',     label: 'Saved per creator per week — no more briefing writers or chasing copy', amber: false },
+          { text: '100%', suffix: '',          label: 'Of content written by our team and delivered to your portal — ready to approve and post', amber: false },
+          { text: '30',   suffix: ' days',    label: 'Notice to cancel — no long-term contracts, no lock-in, no penalty', amber: false },
         ].map((s, i) => (
           <div className="proof-stat" key={i}>
             <div className="proof-val">
@@ -563,18 +567,18 @@ function ProofBar() {
 const problems = [
   {
     icon: <Icon.Clock />,
-    title: "You are the most expensive person in the building — and you're doing admin.",
-    body: "Chasing invoices. Writing the same email for the seventh time. Updating a spreadsheet that nobody else uses. Every hour you spend inside the machine is an hour you are not spending on growth, clients, or money. That is not a time management problem. That is a systems problem.",
+    title: "Your creators go quiet — not because they lack ideas, but because content takes time.",
+    body: "Scripts don't write themselves. Captions need thinking. Hooks need testing. For every creator on your roster, there are hours of writing work sitting between the idea and the post. When that work isn't done, they don't post. When they don't post, they don't grow. And your agency stalls with them.",
   },
   {
     icon: <Icon.TrendingDown />,
-    title: "Leads are coming in and going cold before anyone responds.",
-    body: "A prospect fills in your form at 7pm on a Thursday. By Friday afternoon they have already spoken to someone else. Not because your product is worse. Because your competitor has a system that responded in 90 seconds and yours has a human who saw it Monday morning. Speed wins. Always.",
+    title: "Brand deals are being missed because the outreach never gets written.",
+    body: "You know which creators should be landing partnerships. You know which brands are the right fit. But writing a compelling, tailored proposal for every opportunity takes time nobody has. So the pitch never gets sent. The deal never happens. And the creator stays monetisation-stuck.",
   },
   {
     icon: <Icon.AlertCircle />,
-    title: "Your tools don't talk to each other. You are the connection.",
-    body: "You are copying data from one system into another. Manually. Every day. CRM to spreadsheet. Email to Slack. Invoice to accountant. Every manual handoff is a chance for something to fall through. You are not the bottleneck — the missing system is. And you are paying for it in hours and errors.",
+    title: "You are managing relationships, not producing content — but content is what drives everything.",
+    body: "Creator agencies are built on talent relationships. But the output that makes those relationships valuable — the content — requires a production system. Without one, you are paying for strategy without delivery. Your clients want results. Results come from consistent, quality content.",
   },
 ]
 
@@ -585,9 +589,9 @@ function Problem() {
         <FadeUp>
           <div className="sh c">
             <div className="badge"><span className="badge-dot" />The Real Problem</div>
-            <h2 className="section-title">Your business has a systems gap.<br />And it is costing you daily.</h2>
+            <h2 className="section-title">Content agencies stall when<br />production can't keep up.</h2>
             <p className="section-sub">
-              Every business owner knows the feeling — too much time in the weeds, too little time actually running the company. It is not a motivation problem. It is not a staffing problem. It is an infrastructure problem. And infrastructure is exactly what we build.
+              You can manage ten creators. You can manage twenty. But producing high-quality, consistent content for all of them — week in, week out — is a different kind of problem. That is the problem we solve.
             </p>
           </div>
         </FadeUp>
@@ -605,7 +609,7 @@ function Problem() {
         <FadeUp delay={0.2}>
           <div style={{ textAlign: 'center', marginTop: '52px' }}>
             <a href="#contact" className="btn btn-outline-amber btn-lg">
-              Let's fix your ops <Icon.ArrowRight />
+              See how we fix it <Icon.ArrowRight />
             </a>
           </div>
         </FadeUp>
@@ -616,11 +620,11 @@ function Problem() {
 
 /* ── SOLUTION ────────────────────────────────────────────────── */
 const solutions = [
-  { icon: <Icon.Target size={18} />, title: 'We prove it on our own business before we sell it', body: 'Every system we build for a client we have already tested on ourselves. Our own operations — content, lead intake, reporting, outreach — run on the same AI infrastructure we install for you. We are not pitching a theory. We are showing you what is already working.' },
-  { icon: <Icon.Zap size={18} />, title: 'Your leads get responded to before a human even sees them', body: 'An AI intake system qualifies every enquiry the moment it arrives, responds instantly, asks the right questions, and books the call — all without a person touching it. You wake up to a booked calendar. Not a list of leads to chase.' },
-  { icon: <Icon.Layers size={18} />, title: 'The repetitive work stops landing on people', body: 'Invoicing. Follow-ups. Reporting. Onboarding. The work that eats hours every week gets automated end to end. Your team stops doing low-value processing and starts doing the work that actually moves the business forward.' },
-  { icon: <Icon.RefreshCw size={18} />, title: 'Your tools finally talk to each other', body: 'We connect your existing stack — CRM, email, calendar, accounting, comms — so data flows automatically between them. No more manual handoffs. No more copy-pasting. No more things falling through the gap between systems.' },
-  { icon: <Icon.Shield size={18} />, title: 'Fully managed. Nothing to maintain. Cancel any time.', body: 'We build the system, we run it, and we improve it every month. You access everything through a clean live portal — reports, pipelines, outputs — included in your retainer. No tools to manage, no prompts to write. Cancel with 30 days notice.' },
+  { icon: <Icon.Target size={18} />, title: 'We write the content — every week, without being briefed', body: 'Scripts, hooks, captions, and content plans produced by AI and reviewed by our team. Delivered to your portal every week. Your creators get a queue of ready-to-post content without you writing a word.' },
+  { icon: <Icon.Zap size={18} />, title: 'Brand proposals written and sent on your behalf', body: 'On Growth and Enterprise plans, we write tailored brand partnership proposals for your creators — researched, formatted, and ready to send. You approve, we deliver. No more deals falling through because nobody had time to write the pitch.' },
+  { icon: <Icon.Layers size={18} />, title: 'A content strategy built around each creator', body: 'Every creator on your roster gets a content plan built around their niche, platform, and audience. We track what is working, adjust each month, and keep production aligned with what actually grows the account.' },
+  { icon: <Icon.RefreshCw size={18} />, title: 'Everything in one portal — approve, download, post', body: 'All content is delivered through your private CAIG portal. You review, approve, and hand off to your creators. No email chains. No shared docs. No chasing for drafts. One clean interface, updated every week.' },
+  { icon: <Icon.Shield size={18} />, title: 'Fully managed. Nothing to write. Cancel any time.', body: 'You do not brief us each week, chase for drafts, or manage a writing team. We take care of production end to end. You access everything through your portal and manage your creator relationships. That is the split. Cancel with 30 days notice.' },
 ]
 
 function Solution() {
@@ -629,13 +633,13 @@ function Solution() {
       <div className="container">
         <div className="sol-grid">
           <FadeUp>
-            <div className="badge"><span className="badge-dot" />What We Build</div>
-            <h2 className="section-title">Bespoke AI systems<br />built around your ops.</h2>
+            <div className="badge"><span className="badge-dot" />What We Do</div>
+            <h2 className="section-title">Done-for-you content.<br />Delivered every week.</h2>
             <p className="section-sub" style={{ marginBottom: '36px' }}>
-              Not a SaaS tool. Not a chatbot. A fully managed AI system designed around how your business actually runs — built by us, operated by us, delivered to you through a live portal. Your team focuses on growth. We handle the infrastructure.
+              Not a tool you log into. Not a template you fill in. A team — powered by AI — that produces content for your creators every single week. You manage the talent. We produce the output.
             </p>
             <a href="#contact" className="btn btn-amber btn-lg">
-              Book a Free Strategy Call <Icon.ArrowRight />
+              Get Started <Icon.ArrowRight />
             </a>
           </FadeUp>
           <StaggerGrid className="sol-cards">
@@ -662,34 +666,34 @@ const stars = ['★', '★', '★', '★', '★']
 
 const smallTestis = [
   {
-    quote: "I was spending two hours every morning just on admin — chasing payments, updating the CRM, sending the same follow-up emails. CAIG mapped our workflow, built a system in three weeks, and now that entire block of work just happens. I haven't touched it since.",
+    quote: "Before CAIG, getting content out of our creators was like pulling teeth. They had the ideas but not the time to write it all up. CAIG changed that completely — every Monday our portal has a fresh batch of scripts and captions ready. The creators just review, approve, and post. Consistency went from two posts a week to five.",
     name: 'Priya Nair',
     role: 'Founder',
-    co: 'Nair Consulting Group',
+    co: 'Nair Talent Management',
     av: '#7c7fff',
     initials: 'PN',
-    metric: '2 hrs/day',
-    metricLbl: 'of admin fully automated',
+    metric: '5×/week',
+    metricLbl: 'avg posting frequency per creator',
   },
   {
-    quote: "We were losing leads constantly — not because we weren't getting enquiries, but because nobody was responding fast enough. CAIG built an intake system that replies within a minute, qualifies the lead, and books the call. Our conversion rate went up 40% in six weeks.",
+    quote: "We were managing twelve creators but the content output looked like we had three. CAIG set up the content engine in two weeks. Now every creator has a weekly batch of hooks, captions, and scripts waiting for them. The quality is genuinely better than what we were producing in-house — and it costs less.",
     name: 'Tom Aldridge',
-    role: 'Head of Sales',
-    co: 'Aldridge Group',
+    role: 'Head of Talent',
+    co: 'Aldridge Creative',
     av: '#34d8a4',
     initials: 'TA',
-    metric: '+40%',
-    metricLbl: 'lead conversion in 6 weeks',
+    metric: '12 creators',
+    metricLbl: 'fully content-serviced every week',
   },
   {
-    quote: "Every month I was spending a full day pulling reports together for clients — manually copying numbers from four different tools into a deck. CAIG automated the entire thing. The report builds itself and lands in my inbox Monday morning. I didn't realise how much time I was wasting until it stopped.",
+    quote: "The brand proposals alone have paid for the retainer three times over. CAIG writes them, we send them, brands sign. Before, we were leaving deals on the table because nobody had bandwidth to write a proper pitch. Now we pitch every opportunity.",
     name: 'Sofia Reyes',
-    role: 'Operations Director',
-    co: 'Reyes Business Services',
+    role: 'Partnerships Director',
+    co: 'Reyes Creator Agency',
     av: '#f5a623',
     initials: 'SR',
-    metric: '1 full day',
-    metricLbl: 'saved on reporting per month',
+    metric: '3×',
+    metricLbl: 'retainer ROI from brand deals alone',
   },
 ]
 
@@ -700,9 +704,9 @@ function Testimonials() {
         <FadeUp>
           <div className="sh c">
             <div className="badge"><span className="badge-dot" />Client Results</div>
-            <h2 className="section-title">Real businesses.<br />Specific numbers.</h2>
+            <h2 className="section-title">Real agencies.<br />Real content output.</h2>
             <p className="section-sub">
-              Not case studies written by a marketing team. Direct accounts from business owners who can tell you exactly what changed, how quickly, and what it was worth.
+              From creator managers tired of chasing copy to talent agencies scaling their roster without scaling their headcount — here is what CAIG looks like in practice.
             </p>
           </div>
         </FadeUp>
@@ -711,18 +715,18 @@ function Testimonials() {
           <div className="testi-featured">
             <div className="testi-mark">"</div>
             <div className="testi-quote-big">
-              We have six people in this business. Before CAIG, four of them were spending significant parts of their week on work that a computer should have been doing. We brought CAIG in, they mapped our ops in one call, built the system in a month, and those four people now spend that time on actual client work. The system paid for itself inside six weeks. I wish we had done it two years ago.
+              We went from six creators posting sporadically to all six posting five times a week — consistently, on-brand, with hooks that actually work. I thought that would require a full content team. CAIG replaced what would have been three full-time hires. The content comes into the portal every Monday, the creators pick it up, and it goes out. That is genuinely all we do now.
             </div>
             <div className="testi-meta">
               <div className="testi-av" style={{ background: '#5b5ef4' }}>MW</div>
               <div className="testi-who">
                 <div className="testi-name">Marcus Webb</div>
-                <div className="testi-role">Managing Director &middot; Webb Business Group</div>
+                <div className="testi-role">Managing Director &middot; Webb Talent Group</div>
               </div>
               <div className="testi-result-tag">
                 <div>
-                  <div className="trt-val">6 weeks</div>
-                  <div className="trt-lbl">full cost recovered</div>
+                  <div className="trt-val">6 creators</div>
+                  <div className="trt-lbl">posting 5×/week consistently</div>
                 </div>
               </div>
             </div>
@@ -769,47 +773,47 @@ function Testimonials() {
 /* ── COMPARISON ──────────────────────────────────────────────── */
 const compOptions = [
   {
-    title: 'Hire More Staff',
-    sub: 'Another salary costs £28–45K a year — and they still do the same manual work, just faster',
+    title: 'Hire an In-House Content Writer',
+    sub: 'A full-time content hire costs £28–40K a year — and still can't cover every creator at the volume you need',
     winner: false,
     pros: [
-      { yes: false, text: 'Output is still limited by hours in the working day' },
-      { yes: false, text: 'Sick days, turnover, training — all land on you' },
-      { yes: false, text: 'Every new client adds proportionally more headcount' },
-      { yes: true,  text: 'Human judgement and client relationships' },
+      { yes: false, text: 'One person can't scale across a growing roster' },
+      { yes: false, text: 'Sick days, holidays, and turnover break the production cycle' },
+      { yes: false, text: 'Briefing, feedback, and revision loops eat more time' },
+      { yes: true,  text: 'Deep brand knowledge after time' },
     ],
   },
   {
-    title: 'Buy More SaaS Tools',
-    sub: 'Another subscription that solves one problem and creates three more — and still needs a person to run it',
+    title: 'Use an AI Writing Tool Yourself',
+    sub: 'ChatGPT and similar tools require you to prompt, edit, and manage output — that is still your time',
     winner: false,
     pros: [
-      { yes: false, text: 'Tools do not talk to each other — you are still the glue' },
-      { yes: false, text: 'Generic features that do not fit how your business works' },
-      { yes: false, text: 'More monthly cost with no guarantee of outcome' },
-      { yes: true,  text: 'Fast to set up and easy to cancel' },
+      { yes: false, text: 'You still have to write every prompt and review every output' },
+      { yes: false, text: 'No consistency or creator-specific voice without heavy setup' },
+      { yes: false, text: 'Generic outputs that need significant editing before use' },
+      { yes: true,  text: 'Low cost if you have time to manage it yourself' },
     ],
   },
   {
-    title: 'Keep Doing It Manually',
-    sub: 'Every week you wait is another week of paying people to do work that should be automated',
+    title: 'Brief Creators to Write Their Own Content',
+    sub: 'Creators are talent — not copywriters. Writing their own content is often what slows them down most',
     winner: false,
     pros: [
-      { yes: false, text: 'Ops cost grows with every client you take on' },
-      { yes: false, text: 'Team burns out on repetitive low-value processing' },
-      { yes: false, text: 'Leads go cold while someone is busy doing something else' },
-      { yes: false, text: 'No system means no consistency and no scale' },
+      { yes: false, text: 'Most creators find writing the hardest part of the job' },
+      { yes: false, text: 'Inconsistent output — some weeks nothing gets posted' },
+      { yes: false, text: 'Quality varies widely and is hard to maintain at scale' },
+      { yes: false, text: 'Puts the burden back on the people you are supposed to be supporting' },
     ],
   },
   {
-    title: 'A CAIG AI System',
-    sub: 'Built around how your business actually works — managed by us, live from week one.',
+    title: 'CAIG — Done For You',
+    sub: 'Content produced weekly by AI, reviewed by our team, delivered to your portal. Your creators just post.',
     winner: true,
     pros: [
-      { yes: true,  text: 'Built specifically for your workflows — not off the shelf' },
-      { yes: true,  text: 'AI does the heavy lifting — we manage the rest' },
-      { yes: true,  text: 'Scales with your business without adding headcount' },
-      { yes: true,  text: 'Fully managed — we run it, you access the results' },
+      { yes: true,  text: 'Scales across your entire roster without adding headcount' },
+      { yes: true,  text: 'Consistent weekly delivery — every creator, every week' },
+      { yes: true,  text: 'Built around each creator\'s voice, niche, and platform' },
+      { yes: true,  text: 'You review and approve — we handle all production' },
     ],
   },
 ]
@@ -821,9 +825,9 @@ function Comparison() {
         <FadeUp>
           <div className="sh c">
             <div className="badge"><span className="badge-dot" />The Alternatives</div>
-            <h2 className="section-title">What is the alternative?</h2>
+            <h2 className="section-title">Every content production option — compared.</h2>
             <p className="section-sub">
-              Every business owner has four options. Three of them keep costing more as you grow — or keep you stuck at the same ceiling.
+              There are four ways to solve the content production problem. Three of them still rely on someone's time. One of them doesn't.
             </p>
           </div>
         </FadeUp>
@@ -861,33 +865,33 @@ function Comparison() {
 /* ── SERVICES ────────────────────────────────────────────────── */
 const tiers = [
   {
-    name: 'Strategy Call',
+    name: 'Discovery Call',
     price: 'Free',
-    time: '45 minutes — no obligation, no pitch',
+    time: '30 minutes — no obligation',
     featured: false,
     popular: false,
     feats: [
-      'Full review of your current ops and workflows',
-      'Identify exactly where you are losing the most time and money',
-      'A clear recommendation on what to automate first',
-      'Written action plan delivered after the call',
-      'Honest advice — whether you hire us or not',
-      'Credited in full toward your build if you proceed',
+      'Walk us through your roster and current content process',
+      'We show you exactly what CAIG would produce for your creators',
+      'Live demo of the portal and content output',
+      'Clear recommendation on which plan fits your agency',
+      'No pitch. No obligation. Just the honest answer.',
+      'Setup fee credited in full if you proceed',
     ],
-    cta: 'Book Strategy Call',
+    cta: 'Book Discovery Call',
   },
   {
     name: 'Foundation',
     price: '£3,000/mo',
-    time: '£2,500 setup · single workflow focus',
+    time: '£2,500 setup · up to 2 creators',
     featured: false,
     popular: false,
     feats: [
-      'One core workflow automated end to end',
-      'Built specifically around your business — not a template',
-      'Lead intake, reporting, content, invoicing — your choice',
-      'Live portal to access outputs and track results',
-      'Monthly reporting on time saved and impact',
+      '20 pieces of content per creator per month',
+      'Scripts, hooks, and captions — platform-specific',
+      'Monthly content strategy per creator',
+      'Private portal — review, approve, and download',
+      'Monthly performance report',
       '30-day cancel notice — no long-term commitment',
     ],
     cta: 'Get Started',
@@ -895,32 +899,32 @@ const tiers = [
   {
     name: 'Growth',
     price: '£5,000/mo',
-    time: '£2,500 setup · multi-workflow system',
+    time: '£2,500 setup · up to 5 creators',
     featured: true,
     popular: true,
     feats: [
-      'Everything in Foundation',
-      'Up to three connected workflows automated',
-      'Systems talk to each other — data flows automatically',
-      'Priority support and monthly strategy session',
-      'New automations added each month as your ops evolve',
-      'Team portal with live dashboards and reporting',
+      '50 pieces of content per creator per month',
+      'Scripts, hooks, captions — short and long-form',
+      'Brand partnership proposals written and formatted',
+      'Weekly content strategy updates per creator',
+      'Dedicated content strategist',
+      'Priority turnaround — 48hrs on urgent requests',
     ],
     cta: 'Start Growth Plan',
   },
   {
     name: 'Enterprise',
     price: '£8,500/mo',
-    time: '£2,500 setup · full ops infrastructure',
+    time: '£2,500 setup · unlimited creators',
     featured: false,
     popular: false,
     feats: [
-      'Everything in Growth',
-      'Unlimited workflows and automations',
+      'Unlimited content across your entire roster',
+      'All content types — scripts, captions, threads, briefs',
+      'Brand proposal writing and outreach copy included',
+      'Bespoke content formats built around each creator',
       'Dedicated account manager',
-      'Bespoke automation sprints every month',
-      'White-label portal option for client-facing use',
-      'Direct Slack access to the engineering team',
+      'Daily publishing queue management',
     ],
     cta: 'Talk to Us',
   },
@@ -932,11 +936,11 @@ function Services() {
       <div className="container">
         <FadeUp>
           <div className="sh c">
-            <div className="badge"><span className="badge-dot" />What We Build</div>
-            <h2 className="section-title">Simple, transparent<br />retainer pricing.</h2>
+            <div className="badge"><span className="badge-dot" />Pricing</div>
+            <h2 className="section-title">Simple, transparent<br />monthly pricing.</h2>
             <p className="section-sub">
               One setup fee. One monthly retainer. Cancel with 30 days notice.<br />
-              We build the system, we run it — you access everything through a live portal.
+              We produce the content, you manage the talent.
             </p>
           </div>
         </FadeUp>
@@ -979,26 +983,26 @@ const steps = [
   {
     num: '01',
     label: 'Step One',
-    title: 'Free Strategy Call — 45 minutes',
-    text: 'You walk us through how your business currently operates. We identify the two or three places where automation would save the most time and money. You leave with a clear answer on what to build first and roughly what it costs. No pitch. No obligation. Just the honest answer.',
+    title: 'Discovery call — 30 minutes',
+    text: 'You walk us through your roster, your current content process, and what good looks like for you. We show you a live demo of the portal and what content output looks like in practice. You leave knowing exactly what you would get and what it costs.',
   },
   {
     num: '02',
     label: 'Step Two',
-    title: 'Written proposal in 48 hours',
-    text: 'You get a precise breakdown — every workflow we will automate, the exact tech stack, and a week-by-week build timeline. Fixed price, fixed scope. You know exactly what you are buying before you spend a penny.',
+    title: 'We onboard your creators in 48 hours',
+    text: 'You share basic details for each creator — niche, platform, tone, and any existing content. We set up the content engine for each one, configured around their voice and audience. No lengthy briefing process. No forms to fill in.',
   },
   {
     num: '03',
     label: 'Step Three',
-    title: 'We build — you see it live every week',
-    text: 'We build in weekly sprints with a live demo every Friday. You talk directly to the person building it — not a project manager. If something needs adjusting, it gets adjusted that week. No surprises at the end.',
+    title: 'Content lands in your portal every week',
+    text: 'Every Monday, a fresh batch of scripts, hooks, captions, and content plans is ready in your portal — one batch per creator. You review, approve, and hand off. Your creators post. That is the entire workflow on your side.',
   },
   {
     num: '04',
     label: 'Step Four',
-    title: 'It goes live — we run it from here',
-    text: 'We deploy, onboard your team in 30 minutes, and the system runs from that point. You access everything through a clean portal — outputs, reports, pipelines. We handle everything operationally on the retainer. Cancel any time with 30 days notice.',
+    title: 'We improve it every month',
+    text: 'We track what is performing, adjust the content strategy each month, and refine the output based on what is working for each creator. On Growth and Enterprise, you get a monthly strategy session with your dedicated content strategist.',
   },
 ]
 
@@ -1009,12 +1013,12 @@ function HowItWorks() {
         <div className="hiw-layout">
           <FadeUp>
             <div className="badge"><span className="badge-dot" />The Process</div>
-            <h2 className="section-title">From first call<br />to live system —<br />in under four weeks</h2>
+            <h2 className="section-title">Live in 48 hours.<br />Content every week<br />from that point on.</h2>
             <p className="section-sub" style={{ marginTop: '18px', marginBottom: '36px' }}>
-              No account managers. No discovery workshops that go nowhere. No strategy decks you pay for and never use. You talk to the person building your system from day one.
+              No lengthy onboarding. No content briefs to fill in each week. No chasing for drafts. You share the creator details once — we handle production from there.
             </p>
             <a href="#contact" className="btn btn-outline-amber btn-lg">
-              Book the first call <Icon.ArrowRight />
+              Book the discovery call <Icon.ArrowRight />
             </a>
           </FadeUp>
           <StaggerGrid className="hiw-steps">
@@ -1040,32 +1044,32 @@ function HowItWorks() {
 /* ── FAQ ─────────────────────────────────────────────────────── */
 const faqs = [
   {
-    q: 'What kind of businesses do you work with?',
-    a: "Any business with repetitive operational workflows that are currently being done by hand. We have built systems for service businesses, agencies, content operations, consulting firms, and sales-led businesses. If you can describe a task your team does the same way every day, we can almost certainly automate it.",
+    q: 'What kind of agencies do you work with?',
+    a: "Creator management agencies, talent agencies, and brand-side teams managing content across multiple creators or accounts. If you have a roster of creators who need to post consistently and you are responsible for making that happen, CAIG is built for you.",
   },
   {
-    q: 'What does a CAIG system actually do day to day?',
-    a: "It depends on what we build for you — that is the point. It might automatically respond to and qualify every new lead the moment they enquire. It might generate client reports every Monday without anyone touching a spreadsheet. It might connect your CRM, email, and accounting tool so data flows between them without manual entry. We map your specific ops first, then build the system around that.",
+    q: 'What does CAIG actually produce?',
+    a: "Scripts, hooks, captions, content plans, and brand partnership proposals — written by AI and reviewed by our team before delivery. Every piece is tailored to the specific creator: their niche, platform, tone, and audience. You receive a weekly batch in your portal, ready to review and hand off.",
   },
   {
-    q: 'How is this different from just using ChatGPT or Zapier?',
-    a: "ChatGPT is a general tool. Zapier connects tools but does not make decisions. What we build is a bespoke system that understands your business, your workflow, and your outputs — and operates them end to end without you touching it. The difference is between a hammer and a factory. One requires a person every time. The other just runs.",
+    q: 'How is this different from just using ChatGPT ourselves?',
+    a: "ChatGPT requires you to prompt it, review the output, edit it, and manage the whole process — that is still your time. CAIG takes all of that off your plate. We handle the prompting, the quality review, the formatting, and the delivery. You just approve and post.",
   },
   {
-    q: 'How long does a build take?',
-    a: "The strategy call is free and takes 45 minutes. A full system build typically runs 3 to 5 weeks depending on the complexity of your workflows. You get a precise week-by-week timeline in your proposal before you commit to anything.",
+    q: 'Do we need to brief you every week?',
+    a: "No. You brief us once when you onboard a creator — niche, platform, tone, audience, and any brand guidelines. From there we produce content weekly without needing to ask. If something changes, you update us and we adjust.",
   },
   {
-    q: 'Do my team need to be technical to use it?',
-    a: "No. The interface is clean and built for non-technical users. Onboarding your whole team takes 30 minutes. After that the system just runs — no prompting expertise, no technical knowledge, no maintenance. That is our job.",
+    q: 'How quickly can we get started?',
+    a: "Your first content batch is typically delivered within 48 hours of onboarding. The discovery call is 30 minutes — we can often have your first creators live the same week.",
   },
   {
-    q: 'What happens if I want to cancel?',
-    a: "30 days notice — that is it. No penalty, no contract, no awkward conversation. We are confident enough in what we build that we do not need to lock you in. The system keeps working for those 30 days and then access ends.",
+    q: 'What if the content doesn't sound like the creator?',
+    a: "We refine the voice profile during onboarding and adjust based on your feedback in the first two weeks. Most agencies find the output is accurate from week one. If something isn't right, you tell us and we fix it — that is part of the retainer.",
   },
   {
     q: 'What is the pricing model?',
-    a: "Every plan starts with a £2,500 setup fee which covers the discovery, build, and deployment of your first system. After that you pay a monthly retainer: Foundation at £3,000/mo, Growth at £5,000/mo, or Enterprise at £8,500/mo. No hidden fees. The retainer covers us running, monitoring, and improving the system every month.",
+    a: "Every plan starts with a £2,500 setup fee which covers onboarding, creator profiling, and your first content batch. After that: Foundation at £3,000/mo (up to 2 creators, 20 pieces each), Growth at £5,000/mo (up to 5 creators, 50 pieces each, proposals included), or Enterprise at £8,500/mo (unlimited creators, unlimited content). Cancel with 30 days notice — no lock-in.",
   },
 ]
 
@@ -1077,7 +1081,8 @@ function FAQ() {
         <FadeUp>
           <div className="sh c">
             <div className="badge"><span className="badge-dot" />FAQ</div>
-            <h2 className="section-title">Every question you have<br />before you book the call</h2>          </div>
+            <h2 className="section-title">Every question before<br />you book the call</h2>
+          </div>
         </FadeUp>
         <div className="faq-wrap">
           {faqs.map((f, i) => (
@@ -1118,17 +1123,17 @@ function UrgencyBanner() {
         <div className="urgency-inner">
           <div className="urgency-eyebrow">The straight truth</div>
           <h2 className="urgency-title">
-            Every week without a system<br />is a week you are paying for one anyway.
+            Every week without consistent content<br />is a week your creators aren't growing.
           </h2>
           <p className="urgency-body">
-            You are already paying. In staff hours. In missed leads. In time you spend doing work a machine should handle.
-            <strong style={{ color: 'var(--t0)' }}> The only question is whether you keep paying for the problem or start paying for the solution.</strong> The strategy call is 45 minutes. We map your ops, show you exactly what we would build, and tell you what it would save. No pitch. No deck. Just a straight answer — and you decide.
+            Inconsistent posting doesn't just slow growth — it reverses it. Algorithms deprioritise inactive accounts. Audiences drift. Brand deals go to creators who show up every week.
+            <strong style={{ color: 'var(--t0)' }}> CAIG makes your creators consistent without adding a single person to your team.</strong> The discovery call is 30 minutes. We show you exactly what the content looks like for your roster, and what it costs.
           </p>
           <a href="#contact" className="btn btn-amber btn-lg breathe">
-            Book the Call. Fix the Business. <Icon.ArrowRight size={17} />
+            Book the Call. Keep Your Creators Posting. <Icon.ArrowRight size={17} />
           </a>
           <div className="urgency-note">
-            45-minute call &nbsp;&middot;&nbsp; No pitch deck &nbsp;&middot;&nbsp; No obligation &nbsp;&middot;&nbsp; Slots available this week
+            30-minute call &nbsp;&middot;&nbsp; Live portal demo &nbsp;&middot;&nbsp; No obligation &nbsp;&middot;&nbsp; Slots available this week
           </div>
         </div>
       </FadeUp>
@@ -1164,10 +1169,10 @@ function Contact() {
       <div className="container">
         <div className="contact-grid">
           <FadeUp>
-            <div className="badge"><span className="badge-dot" />Book Your Free Call</div>
-            <h2 className="section-title">Let's find out exactly<br />what we can fix</h2>
+            <div className="badge"><span className="badge-dot" />Get Started</div>
+            <h2 className="section-title">Book a free<br />discovery call</h2>
             <p className="section-sub" style={{ marginBottom: '10px' }}>
-              45 minutes. We map your ops, find your biggest drain, and tell you exactly what we would build and what it would cost. You walk away with a clear answer — whether you hire us or not.
+              30 minutes. We show you the portal, walk through what content would look like for your creators, and give you a clear answer on which plan fits. You walk away knowing exactly what you would get.
             </p>
             <p style={{ fontSize: '14px', color: 'var(--amber)', fontWeight: 600, marginBottom: '28px' }}>
               Completely free. No obligation whatsoever.
@@ -1184,14 +1189,14 @@ function Contact() {
                 <div className="c-slot-icon"><Icon.Mail size={17} /></div>
                 <div>
                   <div className="c-slot-title">Prefer Email?</div>
-                  <div className="c-slot-sub">hello@cornerstoneaigroup.com &mdash; we reply within one business day, always from a real person.</div>
+                  <div className="c-slot-sub">hello@cornerstoneaigroup.com — we reply within one business day, always from a real person.</div>
                 </div>
               </div>
               <div className="c-slot">
                 <div className="c-slot-icon"><Icon.Linkedin /></div>
                 <div>
                   <div className="c-slot-title">LinkedIn</div>
-                  <div className="c-slot-sub">Follow us on LinkedIn for build breakdowns, case studies, and AI workflow ideas.</div>
+                  <div className="c-slot-sub">Follow us on LinkedIn for content examples, creator case studies, and agency growth ideas.</div>
                 </div>
               </div>
             </div>
@@ -1204,12 +1209,12 @@ function Contact() {
                   <div className="form-success-check"><Icon.Check size={26} /></div>
                   <div className="form-success-title">You are on the list</div>
                   <div className="form-success-sub">
-                    We will be in touch within 4 business hours with a calendar link to book your free audit. Talk soon.
+                    We will be in touch within 4 business hours with a calendar link to book your discovery call. Talk soon.
                   </div>
                 </div>
               ) : (
                 <>
-                  <div className="cform-title">Tell us about your business</div>
+                  <div className="cform-title">Tell us about your agency</div>
                   <div className="cform-sub">We reply within 4 business hours, every time</div>
                   <form onSubmit={submit}>
                     <input type="hidden" name="form-name" value="contact" />
@@ -1219,14 +1224,14 @@ function Contact() {
                         <input className="fi" name="name" placeholder="Jane Smith" value={form.name} onChange={set('name')} />
                       </div>
                       <div className="fg">
-                        <label className="fl">Company</label>
-                        <input className="fi" name="company" placeholder="Acme Ltd" value={form.company} onChange={set('company')} />
+                        <label className="fl">Agency / Company</label>
+                        <input className="fi" name="company" placeholder="Talent Agency Ltd" value={form.company} onChange={set('company')} />
                       </div>
                     </div>
                     <div className="frow">
                       <div className="fg">
                         <label className="fl">Work Email</label>
-                        <input className="fi" type="email" name="email" placeholder="jane@company.com" value={form.email} onChange={set('email')} />
+                        <input className="fi" type="email" name="email" placeholder="jane@agency.com" value={form.email} onChange={set('email')} />
                       </div>
                       <div className="fg">
                         <label className="fl">Phone Number</label>
@@ -1234,20 +1239,19 @@ function Contact() {
                       </div>
                     </div>
                     <div className="fg">
-                      <label className="fl">I am interested in</label>
+                      <label className="fl">How many creators are on your roster?</label>
                       <select className="fi" name="service" value={form.service} onChange={set('service')} style={{ cursor: 'pointer' }}>
-                        <option value="">What do you need help with?</option>
-                        <option>Automating repetitive ops / admin</option>
-                        <option>Lead intake and follow-up</option>
-                        <option>Reporting and financial visibility</option>
-                        <option>Content and marketing systems</option>
-                        <option>Connecting existing tools</option>
-                        <option>Not sure — just know something needs fixing</option>
+                        <option value="">Select roster size</option>
+                        <option>1–2 creators</option>
+                        <option>3–5 creators</option>
+                        <option>6–10 creators</option>
+                        <option>11–20 creators</option>
+                        <option>20+ creators</option>
                       </select>
                     </div>
                     <div className="fg">
-                      <label className="fl">Tell us what is eating your time</label>
-                      <textarea className="ft" name="message" placeholder="What does your team spend too much time on? Where are leads or money falling through the gaps?" value={form.message} onChange={set('message')} />
+                      <label className="fl">What is your biggest content challenge right now?</label>
+                      <textarea className="ft" name="message" placeholder="E.g. creators not posting consistently, no time to write content, struggling to get brand proposals out..." value={form.message} onChange={set('message')} />
                     </div>
                     {status === 'error' && (
                       <p style={{ fontSize: '13px', color: 'var(--red)', marginBottom: '12px' }}>
@@ -1260,11 +1264,11 @@ function Contact() {
                       style={{ width: '100%', justifyContent: 'center' }}
                       disabled={status === 'sending'}
                     >
-                      {status !== 'sending' ? 'Book My Free Strategy Call' : 'Sending...'}
+                      {status !== 'sending' ? 'Book My Free Discovery Call' : 'Sending...'}
                       {status !== 'sending' && <Icon.ArrowRight />}
                     </button>
                     <p style={{ fontSize: '11.5px', color: 'var(--t4)', textAlign: 'center', marginTop: '14px' }}>
-                      No pitch. No obligation. A straight answer on what to fix and what it costs.
+                      No obligation. We show you the product, you decide if it fits.
                     </p>
                   </form>
                 </>
@@ -1288,16 +1292,17 @@ function Footer() {
               <Logo size={20} sub={null} />
             </div>
             <p className="footer-tagline">
-              AI content systems for talent agencies, creator managers, and brands
-              managing content at scale. Built to spec. Owned by you.
+              Done-for-you AI content creation for creator agencies and talent managers.
+              Scripts, captions, and proposals — produced weekly, delivered to your portal.
             </p>
           </div>
           <div>
             <div className="footer-col-h">Services</div>
             <ul className="footer-links">
-              <li><a href="#services">Free Strategy Call</a></li>
-              <li><a href="#services">Content System Build</a></li>
-              <li><a href="#services">Growth Retainer</a></li>
+              <li><a href="#services">Free Discovery Call</a></li>
+              <li><a href="#services">Foundation Plan</a></li>
+              <li><a href="#services">Growth Plan</a></li>
+              <li><a href="#services">Enterprise Plan</a></li>
             </ul>
           </div>
           <div>
@@ -1313,7 +1318,7 @@ function Footer() {
             <div className="footer-col-h">Contact</div>
             <ul className="footer-links">
               <li><a href="mailto:hello@cornerstoneaigroup.com">hello@cornerstoneaigroup.com</a></li>
-              <li><a href="#contact">Book Free Audit</a></li>
+              <li><a href="#contact">Book Free Discovery Call</a></li>
               <li><a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
             </ul>
           </div>
