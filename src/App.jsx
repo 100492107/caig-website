@@ -490,7 +490,7 @@ function ProofBar() {
           { text: '7',    suffix: ' personas', label: 'AI-powered UGC creator personas running live in our own network right now', amber: true },
           { text: '4+',   suffix: ' hrs',      label: 'Saved per creator per week on content, captions, briefs, and brand outreach admin', amber: false },
           { text: '100%', suffix: '',           label: 'Of creator content, partnership proposals, and ops run through AI — no manual writing', amber: false },
-          { text: 'Zero', suffix: '',           label: 'Lock-in contracts — every engagement is fixed-fee with full IP ownership on delivery', amber: false },
+          { text: '30',   suffix: ' days',      label: 'Notice to cancel — no long-term contracts, no lock-in, no penalty', amber: false },
         ].map((s, i) => (
           <div className="proof-stat" key={i}>
             <div className="proof-val">
@@ -568,7 +568,7 @@ const solutions = [
   { icon: <Icon.Layers size={18} />, title: 'Content on demand — hooks, captions, briefs, all of it', body: 'Our system generates platform-specific content for each persona in seconds — with the right voice, the right niche angle, the right hashtags. What a content manager would spend a full day on takes under three minutes. That is the system we build for your creators.' },
   { icon: <Icon.BarChart size={18} />, title: 'Brand partnership proposals that actually get replies', body: 'We generate full sponsorship decks tailored to each creator — niche fit, audience data, deliverables, pricing. Outreach goes out on a sequence. Follow-ups are automated. Your team stops chasing and starts closing.' },
   { icon: <Icon.RefreshCw size={18} />, title: 'Creator ops run in two hours a week, not twenty', body: 'Onboarding new talent, tracking brand deal pipelines, managing content approvals, scheduling posts — all systematised. One creator ops system, custom-built for your agency, so your team manages more talent without adding headcount.' },
-  { icon: <Icon.Shield size={18} />, title: 'The system is yours — no matter what', body: 'Everything we build for you is yours to keep. The creator personas, the automations, the content logic — permanently. Access to the live portal runs on your retainer, but the underlying system never disappears. Cancel any time with 30 days notice and walk away with everything intact.' },
+  { icon: <Icon.Shield size={18} />, title: 'Managed end to end — we run it, you own the results', body: 'We build and operate the system on your behalf. You access everything through a live portal — content, deal pipeline, weekly reports — included in your retainer. The system stays under CAIG management, which is what keeps it running at this level. Cancel any time with 30 days notice.' },
 ]
 
 function Solution() {
@@ -754,13 +754,13 @@ const compOptions = [
   },
   {
     title: 'CAIG Content System',
-    sub: 'Running from week one — your creators, your workflow, your system to keep.',
+    sub: 'Fully managed from week one — your creators, your workflow, your live portal.',
     winner: true,
     pros: [
       { yes: true,  text: 'Knows every creator\'s voice, niche, and brand fit' },
       { yes: true,  text: 'Content, proposals, and ops automated end to end' },
       { yes: true,  text: 'Sign more talent without adding ops headcount' },
-      { yes: true,  text: 'System is yours to keep — even if you ever cancel' },
+      { yes: true,  text: 'Fully managed — we run it, portal access included in retainer' },
     ],
   },
 ]
@@ -829,7 +829,7 @@ const tiers = [
   },
   {
     name: 'Starter',
-    price: '£2,000/mo',
+    price: '£3,000/mo',
     time: '£2,500 setup · up to 5 creators',
     featured: false,
     popular: false,
@@ -845,7 +845,7 @@ const tiers = [
   },
   {
     name: 'Growth',
-    price: '£3,500/mo',
+    price: '£5,000/mo',
     time: '£2,500 setup · up to 15 creators',
     featured: true,
     popular: true,
@@ -861,7 +861,7 @@ const tiers = [
   },
   {
     name: 'Agency',
-    price: '£6,000/mo',
+    price: '£8,500/mo',
     time: '£2,500 setup · unlimited creators',
     featured: false,
     popular: false,
@@ -1012,11 +1012,11 @@ const faqs = [
   },
   {
     q: 'What happens to the system after you build it?',
-    a: "Everything built is yours to keep — permanently. The codebase, the IP, the creator personas, the automations. If you ever cancel your retainer, you walk away with the full system intact. We do not hold your data or your tools hostage. Access to the live portal is tied to your active subscription, but the underlying system is always yours.",
+    a: "We manage the system on your behalf — that is what the retainer covers. You get full access to your live portal (content, deal pipeline, weekly reports) and we handle everything operationally. The system is built and run by CAIG; access is tied to your active retainer. Cancel any time with 30 days notice.",
   },
   {
     q: 'What is your pricing model?',
-    a: "There is a one-off setup fee of £2,500 for all plans — this covers onboarding, system build, and creator configuration. After that, you pay a monthly retainer based on your creator roster size: Starter (up to 5 creators) at £2,000/mo, Growth (up to 15) at £3,500/mo, or Agency (unlimited) at £6,000/mo. No hidden fees. Cancel with 30 days notice.",
+    a: "There is a one-off setup fee of £2,500 for all plans — this covers onboarding, system build, and creator configuration. After that, you pay a monthly retainer based on your creator roster size: Starter (up to 5 creators) at £3,000/mo, Growth (up to 15) at £5,000/mo, or Agency (unlimited) at £8,500/mo. No hidden fees. Cancel with 30 days notice.",
   },
 ]
 
