@@ -515,7 +515,7 @@ function Hero() {
         transition={{ delay: 0.9, duration: 0.6 }}
       >
         {[
-          { val: '80%',  suf: '',        lbl: 'Of tasks business owners do manually could be fully automated with the right system in place', amber: true },
+          { val: '80%',  suf: '',        lbl: 'Of tasks business owners do manually could be significantly reduced with the right AI systems in place', amber: true },
           { val: '£28K', suf: '+',       lbl: 'Average annual cost of a single ops hire — before NI, benefits, management time, and sick days', amber: false },
           { val: '6×',   suf: '',        lbl: 'More leads responded to when an AI intake system handles enquiries instantly vs a human checking email', amber: false },
           { val: '30',   suf: ' days',   lbl: 'Notice to cancel — no contracts, no lock-in, no penalty. We keep clients because the system works.', amber: false },
@@ -543,7 +543,7 @@ function ProofBar() {
         {[
           { text: '7',    suffix: ' personas', label: 'AI-powered UGC creator personas running live in our own network right now', amber: true },
           { text: '4+',   suffix: ' hrs',      label: 'Saved per creator per week on content, captions, briefs, and brand outreach admin', amber: false },
-          { text: '100%', suffix: '',           label: 'Of creator content, partnership proposals, and ops run through AI — no manual writing', amber: false },
+           { text: '100%', suffix: '',           label: 'Of content, proposals, and ops are guided by AI — built and managed by our team', amber: false },
           { text: '30',   suffix: ' days',      label: 'Notice to cancel — no long-term contracts, no lock-in, no penalty', amber: false },
         ].map((s, i) => (
           <div className="proof-stat" key={i}>
@@ -807,7 +807,7 @@ const compOptions = [
     winner: true,
     pros: [
       { yes: true,  text: 'Built specifically for your workflows — not off the shelf' },
-      { yes: true,  text: 'Runs automatically — no babysitting, no prompting' },
+      { yes: true,  text: 'AI does the heavy lifting — we manage the rest' },
       { yes: true,  text: 'Scales with your business without adding headcount' },
       { yes: true,  text: 'Fully managed — we run it, you access the results' },
     ],
@@ -997,7 +997,7 @@ const steps = [
   {
     num: '04',
     label: 'Step Four',
-    title: 'It goes live — and runs itself',
+    title: 'It goes live — we run it from here',
     text: 'We deploy, onboard your team in 30 minutes, and the system runs from that point. You access everything through a clean portal — outputs, reports, pipelines. We handle everything operationally on the retainer. Cancel any time with 30 days notice.',
   },
 ]
