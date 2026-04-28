@@ -432,8 +432,8 @@ function Hero() {
             transition={{ delay: 0.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             Managing creators at scale<br />
-            is a <span className="hl">content operations</span><br />
-            problem. We solved it.
+            hits an <span className="hl">operations ceiling.</span><br />
+            We remove it.
           </motion.h1>
 
           <motion.p
@@ -442,9 +442,9 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.55 }}
           >
-            We built an AI content system to run our own network of UGC creators. Now we build
-            the same for talent agencies, creator managers, and brands who are drowning in
-            content, briefs, and brand deal admin.
+            Most creator agencies plateau around 10–20 creators — not because demand drops,
+            but because ops can't keep up. We built an AI system to run our own creator network.
+            Now we build and manage the same for agencies who are ready to scale past that ceiling.
           </motion.p>
 
           <motion.div
@@ -470,7 +470,7 @@ function Hero() {
           >
             <span style={{ color: 'var(--t3)' }}>We run it ourselves — we know it works</span>
             <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
-            One setup fee. Monthly retainer.
+            Take on more creators without hiring
             <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
             Cancel with 30 days notice
           </motion.div>
@@ -564,11 +564,11 @@ function Problem() {
 
 /* ── SOLUTION ────────────────────────────────────────────────── */
 const solutions = [
-  { icon: <Icon.Target size={18} />, title: 'We started by building it for ourselves', body: 'We run 7 AI-powered UGC creator personas right now — travel, fitness, gaming, football, wellness, luxury, parenting. Every piece of content, every brand proposal, every ops decision runs through an AI system we built from scratch. We did not read about this. We live it.' },
-  { icon: <Icon.Layers size={18} />, title: 'Content on demand — hooks, captions, briefs, all of it', body: 'Our system generates platform-specific content for each persona in seconds — with the right voice, the right niche angle, the right hashtags. What a content manager would spend a full day on takes under three minutes. That is the system we build for your creators.' },
-  { icon: <Icon.BarChart size={18} />, title: 'Brand partnership proposals that actually get replies', body: 'We generate full sponsorship decks tailored to each creator — niche fit, audience data, deliverables, pricing. Outreach goes out on a sequence. Follow-ups are automated. Your team stops chasing and starts closing.' },
-  { icon: <Icon.RefreshCw size={18} />, title: 'Creator ops run in two hours a week, not twenty', body: 'Onboarding new talent, tracking brand deal pipelines, managing content approvals, scheduling posts — all systematised. One creator ops system, custom-built for your agency, so your team manages more talent without adding headcount.' },
-  { icon: <Icon.Shield size={18} />, title: 'Managed end to end — we run it, you own the results', body: 'We build and operate the system on your behalf. You access everything through a live portal — content, deal pipeline, weekly reports — included in your retainer. The system stays under CAIG management, which is what keeps it running at this level. Cancel any time with 30 days notice.' },
+  { icon: <Icon.Target size={18} />, title: 'We built this for our own network first', body: 'We run 7 AI-powered UGC creator personas right now — travel, fitness, gaming, football, wellness, luxury, parenting. Every piece of content, every brand proposal, every ops decision runs through the system we sell. We are not pitching a theory. We are running it live.' },
+  { icon: <Icon.Layers size={18} />, title: 'Your creators post more. Without your team writing more.', body: 'Platform-specific content for every creator — in their voice, their niche, their format — generated in under three minutes. What currently takes a content manager a full day happens automatically. More output per creator means more reach, more brand interest, more revenue.' },
+  { icon: <Icon.BarChart size={18} />, title: 'More brand deals closed. Fewer falling through the cracks.', body: 'Every deal tracked from first contact to payment — stage by stage, in a live pipeline your whole team can see. No more deals buried in email threads. No more follow-ups missed. Agencies using a structured pipeline close more deals at higher rates.' },
+  { icon: <Icon.RefreshCw size={18} />, title: 'Add creators without adding ops overhead', body: 'The system scales with your roster. Add a new creator — content pillars, brand outreach, and pipeline tracking are ready in the same session. What used to add a full workload per creator now adds almost nothing. That is how you scale past 20, 30, 50.' },
+  { icon: <Icon.Shield size={18} />, title: 'Fully managed. Portal access included. Nothing to maintain.', body: 'We build and run the system on your behalf. You access everything through a live portal — content queue, deal pipeline, weekly reports — included in your retainer. No tools to manage, no prompts to write, no system to maintain. Cancel with 30 days notice.' },
 ]
 
 function Solution() {
@@ -578,11 +578,11 @@ function Solution() {
         <div className="sol-grid">
           <FadeUp>
             <div className="badge"><span className="badge-dot" />What We Build</div>
-            <h2 className="section-title">An AI content system<br />built around your<br />creators and your ops</h2>
+            <h2 className="section-title">More creators. More deals.<br />No extra headcount.</h2>
             <p className="section-sub" style={{ marginBottom: '36px' }}>
-              Not a ChatGPT wrapper. Not another SaaS subscription. A custom-built system
-              that knows your creators, matches their voice, handles their outreach, and
-              runs their ops — so your team can focus on signing talent and closing deals.
+              Not a ChatGPT wrapper. Not another SaaS tool to manage. A fully managed AI system —
+              we build it, we run it, you access everything through a live portal. Your team focuses
+              on signing talent and closing deals. We handle the rest.
             </p>
             <a href="#contact" className="btn btn-amber btn-lg">
               Get a Free Strategy Call <Icon.ArrowRight />
@@ -887,7 +887,7 @@ function Services() {
             <h2 className="section-title">Simple, transparent<br />retainer pricing.</h2>
             <p className="section-sub">
               One setup fee. One monthly retainer. Cancel with 30 days notice.<br />
-              The system, the IP, and everything built is yours to keep — always.
+              We run the system — you access everything through a live portal.
             </p>
           </div>
         </FadeUp>
@@ -1074,10 +1074,10 @@ function UrgencyBanner() {
           <p className="urgency-body">
             Seven creator personas. Live on TikTok and Instagram. Every post, every brand pitch,
             every ops decision running through the system we built.
-            <strong style={{ color: 'var(--t0)' }}> If it is good enough to run our own network, it is good enough to run yours.</strong> The strategy call is free. It is 45 minutes. Come and see it working for yourself.
+            <strong style={{ color: 'var(--t0)' }}> If it is good enough to run our own network, it is good enough to run yours.</strong> The strategy call is 45 minutes. We show you the live system, walk through your roster, and tell you exactly what we'd build — and what it would change.
           </p>
           <a href="#contact" className="btn btn-amber btn-lg breathe">
-            Book My Free Strategy Call <Icon.ArrowRight size={17} />
+            See How It Works For Your Agency <Icon.ArrowRight size={17} />
           </a>
           <div className="urgency-note">
             45-minute call &nbsp;&middot;&nbsp; No pitch deck &nbsp;&middot;&nbsp; No obligation &nbsp;&middot;&nbsp; Slots available within 3 business days
