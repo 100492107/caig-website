@@ -194,7 +194,10 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.05em; line-height: 1.06; }
 /* ── HERO ───────────────────────────────────── */
 .hero {
   position: relative;
-  display: flex; align-items: flex-start; overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow: hidden;
   padding-top: var(--nav-h);
 }
 .hero-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
