@@ -1155,11 +1155,12 @@ function Contact() {
     e.preventDefault()
     setStatus('sending')
     try {
-      await fetch('/', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({ 'form-name': 'contact', ...form }).toString(),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
       })
+      if (!res.ok) throw new Error('failed')
       setStatus('success')
     } catch {
       setStatus('error')
@@ -1218,7 +1219,7 @@ function Contact() {
                 <>
                   <div className="cform-title">Send us a message</div>
                   <div className="cform-sub">We reply within 4 business hours, every time</div>
-                  <form onSubmit={submit} name="contact" method="POST" data-netlify="true">
+                  <form onSubmit={submit}>
                     <input type="hidden" name="form-name" value="contact" />
                     <div className="frow">
                       <div className="fg">
