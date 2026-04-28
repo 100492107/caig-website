@@ -401,6 +401,38 @@ function HeroDashboard() {
   )
 }
 
+/* ── HERO TICKER ──────────────────────────────────────────────── */
+const TICKER_ITEMS = [
+  { icon: '↑', text: 'Scale past 20 creators without hiring' },
+  { icon: '⚡', text: 'Content generated in under 3 minutes per creator' },
+  { icon: '✓', text: 'Fully managed — we run it, you access the portal' },
+  { icon: '↑', text: 'More brand deals closed, fewer falling through the cracks' },
+  { icon: '★', text: 'Built on a live network we operate ourselves' },
+  { icon: '⚡', text: 'Brand proposals generated in seconds, not hours' },
+  { icon: '✓', text: 'Cancel with 30 days notice — no lock-in' },
+  { icon: '↑', text: 'One system replaces a full content ops team' },
+]
+
+function HeroTicker() {
+  // Duplicate for seamless infinite loop
+  const items = [...TICKER_ITEMS, ...TICKER_ITEMS]
+  return (
+    <div className="hero-ticker">
+      <div className="hero-ticker-fade hero-ticker-fade-l" />
+      <div className="hero-ticker-track">
+        {items.map((item, i) => (
+          <div key={i} className="hero-ticker-item">
+            <span className="hero-ticker-icon">{item.icon}</span>
+            <span className="hero-ticker-text">{item.text}</span>
+            <span className="hero-ticker-sep" />
+          </div>
+        ))}
+      </div>
+      <div className="hero-ticker-fade hero-ticker-fade-r" />
+    </div>
+  )
+}
+
 /* ── HERO ─────────────────────────────────────────────────────── */
 function Hero() {
   return (
@@ -412,78 +444,70 @@ function Hero() {
       </div>
 
       <div className="container">
-        <div className="hero-split">
-          {/* ── LEFT: copy ── */}
-          <div className="hero-copy">
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.5 }}
-            >
-              <div className="badge" style={{ display: 'inline-flex', marginBottom: '28px' }}>
-                <span className="badge-dot" />We run 7 AI-powered creator personas, live right now
-              </div>
-            </motion.div>
-
-            <motion.h1
-              className="hero-h1"
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            >
-              Managing creators at scale<br />
-              hits an <span className="hl">operations ceiling.</span><br />
-              We remove it.
-            </motion.h1>
-
-            <motion.p
-              className="hero-sub"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35, duration: 0.55 }}
-            >
-              Most creator agencies plateau around 10–20 creators — not because demand drops,
-              but because ops can't keep up. We built an AI system to run our own creator network.
-              Now we build and manage the same for agencies who are ready to scale past that ceiling.
-            </motion.p>
-
-            <motion.div
-              className="hero-ctas"
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-            >
-              <a href="#contact" className="btn btn-amber btn-lg breathe">
-                Get a Free Strategy Call
-                <Icon.ArrowRight size={16} />
-              </a>
-              <a href="#services" className="btn btn-ghost btn-lg">
-                See Pricing
-              </a>
-            </motion.div>
-
-            <motion.div
-              className="hero-trust"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.75, duration: 0.6 }}
-            >
-              <span style={{ color: 'var(--t3)' }}>We run it ourselves — we know it works</span>
-              <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
-              Take on more creators without hiring
-              <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
-              Cancel with 30 days notice
-            </motion.div>
-          </div>
-
-          {/* ── RIGHT: animated mockup ── */}
-          <div className="hero-visual">
-            <div className="hd-float-wrap">
-              <HeroDashboard />
+        <div className="hero-center">
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+          >
+            <div className="badge" style={{ display: 'inline-flex', marginBottom: '28px' }}>
+              <span className="badge-dot" />We run 7 AI-powered creator personas, live right now
             </div>
-          </div>
+          </motion.div>
+
+          <motion.h1
+            className="hero-h1"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          >
+            Managing creators at scale<br />
+            hits an <span className="hl">operations ceiling.</span><br />
+            We remove it.
+          </motion.h1>
+
+          <motion.p
+            className="hero-sub"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35, duration: 0.55 }}
+          >
+            Most creator agencies plateau around 10–20 creators — not because demand drops,
+            but because ops can't keep up. We built an AI system to run our own creator network.
+            Now we build and manage the same for agencies ready to scale past that ceiling.
+          </motion.p>
+
+          <motion.div
+            className="hero-ctas"
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
+            <a href="#contact" className="btn btn-amber btn-lg breathe">
+              Get a Free Strategy Call
+              <Icon.ArrowRight size={16} />
+            </a>
+            <a href="#services" className="btn btn-ghost btn-lg">
+              See Pricing
+            </a>
+          </motion.div>
+
+          <motion.div
+            className="hero-trust"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.75, duration: 0.6 }}
+          >
+            <span style={{ color: 'var(--t3)' }}>We run it ourselves — we know it works</span>
+            <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
+            Take on more creators without hiring
+            <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
+            Cancel with 30 days notice
+          </motion.div>
         </div>
       </div>
+
+      <HeroTicker />
     </section>
   )
 }
