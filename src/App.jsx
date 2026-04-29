@@ -167,6 +167,104 @@ const Icon = {
   ),
 }
 
+/* ── COUNT-UP HOOK ───────────────────────────────────────────── */
+function useCountUp(target, duration = 1800) {
+  const [count, setCount] = useState(0)
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: '-80px' })
+  useEffect(() => {
+    if (!inView) return
+    let start = null
+    const step = (ts) => {
+      if (!start) start = ts
+      const progress = Math.min((ts - start) / duration, 1)
+      setCount(Math.floor(progress * target))
+      if (progress < 1) requestAnimationFrame(step)
+    }
+    requestAnimationFrame(step)
+  }, [inView, target, duration])
+  return [count, ref]
+}
+
+/* ── STICKY CTA BAR ─────────────────────────────────────────── */
+function StickyBar() {
+  const [show, setShow] = useState(false)
+  useEffect(() => {
+    const h = () => setShow(window.scrollY > 600)
+    window.addEventListener('scroll', h, { passive: true })
+    return () => window.removeEventListener('scroll', h)
+  }, [])
+  return (
+    <AnimatePresence>
+      {show && (
+        <motion.div
+          className="sticky-bar"
+          initial={{ y: 80, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 80, opacity: 0 }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <div className="sticky-bar-inner">
+            <div className="sticky-bar-text">
+              <span className="sticky-bar-title">Ready to stop being the bottleneck?</span>
+              <span className="sticky-bar-sub">30-min call · Live portal demo · No obligation</span>
+            </div>
+            <a href="#contact" className="btn btn-amber btn-md breathe">
+              Book Free Call <Icon.ArrowRight size={14} />
+            </a>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  )
+}
+
+/* ── PORTAL DELIVERABLES GRID ────────────────────────────────── */
+const PORTAL_ITEMS = [
+  { icon: <Icon.Zap size={22} />, label: 'Hook Scripts', desc: 'Pattern-interrupt openers written for your creator\'s exact niche and platform. Ready to record.' },
+  { icon: <Icon.FileText size={22} />, label: 'Long-form Scripts', desc: 'Full video scripts with intro, body, and CTA. Structured. On-brand. Delivered every week.' },
+  { icon: <Icon.Target size={22} />, label: 'Captions & Copy', desc: 'Platform-specific captions for every post. Hooks, hashtags, and calls-to-action included.' },
+  { icon: <Icon.Layers size={22} />, label: 'Content Plans', desc: 'Monthly content calendar per creator — topics, formats, and posting schedule mapped out.' },
+  { icon: <Icon.Star size={22} />, label: 'Brand Proposals', desc: 'Tailored partnership decks for Growth and Enterprise clients. Written, formatted, ready to send.' },
+  { icon: <Icon.RefreshCw size={22} />, label: 'Weekly Delivery', desc: 'Every Monday. No briefing from you. No chasing for drafts. Just open the portal and approve.' },
+]
+
+function PortalGrid() {
+  return (
+    <section className="portal-section section" id="portal">
+      <div className="container">
+        <FadeUp>
+          <div className="sh c">
+            <div className="badge"><span className="badge-dot" />Inside Your Portal</div>
+            <h2 className="section-title">Everything your creators need<br />to post — produced every week.</h2>
+            <p className="section-sub">
+              No templates. No prompts to fill in. Every piece is written specifically for each creator on your roster and waiting in your portal every Monday.
+            </p>
+          </div>
+        </FadeUp>
+        <StaggerGrid className="portal-grid">
+          {PORTAL_ITEMS.map((item, i) => (
+            <FadeItem key={i}>
+              <div className="portal-card">
+                <div className="portal-icon">{item.icon}</div>
+                <div className="portal-label">{item.label}</div>
+                <div className="portal-desc">{item.desc}</div>
+              </div>
+            </FadeItem>
+          ))}
+        </StaggerGrid>
+        <FadeUp delay={0.15}>
+          <div style={{ textAlign: 'center', marginTop: '48px' }}>
+            <a href="#contact" className="btn btn-amber btn-lg breathe">
+              See It Built for Your Roster <Icon.ArrowRight size={15} />
+            </a>
+          </div>
+        </FadeUp>
+      </div>
+    </section>
+  )
+}
+
 /* ── NAV ─────────────────────────────────────────────────────── */
 function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -181,19 +279,8 @@ function Nav() {
         <a href="/" className="nav-logo">
           <Logo size={22} sub="Content Group" />
         </a>
-        <ul className="nav-links">
-          {[
-            ['#problem', 'The Problem'],
-            ['#services', 'What You Get'],
-            ['#how-it-works', 'How It Works'],
-            ['#testimonials', 'Results'],
-            ['#faq', 'FAQ'],
-          ].map(([h, l]) => (
-            <li key={h}><a href={h}>{l}</a></li>
-          ))}
-        </ul>
         <div className="nav-right">
-          <a href="#contact" className="btn btn-amber btn-md">Get Started</a>
+          <a href="#contact" className="btn btn-amber btn-md breathe">Book a Free Call</a>
         </div>
       </div>
     </nav>
@@ -437,6 +524,37 @@ function HeroTicker() {
   )
 }
 
+/* ── HERO STATS (count-up) ───────────────────────────────────── */
+function StatItem({ target, prefix = '', suffix = '', label, amber }) {
+  const [count, ref] = useCountUp(target)
+  return (
+    <div className="hero-stat" ref={ref}>
+      <div className="hero-stat-val">
+        <span style={{ color: amber ? 'var(--amber)' : 'var(--t0)' }}>
+          {prefix}{count}{suffix}
+        </span>
+      </div>
+      <div className="hero-stat-lbl">{label}</div>
+    </div>
+  )
+}
+
+function HeroStats() {
+  return (
+    <motion.div
+      className="hero-stats"
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.9, duration: 0.6 }}
+    >
+      <StatItem target={4}   suffix="+ hrs"  label="Saved per creator per week — no briefing, no chasing, no rewriting" amber />
+      <StatItem target={20}  suffix="+"       label="Pieces of content per creator per month on Foundation — scripts, hooks, captions" />
+      <StatItem target={100} suffix="%"       label="Written and delivered by CAIG — you review, approve, your creators post" />
+      <StatItem target={30}  suffix=" days"   label="Notice to cancel — no contracts, no lock-in, no penalty. Ever." />
+    </motion.div>
+  )
+}
+
 /* ── HERO ─────────────────────────────────────────────────────── */
 function Hero() {
   return (
@@ -512,26 +630,7 @@ function Hero() {
       </div>
 
       {/* ── Proof stats ── */}
-      <motion.div
-        className="hero-stats"
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.9, duration: 0.6 }}
-      >
-        {[
-          { val: '4+',   suf: ' hrs',  lbl: 'Saved per creator per week — no briefing writers, no chasing copy, no rewriting drafts', amber: true },
-          { val: '20+',  suf: '',      lbl: 'Pieces of content per creator per month on Foundation — scripts, hooks, and captions', amber: false },
-          { val: '100%', suf: '',      lbl: 'Written and delivered by CAIG — you review, approve, your creators post', amber: false },
-          { val: '30',   suf: ' days', lbl: 'Notice to cancel — no contracts, no lock-in, no penalty. Ever.', amber: false },
-        ].map((s, i) => (
-          <div className="hero-stat" key={i}>
-            <div className="hero-stat-val">
-              <span style={{ color: s.amber ? 'var(--amber)' : 'var(--t0)' }}>{s.val}{s.suf}</span>
-            </div>
-            <div className="hero-stat-lbl">{s.lbl}</div>
-          </div>
-        ))}
-      </motion.div>
+      <HeroStats />
 
       <HeroTicker />
     </section>
@@ -1340,9 +1439,11 @@ function MainSite() {
   return (
     <>
       <Nav />
+      <StickyBar />
       <main>
         <Hero />
         <Problem />
+        <PortalGrid />
         <Solution />
         <Testimonials />
         <Comparison />
