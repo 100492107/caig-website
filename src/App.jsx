@@ -456,7 +456,7 @@ function Hero() {
               transition={{ delay: 0.1, duration: 0.5 }}
             >
               <div className="badge" style={{ display: 'inline-flex', marginBottom: '28px' }}>
-                <span className="badge-dot" />Done-for-you AI content creation for creator agencies
+                <span className="badge-dot" />For creator managers who are done being the bottleneck
               </div>
             </motion.div>
           </div>
@@ -467,9 +467,9 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            Your creators need content.<br />
-            <span className="hl">We write it, deliver it,</span><br />
-            and keep it coming.
+            Your creators aren't posting.<br />
+            <span className="hl">Not because they lack ideas.</span><br />
+            Because nobody wrote the content.
           </motion.h1>
 
           <motion.p
@@ -478,7 +478,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.55 }}
           >
-            CAIG produces AI-powered scripts, hooks, captions, and brand proposals for your creator roster — every week, without you writing a word. You manage the relationships. We produce the content. Your creators stay consistent, on-brand, and posting.
+            You built the roster. You landed the relationships. You know exactly how big this could get. But every week, the content doesn't get written — and every week your creators fall behind. CAIG writes it for them. Scripts, hooks, captions, proposals — produced by AI, delivered to your portal every Monday. Your creators post. Your agency grows.
           </motion.p>
 
           <motion.div
@@ -488,7 +488,7 @@ function Hero() {
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             <a href="#contact" className="btn btn-amber btn-lg breathe">
-              See How It Works
+              Show Me How It Works
               <Icon.ArrowRight size={16} />
             </a>
             <a href="#services" className="btn btn-ghost btn-lg">
@@ -502,9 +502,9 @@ function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.75, duration: 0.6 }}
           >
-            <span style={{ color: 'var(--t3)' }}>Content delivered weekly to your private portal</span>
+            <span style={{ color: 'var(--t3)' }}>Content delivered to your portal every week</span>
             <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
-            Written by AI, reviewed by our team
+            No briefing. No chasing. No writing.
             <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
             Cancel with 30 days notice
           </motion.div>
@@ -519,10 +519,10 @@ function Hero() {
         transition={{ delay: 0.9, duration: 0.6 }}
       >
         {[
-          { val: '4+',   suf: ' hrs',   lbl: 'Saved per creator per week — no more briefing, writing, or chasing content', amber: true },
-          { val: '20',   suf: '+',      lbl: 'Pieces of content produced per creator per month on our Foundation plan', amber: false },
-          { val: '100%', suf: '',       lbl: 'Of content written and delivered by CAIG — you review, approve, and post', amber: false },
-          { val: '30',   suf: ' days',  lbl: 'Notice to cancel — no contracts, no lock-in, no penalty. Ever.', amber: false },
+          { val: '4+',   suf: ' hrs',  lbl: 'Saved per creator per week — no briefing writers, no chasing copy, no rewriting drafts', amber: true },
+          { val: '20+',  suf: '',      lbl: 'Pieces of content per creator per month on Foundation — scripts, hooks, and captions', amber: false },
+          { val: '100%', suf: '',      lbl: 'Written and delivered by CAIG — you review, approve, your creators post', amber: false },
+          { val: '30',   suf: ' days', lbl: 'Notice to cancel — no contracts, no lock-in, no penalty. Ever.', amber: false },
         ].map((s, i) => (
           <div className="hero-stat" key={i}>
             <div className="hero-stat-val">
@@ -589,9 +589,9 @@ function Problem() {
         <FadeUp>
           <div className="sh c">
             <div className="badge"><span className="badge-dot" />The Real Problem</div>
-            <h2 className="section-title">Content agencies stall when<br />production can't keep up.</h2>
+            <h2 className="section-title">You already know what the problem is.<br />You just haven't fixed it yet.</h2>
             <p className="section-sub">
-              You can manage ten creators. You can manage twenty. But producing high-quality, consistent content for all of them — week in, week out — is a different kind of problem. That is the problem we solve.
+              Your creators have the audience, the niche, the potential. The only thing stopping them from growing — and stopping your agency from scaling with them — is consistent content. Not ideas. Not strategy. Just someone to actually write it.
             </p>
           </div>
         </FadeUp>
@@ -1121,19 +1121,19 @@ function UrgencyBanner() {
     <section className="urgency-section">
       <FadeUp>
         <div className="urgency-inner">
-          <div className="urgency-eyebrow">The straight truth</div>
+          <div className="urgency-eyebrow">The cost of doing nothing</div>
           <h2 className="urgency-title">
-            Every week without consistent content<br />is a week your creators aren't growing.
+            Every week your creators don't post<br />is a week someone else's do.
           </h2>
           <p className="urgency-body">
-            Inconsistent posting doesn't just slow growth — it reverses it. Algorithms deprioritise inactive accounts. Audiences drift. Brand deals go to creators who show up every week.
-            <strong style={{ color: 'var(--t0)' }}> CAIG makes your creators consistent without adding a single person to your team.</strong> The discovery call is 30 minutes. We show you exactly what the content looks like for your roster, and what it costs.
+            Algorithms reward creators who show up. Brands sign the ones with consistent output. Audiences forget the ones who go quiet. Right now, somewhere on your roster, a creator hasn't posted in two weeks. Not because they don't want to — because nobody wrote the content.
+            <strong style={{ color: 'var(--t0)' }}> That is a solvable problem. Book a 30-minute call and we will show you exactly what CAIG produces for creators like yours — and what it costs.</strong>
           </p>
           <a href="#contact" className="btn btn-amber btn-lg breathe">
-            Book the Call. Keep Your Creators Posting. <Icon.ArrowRight size={17} />
+            Book the Call — 30 Minutes, No Obligation <Icon.ArrowRight size={17} />
           </a>
           <div className="urgency-note">
-            30-minute call &nbsp;&middot;&nbsp; Live portal demo &nbsp;&middot;&nbsp; No obligation &nbsp;&middot;&nbsp; Slots available this week
+            Live portal demo &nbsp;&middot;&nbsp; Real content examples for your niche &nbsp;&middot;&nbsp; Slots available this week
           </div>
         </div>
       </FadeUp>
