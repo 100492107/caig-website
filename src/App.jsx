@@ -951,116 +951,71 @@ function Comparison() {
 }
 
 /* ── SERVICES ────────────────────────────────────────────────── */
-const tiers = [
+/* ── WHY CAIG ────────────────────────────────────────────────── */
+const whyItems = [
   {
-    name: 'Discovery Call',
-    price: 'Free',
-    time: '30 minutes — no obligation',
-    featured: false,
-    popular: false,
-    feats: [
-      'Walk us through your roster and current content process',
-      'We show you exactly what CAIG would produce for your creators',
-      'Live demo of the portal and content output',
-      'Clear recommendation on which plan fits your agency',
-      'No pitch. No obligation. Just the honest answer.',
-      'Setup fee credited in full if you proceed',
-    ],
-    cta: 'Book Discovery Call',
+    num: '01',
+    title: 'We never ask you to brief us.',
+    body: 'Most content solutions still need you to write prompts, fill in templates, or manage a freelancer. We don\'t. You onboard your creators once. After that, content shows up every Monday. No check-ins. No forms. No follow-ups.',
   },
   {
-    name: 'Foundation',
-    price: '£3,000/mo',
-    time: '£2,500 setup · up to 2 creators',
-    featured: false,
-    popular: false,
-    feats: [
-      '20 pieces of content per creator per month',
-      'Scripts, hooks, and captions — platform-specific',
-      'Monthly content strategy per creator',
-      'Private portal — review, approve, and download',
-      'Monthly performance report',
-      '30-day cancel notice — no long-term commitment',
-    ],
-    cta: 'Get Started',
+    num: '02',
+    title: 'Every piece is built for that creator\'s exact niche.',
+    body: 'Generic content gets ignored. We build a deep content profile for every creator — their voice, their niche, their audience, their platform. What lands in your portal could only have been written for them.',
   },
   {
-    name: 'Growth',
-    price: '£5,000/mo',
-    time: '£2,500 setup · up to 5 creators',
-    featured: true,
-    popular: true,
-    feats: [
-      '50 pieces of content per creator per month',
-      'Scripts, hooks, captions — short and long-form',
-      'Brand partnership proposals written and formatted',
-      'Weekly content strategy updates per creator',
-      'Dedicated content strategist',
-      'Priority turnaround — 48hrs on urgent requests',
-    ],
-    cta: 'Start Growth Plan',
+    num: '03',
+    title: 'A cheaper tool is not a competitor. A system is.',
+    body: 'Anyone can subscribe to an AI writing tool. Running it, prompting it, reviewing it, formatting it, and delivering it for ten creators every week — that\'s what we do. You\'re not paying for AI. You\'re paying for the system that makes it work at scale.',
   },
   {
-    name: 'Enterprise',
-    price: '£8,500/mo',
-    time: '£2,500 setup · unlimited creators',
-    featured: false,
-    popular: false,
-    feats: [
-      'Unlimited content across your entire roster',
-      'All content types — scripts, captions, threads, briefs',
-      'Brand proposal writing and outreach copy included',
-      'Bespoke content formats built around each creator',
-      'Dedicated account manager',
-      'Daily publishing queue management',
-    ],
-    cta: 'Talk to Us',
+    num: '04',
+    title: 'Your portal is a competitive advantage.',
+    body: 'Your clients get a private portal with their content queue, history, and approvals in one place. No other agency offers this. It signals professionalism, justifies your retainer, and makes you harder to replace.',
+  },
+  {
+    num: '05',
+    title: 'We grow with you, not against you.',
+    body: 'Sign one new creator? Their content starts the following Monday. No renegotiating. No extra onboarding cost. The system scales with your roster. You focus on signing talent — we handle the delivery.',
+  },
+  {
+    num: '06',
+    title: 'The results compound. The alternatives don\'t.',
+    body: 'Consistent posting builds algorithmic trust, audience loyalty, and brand deal leverage. Every week your creators post, they get easier to monetise. Every week they don\'t — you lose ground that takes months to recover.',
   },
 ]
 
-function Services() {
+function WhyCAIG() {
   return (
-    <section className="section" id="services">
+    <section className="why-section section" id="why">
       <div className="container">
         <FadeUp>
           <div className="sh c">
-            <div className="badge"><span className="badge-dot" />Pricing</div>
-            <h2 className="section-title">Simple, transparent<br />monthly pricing.</h2>
+            <div className="badge"><span className="badge-dot" />Why Agencies Choose CAIG</div>
+            <h2 className="section-title">This isn't a content tool.<br />It's an unfair advantage.</h2>
             <p className="section-sub">
-              One setup fee. One monthly retainer. Cancel with 30 days notice.<br />
-              We produce the content, you manage the talent.
+              The agencies that win in creator management aren't the ones working harder. They're the ones who solved content production while everyone else is still stuck in it.
             </p>
           </div>
         </FadeUp>
-        <StaggerGrid className="svc-grid">
-          {tiers.map((t, i) => (
+        <StaggerGrid className="why-grid">
+          {whyItems.map((item, i) => (
             <FadeItem key={i}>
-              <div className={`svc-card${t.featured ? ' feat' : ''}`}>
-                {t.popular && <div className="svc-popular">Most Popular</div>}
-                <div className="svc-name">{t.name}</div>
-                <div className="svc-price">{t.price}</div>
-                <div className="svc-time">
-                  <span className="svc-time-dot" />{t.time}
-                </div>
-                <div className="svc-div" />
-                <ul className="svc-feats">
-                  {t.feats.map((f, j) => (
-                    <li className="svc-feat" key={j}>
-                      <span className="svc-check"><Icon.Check /></span>{f}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="#contact"
-                  className={`btn btn-lg ${t.featured ? 'btn-amber' : 'btn-outline-amber'}`}
-                  style={{ width: '100%', justifyContent: 'center' }}
-                >
-                  {t.cta}
-                </a>
+              <div className="why-card">
+                <div className="why-num">{item.num}</div>
+                <div className="why-title">{item.title}</div>
+                <div className="why-body">{item.body}</div>
               </div>
             </FadeItem>
           ))}
         </StaggerGrid>
+        <FadeUp delay={0.2}>
+          <div style={{ textAlign: 'center', marginTop: '60px' }}>
+            <a href="#contact" className="btn btn-amber btn-xl breathe">
+              Get The Advantage <Icon.ArrowRight size={17} />
+            </a>
+          </div>
+        </FadeUp>
       </div>
     </section>
   )
@@ -1156,8 +1111,8 @@ const faqs = [
     a: "We refine the voice profile during onboarding and adjust based on your feedback in the first two weeks. Most agencies find the output is accurate from week one. If something isn't right, you tell us and we fix it — that is part of the retainer.",
   },
   {
-    q: 'What is the pricing model?',
-    a: "Every plan starts with a £2,500 setup fee which covers onboarding, creator profiling, and your first content batch. After that: Foundation at £3,000/mo (up to 2 creators, 20 pieces each), Growth at £5,000/mo (up to 5 creators, 50 pieces each, proposals included), or Enterprise at £8,500/mo (unlimited creators, unlimited content). Cancel with 30 days notice — no lock-in.",
+    q: 'How does pricing work?',
+    a: "Pricing is based on your roster size and content volume. We don't publish rates publicly — every agency is different and we'd rather give you an accurate number on a call than a figure that doesn't fit. Book a free discovery call and we'll give you a clear, honest quote with no obligation.",
   },
 ]
 
@@ -1385,12 +1340,12 @@ function Footer() {
             </p>
           </div>
           <div>
-            <div className="footer-col-h">Services</div>
+            <div className="footer-col-h">What We Do</div>
             <ul className="footer-links">
-              <li><a href="#services">Free Discovery Call</a></li>
-              <li><a href="#services">Foundation Plan</a></li>
-              <li><a href="#services">Growth Plan</a></li>
-              <li><a href="#services">Enterprise Plan</a></li>
+              <li><a href="#portal">Inside Your Portal</a></li>
+              <li><a href="#solution">How It Works</a></li>
+              <li><a href="#why">Why CAIG</a></li>
+              <li><a href="#testimonials">Client Results</a></li>
             </ul>
           </div>
           <div>
@@ -1434,9 +1389,9 @@ function MainSite() {
         <Problem />
         <PortalGrid />
         <Solution />
+        <WhyCAIG />
         <Testimonials />
         <Comparison />
-        <Services />
         <HowItWorks />
         <FAQ />
         <UrgencyBanner />
