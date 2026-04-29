@@ -578,17 +578,15 @@ function Hero() {
 
       <div className="container">
         <div className="hero-center">
-          <div className="hero-badge-wrap">
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.5 }}
-            >
-              <div className="badge" style={{ display: 'inline-flex', marginBottom: '28px' }}>
-                <span className="badge-dot" />For creator managers who are done being the bottleneck
-              </div>
-            </motion.div>
-          </div>
+
+          <motion.div
+            className="hero-eyebrow"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+          >
+            CORNERSTONE AI GROUP
+          </motion.div>
 
           <motion.h1
             className="hero-h1"
@@ -596,9 +594,8 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            Your creators aren't posting.<br />
-            <span className="hl">Not because they lack ideas.</span><br />
-            Because nobody wrote the content.
+            Your Creators.<br />
+            <span className="hl">Posting Every Week.</span>
           </motion.h1>
 
           <motion.p
@@ -607,41 +604,22 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.55 }}
           >
-            You built the roster. You landed the relationships. You know exactly how big this could get. But every week, the content doesn't get written — and every week your creators fall behind. CAIG writes it for them. Scripts, hooks, captions, proposals — produced by AI, delivered to your portal every Monday. Your creators post. Your agency grows.
+            We write the content. You manage the talent.
           </motion.p>
 
           <motion.div
-            className="hero-ctas"
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
           >
-            <a href="#contact" className="btn btn-amber btn-lg breathe">
-              Show Me How It Works
-              <Icon.ArrowRight size={16} />
-            </a>
-            <a href="#services" className="btn btn-ghost btn-lg">
-              View Pricing
+            <a href="#contact" className="btn btn-amber btn-xl breathe">
+              Book a Free Call
+              <Icon.ArrowRight size={18} />
             </a>
           </motion.div>
 
-          <motion.div
-            className="hero-trust"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.75, duration: 0.6 }}
-          >
-            <span style={{ color: 'var(--t3)' }}>Content delivered to your portal every week</span>
-            <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
-            No briefing. No chasing. No writing.
-            <span style={{ margin: '0 12px', opacity: 0.2 }}>|</span>
-            Cancel with 30 days notice
-          </motion.div>
         </div>
       </div>
-
-      {/* ── Proof stats ── */}
-      <HeroStats />
 
       <HeroTicker />
     </section>
