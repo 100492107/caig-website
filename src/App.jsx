@@ -774,10 +774,10 @@ function Testimonials() {
 const compOptions = [
   {
     title: 'Hire an In-House Content Writer',
-    sub: 'A full-time content hire costs £28–40K a year — and still can't cover every creator at the volume you need',
+    sub: "A full-time content hire costs £28–40K a year — and still can't cover every creator at the volume you need",
     winner: false,
     pros: [
-      { yes: false, text: 'One person can't scale across a growing roster' },
+      { yes: false, text: "One person can't scale across a growing roster" },
       { yes: false, text: 'Sick days, holidays, and turnover break the production cycle' },
       { yes: false, text: 'Briefing, feedback, and revision loops eat more time' },
       { yes: true,  text: 'Deep brand knowledge after time' },
@@ -1064,7 +1064,7 @@ const faqs = [
     a: "Your first content batch is typically delivered within 48 hours of onboarding. The discovery call is 30 minutes — we can often have your first creators live the same week.",
   },
   {
-    q: 'What if the content doesn't sound like the creator?',
+      q: "What if the content doesn't sound like the creator?",
     a: "We refine the voice profile during onboarding and adjust based on your feedback in the first two weeks. Most agencies find the output is accurate from week one. If something isn't right, you tell us and we fix it — that is part of the retainer.",
   },
   {
