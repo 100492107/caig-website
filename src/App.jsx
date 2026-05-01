@@ -570,10 +570,13 @@ function HeroStats() {
 function Hero() {
   return (
     <section className="hero">
-      <div className="hero-bg">
-        <div className="hero-orb hero-orb-1" />
-        <div className="hero-orb hero-orb-2" />
-        <div className="hero-orb hero-orb-3" />
+      <div className="hero-bg" />
+      <div className="hero-planet-wrap">
+        <div className="hero-planet-glow" />
+        <div className="hero-planet">
+          <div className="hero-planet-ring" />
+        </div>
+        <div className="hero-planet-ring" />
       </div>
 
       <div className="container">
