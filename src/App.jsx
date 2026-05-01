@@ -15,25 +15,25 @@ const PARTICLE_OPTIONS = {
   fpsLimit: 60,
   interactivity: {
     events: { onHover: { enable: true, mode: 'grab' } },
-    modes: { grab: { distance: 160, links: { opacity: 0.35 } } },
+    modes: { grab: { distance: 160, links: { opacity: 0.28 } } },
   },
   particles: {
     color: { value: ['#f7b034', '#7c7fff', '#34d8a4'] },
-    links: { color: '#ffffff', distance: 145, enable: true, opacity: 0.18, width: 1.2 },
-    move: { enable: true, speed: 0.6, direction: 'none', random: true, straight: false, outModes: { default: 'bounce' } },
-    number: { value: 90, density: { enable: true, area: 900 } },
-    opacity: { value: { min: 0.5, max: 1 }, animation: { enable: true, speed: 0.5, sync: false } },
+    links: { color: '#ffffff', distance: 130, enable: true, opacity: 0.13, width: 1 },
+    move: { enable: true, speed: 0.5, direction: 'none', random: true, straight: false, outModes: { default: 'bounce' } },
+    number: { value: 70, density: { enable: true, area: 1000 } },
+    opacity: { value: { min: 0.4, max: 0.85 }, animation: { enable: true, speed: 0.4, sync: false } },
     shape: { type: 'circle' },
-    size: { value: { min: 2, max: 4 } },
+    size: { value: { min: 1.5, max: 3 } },
   },
   detectRetina: true,
 }
 
-function ParticlesHeroBg() {
+function ParticlesHeroBg({ opacity }) {
   const [ready, setReady] = useState(false)
   useEffect(() => { engineReady.then(() => setReady(true)) }, [])
   return (
-    <div style={{ position: 'absolute', inset: 0, zIndex: 0, opacity: ready ? 1 : 0, transition: 'opacity 0.6s ease' }}>
+    <div style={{ position: 'absolute', inset: 0, zIndex: 0, opacity: ready ? opacity : 0, transition: ready ? 'none' : 'opacity 0.6s ease', pointerEvents: opacity < 0.05 ? 'none' : 'auto' }}>
       {ready && (
         <Particles id="hero-particles" options={PARTICLE_OPTIONS} style={{ position: 'absolute', inset: 0 }} />
       )}
@@ -604,11 +604,30 @@ function HeroStats() {
 
 /* ── HERO ─────────────────────────────────────────────────────── */
 function Hero() {
+  const sectionRef = useRef(null)
+  const [particleOpacity, setParticleOpacity] = useState(1)
+
+  useEffect(() => {
+    const onScroll = () => {
+      const el = sectionRef.current
+      if (!el) return
+      const h = el.offsetHeight
+      const scrolled = window.scrollY
+      // start fading at 60% through the hero, fully gone by the bottom
+      const fadeStart = h * 0.55
+      const fadeEnd   = h * 0.95
+      const raw = 1 - (scrolled - fadeStart) / (fadeEnd - fadeStart)
+      setParticleOpacity(Math.min(1, Math.max(0, raw)))
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
-    <section className="hero">
-      <ParticlesHeroBg />
+    <section className="hero" ref={sectionRef}>
+      <ParticlesHeroBg opacity={particleOpacity} />
       <div className="hero-overlay" />
-      <div className="hero-orbs">
+      <div className="hero-orbs" style={{ opacity: particleOpacity, transition: 'none' }}>
         <div className="hero-orb hero-orb-1" />
         <div className="hero-orb hero-orb-2" />
       </div>
