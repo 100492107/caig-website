@@ -324,7 +324,7 @@ function Nav() {
     <nav className={`nav${scrolled ? ' scrolled' : ''}`}>
       <div className="nav-inner">
         <a href="/" className="nav-logo">
-          <Logo size={22} sub="Content Group" />
+          <Logo height={32} />
         </a>
         <div className="nav-right">
           <a href="#contact" className="btn btn-amber btn-md breathe">Book a Free Call</a>
@@ -485,7 +485,7 @@ function HeroDashboard() {
         {/* Sidebar */}
         <div className="hd-sidebar">
           <div className="hd-sidebar-gem">
-            <LogoMark size={22} />
+            <LogoMark size={32} />
           </div>
           <div className="hd-sidebar-div" />
           {HD_MODULES.map((m, i) => (
@@ -1389,7 +1389,7 @@ function Footer() {
         <div className="footer-grid">
           <div>
             <div className="footer-logo-row">
-              <Logo size={20} sub={null} />
+              <Logo height={28} />
             </div>
             <p className="footer-tagline">
               Done-for-you AI content creation for creator agencies and talent managers.
