@@ -253,8 +253,8 @@ function StickyBar() {
         >
           <div className="sticky-bar-inner">
             <div className="sticky-bar-text">
-              <span className="sticky-bar-title">See exactly what CAIG delivers — before you commit to anything.</span>
-              <span className="sticky-bar-sub">30-min call · Live portal demo · Real content examples for your niche</span>
+              <span className="sticky-bar-title">Finance content, produced and delivered. No briefing. No chasing. Just post.</span>
+              <span className="sticky-bar-sub">30-min call · Real finance content examples · Live portal demo</span>
             </div>
             <a href="#contact" className="btn btn-amber btn-md breathe">
               Book Free Call <Icon.ArrowRight size={14} />
@@ -268,12 +268,12 @@ function StickyBar() {
 
 /* ── PORTAL DELIVERABLES GRID ────────────────────────────────── */
 const PORTAL_ITEMS = [
-  { icon: <Icon.Zap size={22} />, label: 'Hook Scripts', desc: 'Pattern-interrupt openers written for your creator\'s exact niche and platform. Ready to record.' },
-  { icon: <Icon.FileText size={22} />, label: 'Long-form Scripts', desc: 'Full video scripts with intro, body, and CTA. Structured. On-brand. Delivered every week.' },
-  { icon: <Icon.Target size={22} />, label: 'Captions & Copy', desc: 'Platform-specific captions for every post. Hooks, hashtags, and calls-to-action included.' },
-  { icon: <Icon.Layers size={22} />, label: 'Content Plans', desc: 'Monthly content calendar per creator — topics, formats, and posting schedule mapped out.' },
-  { icon: <Icon.Star size={22} />, label: 'Brand Proposals', desc: 'Tailored partnership decks for Growth and Enterprise clients. Written, formatted, ready to send.' },
-  { icon: <Icon.RefreshCw size={22} />, label: 'Weekly Delivery', desc: 'Every Monday. No briefing from you. No chasing for drafts. Just open the portal and approve.' },
+  { icon: <Icon.Zap size={22} />, label: 'YouTube Scripts', desc: 'Full long-form scripts covering finance topics — investing, budgeting, tax, ETFs, market breakdowns — structured for watch time, retention, and CTR.' },
+  { icon: <Icon.FileText size={22} />, label: 'Hook Openers', desc: 'Pattern-interrupt hooks written specifically for finance audiences. "You\'ve been calculating compound interest wrong." Tested formats, every week.' },
+  { icon: <Icon.Target size={22} />, label: 'X (Twitter) Threads', desc: 'Finance threads built for engagement and follower growth — breakdowns, contrarian takes, explainers, ranked lists. Ready to post, pre-formatted.' },
+  { icon: <Icon.Layers size={22} />, label: 'Short-form Captions', desc: 'Captions for YouTube Shorts, TikTok, and Instagram Reels — platform-specific, hashtag-optimised, built to convert viewers to subscribers.' },
+  { icon: <Icon.Star size={22} />, label: 'Brand Sponsorship Proposals', desc: 'Tailored outreach to fintech platforms, trading apps, insurance providers, and financial tools. Researched, written, and formatted. Ready to send.' },
+  { icon: <Icon.RefreshCw size={22} />, label: 'Monthly Performance Report', desc: 'We track what landed, what didn\'t, and what to do more of. Every month\'s content is better than the last because we\'re looking at what actually worked.' },
 ]
 
 function PortalGrid() {
@@ -282,10 +282,10 @@ function PortalGrid() {
       <div className="container">
         <FadeUp>
           <div className="sh c">
-            <div className="badge"><span className="badge-dot" />Inside Your Portal</div>
-            <h2 className="section-title">Everything your creators need<br />to post — produced every week.</h2>
+            <div className="badge"><span className="badge-dot" />What We Deliver</div>
+            <h2 className="section-title">Every format. Every platform.<br />Every week. Finance-specific.</h2>
             <p className="section-sub">
-              No templates. No prompts to fill in. Every piece is written specifically for each creator on your roster and waiting in your portal every Monday.
+              YouTube scripts, X threads, short-form hooks, captions, and brand sponsorship proposals — written for finance creators, not adapted from a template. Everything lands in your portal every Monday.
             </p>
           </div>
         </FadeUp>
@@ -323,7 +323,7 @@ function Nav() {
   return (
     <nav className={`nav${scrolled ? ' scrolled' : ''}`}>
       <div className="nav-inner">
-        <div className="nav-eyebrow">CORNERSTONE AI GROUP</div>
+        <div className="nav-eyebrow">CAIG — Finance Creator Content</div>
         <div className="nav-right">
           <a href="#contact" className="btn btn-amber btn-md breathe">See a Live Demo</a>
         </div>
@@ -572,10 +572,10 @@ function HeroTicker() {
 /* ── HERO PROCESS STRIP ──────────────────────────────────────── */
 function HeroProcessStrip() {
   const steps = [
-    { n: '01', label: 'Onboard once', body: 'One setup call. We build the content profile.' },
-    { n: '02', label: 'We write it', body: 'AI drafts, our team reviews every piece.' },
-    { n: '03', label: 'Delivered Mondays', body: 'Scripts, hooks, captions — in your portal.' },
-    { n: '04', label: 'You approve & post', body: 'Review, approve, hand off. Nothing to write.' },
+    { n: '01', label: 'Onboard once', body: 'One call. We map your niche, voice, and audience.' },
+    { n: '02', label: 'We write it all', body: 'Scripts, hooks, threads, captions — AI-drafted, human-reviewed.' },
+    { n: '03', label: 'In your portal Monday', body: 'A full week of content, ready to approve and post.' },
+    { n: '04', label: 'We track & improve', body: 'Monthly performance report. Output gets sharper every cycle.' },
   ]
   return (
     <div className="hero-process-strip">
@@ -629,7 +629,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.18, duration: 0.5 }}
           >
-            Done-for-you content creation — for creators &amp; agencies
+            Done-for-you content for finance creators &amp; the agencies that manage them
           </motion.div>
 
           <motion.h1
@@ -638,9 +638,9 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.28, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            Scripts. Captions. Proposals.<br />
-            <span className="hl">Delivered every week.</span><br />
-            <span className="hero-h1-sub">Without you writing a word.</span>
+            Your finance creators should be<br />
+            <span className="hl">posting five times a week.</span><br />
+            <span className="hero-h1-sub">Most manage one or two. We fix that.</span>
           </motion.h1>
 
           <motion.p
@@ -649,7 +649,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.42, duration: 0.55 }}
           >
-            CAIG is a done-for-you content service. We produce weekly scripts, hooks, captions, and brand proposals for creators and creator agencies — AI-generated, human-reviewed, delivered to your private portal every Monday.
+            CAIG produces weekly YouTube scripts, X threads, short-form hooks, captions, and brand sponsorship proposals for finance and personal finance creators — AI-generated, human-reviewed, delivered to your private portal every Monday. You approve. They post. No briefing required.
           </motion.p>
 
           <motion.div
@@ -686,10 +686,10 @@ function ProofBar() {
       <div className="container">
         <div className="proof-bar-inner">
         {[
-          { text: 'Weekly',   label: 'Content delivered every Monday — scripts, hooks, captions, content plans', amber: true },
-          { text: '48 hrs',   label: 'From discovery call to first content batch in your portal', amber: false },
-          { text: 'AI + human', label: 'Every piece AI-generated and reviewed by our team before delivery', amber: false },
-          { text: '30 days',  label: 'Notice to cancel — no contracts, no lock-in, no penalty', amber: false },
+          { text: 'Finance-specific',  label: 'Content written for the finance niche — not adapted from a generic template', amber: true },
+          { text: 'Weekly',            label: 'YouTube scripts, X threads, hooks, captions, and proposals delivered every Monday', amber: false },
+          { text: 'AI + human QA',     label: 'Every piece AI-generated and reviewed by our team before delivery', amber: false },
+          { text: '30 days',           label: 'Notice to cancel — no contracts, no lock-in, no penalty', amber: false },
         ].map((s, i) => (
           <div className="proof-stat" key={i}>
             <div className="proof-val">
@@ -708,18 +708,18 @@ function ProofBar() {
 const problems = [
   {
     icon: <Icon.Clock />,
-    title: "You know what you should be posting. Finding the time to write it is the problem.",
-    body: "Scripts don't write themselves. Captions need thinking. Hooks need testing. Whether you're a solo creator or managing a full roster, the writing work piles up fast. When it doesn't get done, content doesn't go out. When content doesn't go out, growth stops.",
+    title: "Finance creators know their subject. Writing about it every week is where the time goes.",
+    body: "Explaining compound interest, breaking down an ETF, scripting a Roth IRA comparison — the knowledge is there. The two hours it takes to turn it into a hook, a script, and a caption set is not. So the video doesn't get made. The channel stalls. The brand deal window closes.",
   },
   {
     icon: <Icon.TrendingDown />,
-    title: "Brand deals and opportunities are slipping because the outreach never gets written.",
-    body: "You know which brands are the right fit. You know the pitch that would land. But writing a compelling, tailored proposal takes time nobody has — whether that's you, your manager, or your whole team. So the deal never gets sent. The opportunity disappears.",
+    title: "Sponsorship revenue is being left on the table because the pitch never gets written.",
+    body: "Finance creators command some of the highest CPMs and brand deal rates in the creator economy. Fintech, trading platforms, credit cards, insurance, tax tools — the budgets are there. But a compelling, tailored sponsorship proposal takes time nobody has. The opportunity disappears to whoever sends it first.",
   },
   {
     icon: <Icon.AlertCircle />,
-    title: "Content is what drives everything — but it's always the last thing that gets done.",
-    body: "The ideas are there. The audience is there. The potential is there. What's missing is someone to actually sit down and produce the content, every single week, without it falling on you. That gap — between knowing what to post and actually posting it — is what CAIG closes.",
+    title: "Agencies managing finance creators are producing content for five — and struggling to cover two.",
+    body: "One creator posting inconsistently is a missed opportunity. A roster of finance creators all posting inconsistently is a systematic problem. The scripts, the threads, the hooks — they all need writing. When nobody has time to write them, your roster plateaus and your retainer justification weakens.",
   },
 ]
 
@@ -730,9 +730,9 @@ function Problem() {
         <FadeUp>
           <div className="sh c">
             <div className="badge"><span className="badge-dot" />The Real Problem</div>
-            <h2 className="section-title">You already know what the problem is.<br />You just haven't fixed it yet.</h2>
+            <h2 className="section-title">Finance creators have the authority.<br />The content production is where it breaks down.</h2>
             <p className="section-sub">
-              Whether you're a solo creator or running an agency, the bottleneck is always the same — consistent content. Not ideas. Not talent. Not strategy. Just someone to actually write it, every single week.
+              Your creators understand macro trends, tax efficiency, and portfolio construction better than anyone. None of that matters if they're not posting consistently. The knowledge is there. The writing infrastructure is not.
             </p>
           </div>
         </FadeUp>
@@ -761,11 +761,11 @@ function Problem() {
 
 /* ── SOLUTION ────────────────────────────────────────────────── */
 const solutions = [
-  { icon: <Icon.Target size={18} />, title: 'We write the content — every week, without being briefed', body: 'Scripts, hooks, captions, and content plans produced by AI and reviewed by our team. Delivered to your portal every week. Whether you\'re a solo creator or managing a roster, you get a queue of ready-to-post content without writing a word.' },
-  { icon: <Icon.Zap size={18} />, title: 'Brand proposals written and sent on your behalf', body: 'On Growth and Agency plans, we write tailored brand partnership proposals — researched, formatted, and ready to send. You approve, we deliver. No more deals falling through because nobody had time to write the pitch.' },
-  { icon: <Icon.Layers size={18} />, title: 'A content strategy built around you — not a template', body: 'Every creator gets a content plan built around their specific niche, platform, and audience. We track what is working, adjust each month, and keep production aligned with what actually grows the account.' },
-  { icon: <Icon.RefreshCw size={18} />, title: 'Everything in one portal — approve, download, post', body: 'All content is delivered through your private CAIG portal. You review, approve, and post — or hand off to your creators. No email chains. No shared docs. No chasing for drafts. One clean interface, updated every week.' },
-  { icon: <Icon.Shield size={18} />, title: 'Fully managed. Nothing to write. Cancel any time.', body: 'You do not brief us each week, chase for drafts, or manage a writing team. We take care of production end to end. You access everything through your portal. That is the entire workflow on your side. Cancel with 30 days notice.' },
+  { icon: <Icon.Target size={18} />, title: 'Finance content written weekly — no brief required', body: 'YouTube scripts on investing, budgeting, and market analysis. X threads. Short-form hooks. Captions. All written specifically for finance creators — their voice, their audience, their niche — and delivered every Monday. You brief us once at onboarding. After that, it just arrives.' },
+  { icon: <Icon.Zap size={18} />, title: 'Sponsorship proposals to the right brands — written and ready', body: 'Fintech platforms, trading apps, robo-advisors, insurance providers, tax tools — finance creators command some of the highest brand deal rates in the industry. On Growth and Agency plans, we research the right brands, write the proposals, and have them ready for you to send. No deal falls through because nobody had time to write the pitch.' },
+  { icon: <Icon.Layers size={18} />, title: 'Monthly performance reporting — content gets better over time', body: 'Each month we analyse which topics drove views, which hooks got clicks, and which formats retained audience longest. We adjust next month\'s content accordingly. Your creators\'s output improves every cycle. Generic AI tools don\'t do this. This is why the output compounds.' },
+  { icon: <Icon.RefreshCw size={18} />, title: 'One portal — approve, download, post', body: 'All content lands in your private CAIG portal every Monday. You review each piece, approve what you want, and hand off or post. No email chains. No Google Docs. No chasing for drafts. One clean interface. Everything in one place.' },
+  { icon: <Icon.Shield size={18} />, title: 'Fully managed. Nothing to write. Cancel with 30 days\' notice.', body: 'We handle research, drafting, QA, and delivery. You manage the creators and relationships. The entire workflow on your side is: open the portal, review, approve. That\'s it. Cancel any time with 30 days\' written notice — no penalty, no lock-in.' },
 ]
 
 function Solution() {
@@ -775,12 +775,12 @@ function Solution() {
         <div className="sol-grid">
           <FadeUp>
             <div className="badge"><span className="badge-dot" />What We Do</div>
-            <h2 className="section-title">Done-for-you content.<br />Delivered every week.</h2>
+            <h2 className="section-title">The content engine your finance creators are missing.</h2>
             <p className="section-sub" style={{ marginBottom: '36px' }}>
-              Not a tool you log into. Not a template you fill in. A team — powered by AI — that produces content every single week. Whether you're a solo creator or running a full agency, you manage the talent. We produce the output.
+              Not a tool. Not a freelancer. A managed system that produces finance-specific content every week — scripts, threads, hooks, captions, and brand proposals — without you writing a single word.
             </p>
             <a href="#contact" className="btn btn-amber btn-lg">
-              Get Started <Icon.ArrowRight />
+              See It Working — Book a Demo <Icon.ArrowRight />
             </a>
           </FadeUp>
           <StaggerGrid className="sol-cards">
@@ -841,10 +841,10 @@ function ProcessCredibility() {
       <div className="container">
         <FadeUp>
           <div className="sh c">
-            <div className="badge"><span className="badge-dot" />How It Actually Works</div>
-            <h2 className="section-title">What you get.<br />How we deliver it.</h2>
+            <div className="badge"><span className="badge-dot" />How We Actually Work</div>
+            <h2 className="section-title">Specific claims.<br />No vague promises.</h2>
             <p className="section-sub">
-              No vague promises. Here is exactly what CAIG produces, how it gets produced, and what the process looks like on your side.
+              Here is exactly what CAIG produces for finance creators, how it gets produced, and what the entire process looks like on your side.
             </p>
           </div>
         </FadeUp>
@@ -874,47 +874,47 @@ function ProcessCredibility() {
 /* ── COMPARISON ──────────────────────────────────────────────── */
 const compOptions = [
   {
-    title: 'Hire an In-House Content Writer',
-    sub: "A full-time content hire costs £28–40K a year — and still can't cover every creator at the volume needed",
+    title: 'Hire a Finance Content Writer',
+    sub: "A writer who understands finance well enough to produce accurate scripts costs £30–45K a year — and still can't cover every creator at the volume needed",
     winner: false,
     pros: [
-      { yes: false, text: "One person can't scale across a growing roster or multiple platforms" },
+      { yes: false, text: "Rare to find someone who knows both finance deeply and writes hooks well" },
       { yes: false, text: 'Sick days, holidays, and turnover break the production cycle' },
-      { yes: false, text: 'Briefing, feedback, and revision loops eat more time' },
-      { yes: true,  text: 'Deep brand knowledge after time' },
+      { yes: false, text: 'Briefing, feedback, and revision loops eat more time than writing it yourself' },
+      { yes: true,  text: 'Deep brand and voice knowledge after several months' },
     ],
   },
   {
-    title: 'Use an AI Writing Tool Yourself',
-    sub: 'ChatGPT and similar tools require you to prompt, edit, and manage output — that is still your time',
+    title: 'Use ChatGPT / AI Tools Yourself',
+    sub: 'AI tools require you to prompt, review, and manage output every week — that time cost is real and it compounds',
     winner: false,
     pros: [
-      { yes: false, text: 'You still have to write every prompt and review every output' },
-      { yes: false, text: 'No consistency or creator-specific voice without heavy setup' },
-      { yes: false, text: 'Generic outputs that need significant editing before use' },
-      { yes: true,  text: 'Low cost if you have time to manage it yourself' },
+      { yes: false, text: 'Finance content requires accurate, specific prompting — generic outputs get things wrong' },
+      { yes: false, text: 'No creator-specific voice, no platform optimisation, no performance tracking' },
+      { yes: false, text: 'Every piece still needs significant editing before a finance audience will trust it' },
+      { yes: true,  text: 'Low cost if you have the time and prompt engineering skills' },
     ],
   },
   {
-    title: 'Write It Yourself',
-    sub: 'Whether you\'re a creator or a manager — your time is worth more than writing captions every week',
+    title: 'The Creator Writes Their Own Content',
+    sub: 'Finance creators have the knowledge — but scripting, threading, and captioning eats the time they should spend on insight and delivery',
     winner: false,
     pros: [
-      { yes: false, text: 'Writing content is often the hardest and slowest part of the job' },
-      { yes: false, text: 'Inconsistent output — some weeks nothing gets posted' },
-      { yes: false, text: 'Quality varies and is hard to maintain under pressure' },
-      { yes: false, text: 'The time cost compounds across every creator and every week' },
+      { yes: false, text: 'The most accurate output — but the slowest and most inconsistent' },
+      { yes: false, text: 'Output drops immediately when filming, life, or other work takes priority' },
+      { yes: false, text: 'Hard to maintain volume across YouTube, X, and short-form simultaneously' },
+      { yes: false, text: 'The creator\'s zone of genius is finance — not content production' },
     ],
   },
   {
-    title: 'CAIG — Done For You',
-    sub: 'Content produced weekly by AI, reviewed by our team, delivered to your portal. You just post.',
+    title: 'CAIG — Finance-Specific, Done For You',
+    sub: 'Finance content produced weekly by AI, reviewed by our team, performance-tracked monthly, delivered to your portal. You approve and post.',
     winner: true,
     pros: [
-      { yes: true,  text: 'Works for solo creators and full agencies — any size' },
-      { yes: true,  text: 'Consistent weekly delivery — every creator, every week' },
-      { yes: true,  text: 'Built around each creator\'s voice, niche, and platform' },
-      { yes: true,  text: 'You review and approve — we handle all production' },
+      { yes: true,  text: 'Written for the finance niche — not adapted from a generic content template' },
+      { yes: true,  text: 'YouTube scripts, X threads, short-form, captions, brand proposals — all covered' },
+      { yes: true,  text: 'Performance data used to improve output every month' },
+      { yes: true,  text: 'Scales across a full agency roster without adding headcount' },
     ],
   },
 ]
@@ -926,9 +926,9 @@ function Comparison() {
         <FadeUp>
           <div className="sh c">
             <div className="badge"><span className="badge-dot" />The Alternatives</div>
-            <h2 className="section-title">Every content production option — compared.</h2>
+            <h2 className="section-title">Four ways to solve the content problem.<br />Three of them still cost you time.</h2>
             <p className="section-sub">
-              There are four ways to solve the content production problem. Three of them still rely on someone's time. One of them doesn't.
+              Every option for producing consistent finance content has a real cost. Here is what each one actually involves.
             </p>
           </div>
         </FadeUp>
@@ -968,33 +968,33 @@ function Comparison() {
 const whyItems = [
   {
     num: '01',
-    title: 'We never ask you to brief us.',
-    body: 'Most content solutions still need you to write prompts, fill in templates, or manage a freelancer. We don\'t. You onboard once — whether you\'re a solo creator or managing twenty. After that, content shows up every Monday. No check-ins. No forms. No follow-ups.',
+    title: 'We know finance content. Not just content.',
+    body: 'Hooks that work for a stock-picking channel are different from hooks that work for a budgeting channel. CPM-optimised YouTube titles for personal finance differ from those for crypto or macro commentary. We write for the finance niche specifically — not adapted from a generic template.',
   },
   {
     num: '02',
-    title: 'Every piece is built for your exact niche.',
-    body: 'Generic content gets ignored. We build a deep content profile for every creator — their voice, their niche, their audience, their platform. What lands in your portal could only have been written for them.',
+    title: 'We never ask you to brief us again after onboarding.',
+    body: 'Most content solutions still need you to write prompts, fill in briefs, or manage a freelancer every week. We don\'t. You onboard each creator once — niche, voice, audience, platform — and content shows up every Monday. No check-ins. No forms. No follow-ups.',
   },
   {
     num: '03',
-    title: 'A cheaper tool is not a competitor. A system is.',
-    body: 'Anyone can open ChatGPT. Running it, prompting it, reviewing it, formatting it, and delivering it week after week — for yourself or for a roster — that\'s what we do. You\'re not paying for AI. You\'re paying for the system that makes it work.',
+    title: 'Finance creators have unusually high brand deal potential. We help you capture it.',
+    body: 'Fintech CPMs are among the highest of any creator niche. Trading platforms, robo-advisors, and credit card companies actively seek finance creators with engaged audiences. We write the sponsorship proposals that turn that potential into actual deals — researched, tailored, ready to send.',
   },
   {
     num: '04',
-    title: 'Your portal is a professional edge.',
-    body: 'You get a private portal with your content queue, history, and approvals in one place. For individual creators it means one clean home for all your content. For agencies, it signals the kind of professionalism that justifies a retainer and makes you harder to replace.',
+    title: 'The output improves every month.',
+    body: 'We track performance data from your creators\' content — what hooks drove clicks, which topics retained viewers longest, what formats grew subscribers. Every month\'s content brief is informed by the previous month\'s results. Generic content services don\'t do this. It\'s why our output compounds.',
   },
   {
     num: '05',
-    title: 'We grow with you, not against you.',
-    body: 'Adding a new creator to your roster? Their content starts the following Monday. Growing your own account to a new platform? We expand with you. No renegotiating. No extra onboarding cost. The system scales with you.',
+    title: 'Your portal is a professional edge for agencies.',
+    body: 'Agencies get a private portal where all creator content is queued, approved, and archived. For talent managers, it signals the kind of professional infrastructure that justifies a retainer. For creators, it means they always know exactly what to post and when.',
   },
   {
     num: '06',
-    title: 'The results compound. The alternatives don\'t.',
-    body: 'Consistent posting builds algorithmic trust, audience loyalty, and brand deal leverage. Every week you post, your account gets easier to monetise. Every week you don\'t — you lose ground that takes months to recover.',
+    title: 'Consistent posting builds compounding authority in finance.',
+    body: 'A finance creator who posts five times a week consistently builds algorithmic trust, audience loyalty, and brand deal leverage faster than one who posts sporadically. The creators who dominate personal finance on YouTube and X got there through volume and consistency. CAIG is the infrastructure that makes that possible.',
   },
 ]
 
@@ -1004,10 +1004,10 @@ function WhyCAIG() {
       <div className="container">
         <FadeUp>
           <div className="sh c">
-            <div className="badge"><span className="badge-dot" />Why Creators & Agencies Choose CAIG</div>
-            <h2 className="section-title">This isn't a content tool.<br />It's an unfair advantage.</h2>
+            <div className="badge"><span className="badge-dot" />Why Finance Creators & Agencies Choose CAIG</div>
+            <h2 className="section-title">The finance creators winning on YouTube and X<br />are not writing their own content.</h2>
             <p className="section-sub">
-              The creators and agencies that win aren't the ones working harder. They're the ones who solved content production while everyone else is still stuck in it.
+              The ones posting five times a week consistently — building subscriber counts, landing fintech deals, growing email lists — have solved the production problem. That is the only difference between them and the ones with better knowledge and smaller audiences.
             </p>
           </div>
         </FadeUp>
@@ -1040,25 +1040,25 @@ const steps = [
     num: '01',
     label: 'Step One',
     title: 'Discovery call — 30 minutes',
-    text: 'You tell us who you are — a solo creator or an agency — and walk us through your current content process and what good looks like for you. We show you a live demo of the portal and real content output. You leave knowing exactly what you\'d get and what it costs.',
+    text: 'We walk through your roster, the finance niches your creators cover, current posting frequency, and what platforms you\'re targeting. We show you the portal live and share real examples of finance content we\'ve produced. You leave knowing exactly what you\'d get and what it costs.',
   },
   {
     num: '02',
     label: 'Step Two',
-    title: 'We onboard your creators in 48 hours',
-    text: 'You share basic details — niche, platform, tone, and any existing content. Whether that\'s just you or a full roster, we set up the content engine for each creator, configured around their voice and audience. No lengthy briefing process. No forms to fill in.',
+    title: 'Onboarding in 48 hours',
+    text: 'For each creator you share: their finance sub-niche (investing, budgeting, tax, macro, crypto), their primary platform, their tone, and any past content for voice reference. We build the content profile. No lengthy forms. No weekly briefing process. That setup call is all we need.',
   },
   {
     num: '03',
     label: 'Step Three',
-    title: 'Content lands in your portal every week',
-    text: 'Every Monday, a fresh batch of scripts, hooks, captions, and content plans is ready in your portal. You review, approve, and post — or hand off to your creators. That is the entire workflow on your side.',
+    title: 'Finance content in your portal every Monday',
+    text: 'YouTube scripts, X threads, short-form hooks, and captions — written for your creator\'s specific finance niche and audience — arrive every Monday. You review, approve what you want, and post or hand off. That is the entire workflow on your side.',
   },
   {
     num: '04',
     label: 'Step Four',
-    title: 'We improve it every month',
-    text: 'We track what is performing, adjust the content strategy each month, and refine the output based on what is working. On Growth and Agency plans, you get a monthly strategy session with your dedicated content strategist.',
+    title: 'Monthly performance report and content adjustment',
+    text: 'Each month we analyse what performed — which topics drove views and clicks, which hooks retained audience, which formats grew subscribers. We adjust next month\'s content accordingly. On Growth and Agency plans, you also get a strategy call with your content lead.',
   },
 ]
 
@@ -1069,9 +1069,9 @@ function HowItWorks() {
         <div className="hiw-layout">
           <FadeUp>
             <div className="badge"><span className="badge-dot" />The Process</div>
-            <h2 className="section-title">Live in 48 hours.<br />Content every week<br />from that point on.</h2>
+            <h2 className="section-title">Live in 48 hours.<br />Finance content every week<br />from that point on.</h2>
             <p className="section-sub" style={{ marginTop: '18px', marginBottom: '36px' }}>
-              No lengthy onboarding. No content briefs to fill in each week. No chasing for drafts. You share the creator details once — we handle production from there.
+              No lengthy onboarding. No content briefs to fill in each week. No chasing for drafts. You share the creator details once — we handle everything from there.
             </p>
             <a href="#contact" className="btn btn-outline-amber btn-lg">
               Book the discovery call <Icon.ArrowRight />
@@ -1100,32 +1100,36 @@ function HowItWorks() {
 /* ── FAQ ─────────────────────────────────────────────────────── */
 const faqs = [
   {
-    q: 'Who is CAIG for?',
-    a: "Two types of clients. First: individual creators who want consistent content without spending hours writing it themselves — scripts, hooks, captions, and content plans, delivered weekly. Second: creator management agencies and talent managers who need to produce content across a full roster without hiring a writing team. If you need content to go out every week and you don't want to be the one writing it, CAIG is built for you.",
+    q: 'Who exactly is CAIG for?',
+    a: "Finance and personal finance creators on YouTube and X — and the agencies or talent managers that manage them. If you're producing content about investing, budgeting, tax, markets, crypto, or financial independence and you're not posting as consistently as you should be, CAIG is built for you.",
   },
   {
     q: 'What does CAIG actually produce?',
-    a: "Scripts, hooks, captions, content plans, and brand partnership proposals — written by AI and reviewed by our team before delivery. Every piece is tailored to the specific creator: their niche, platform, tone, and audience. You receive a weekly batch in your portal, ready to review and hand off.",
+    a: "YouTube scripts, X (Twitter) threads, short-form hooks for Reels and Shorts, platform captions, monthly content plans, and brand sponsorship proposals — all written specifically for the finance niche. Every piece is AI-generated and then reviewed by our team before it lands in your portal. You receive a weekly batch every Monday.",
   },
   {
-    q: 'How is this different from just using ChatGPT ourselves?',
-    a: "ChatGPT requires you to prompt it, review the output, edit it, and manage the whole process — that is still your time. CAIG takes all of that off your plate. We handle the prompting, the quality review, the formatting, and the delivery. You just approve and post.",
+    q: 'How is this different from using ChatGPT ourselves?',
+    a: "Finance content requires accurate, specific output — generic AI prompts produce generic financial commentary that a knowledgeable audience will notice and discount. We've built prompting systems tuned for the finance niche. We also review every piece, track performance each month, and adjust future content based on what actually worked. That feedback loop is what separates us from a tool you run yourself.",
   },
   {
-    q: 'Do we need to brief you every week?',
-    a: "No. You brief us once when you onboard a creator — niche, platform, tone, audience, and any brand guidelines. From there we produce content weekly without needing to ask. If something changes, you update us and we adjust.",
+    q: 'Do you need to brief you every week?',
+    a: "No. You brief us once during onboarding — finance sub-niche, platforms, tone, target audience, and any brand guidelines. From that point we produce content every week without needing to ask. If something changes — new platform, new angle, a brand deal that affects messaging — you update us and we adjust.",
+  },
+  {
+    q: 'How accurate is the finance content?',
+    a: "We write at the level of a well-researched explainer, not investment advice. Every script is reviewed by our team for accuracy, clarity, and tone before delivery. For niche-specific accuracy (e.g. tax rules for a specific country, complex derivatives), you or your creator reviews and corrects — that is the approval step. Most clients find the output is accurate from week one.",
+  },
+  {
+    q: 'What platforms do you cover?',
+    a: "YouTube (long-form scripts), X (Twitter threads), YouTube Shorts / TikTok / Instagram Reels (short-form hooks and scripts), and caption copy for all platforms. We expand to additional formats based on your creators\' platform mix.",
   },
   {
     q: 'How quickly can we get started?',
-    a: "Your first content batch is typically delivered within 48 hours of onboarding. The discovery call is 30 minutes — we can often have your first creators live the same week.",
-  },
-  {
-      q: "What if the content doesn't sound like the creator?",
-    a: "We refine the voice profile during onboarding and adjust based on your feedback in the first two weeks. Most agencies find the output is accurate from week one. If something isn't right, you tell us and we fix it — that is part of the retainer.",
+    a: "Your first content batch is typically delivered within 48 hours of completing onboarding. The discovery call is 30 minutes. We can often have your first creators live the same week.",
   },
   {
     q: 'How does pricing work?',
-    a: "We offer plans for solo creators as well as agencies managing multiple creators. Pricing depends on how many creators you need covered and what content volume you need each week. We don't publish rates publicly — every situation is different and we'd rather give you an accurate number on a call than a figure that doesn't fit. Book a free discovery call and we'll give you a clear, honest quote with no obligation.",
+    a: "We offer plans for individual finance creators and for agencies managing a roster. Pricing depends on the number of creators, platforms, and content volume. We don't publish rates publicly — book a free discovery call and we'll give you a specific, honest quote with no obligation.",
   },
 ]
 
@@ -1179,11 +1183,11 @@ function UrgencyBanner() {
         <div className="urgency-inner">
           <div className="urgency-eyebrow">The cost of doing nothing</div>
           <h2 className="urgency-title">
-            Every week you don't post<br />is a week someone else does.
+            Every week a finance creator doesn't post<br />is a week their audience finds someone who does.
           </h2>
           <p className="urgency-body">
-            Algorithms reward creators who show up. Brands sign the ones with consistent output. Audiences forget the ones who go quiet. Whether you're a solo creator or managing a roster — the content gap costs you every single week it stays open.
-            <strong style={{ color: 'var(--t0)' }}> That is a solvable problem. Book a 30-minute call and we will show you exactly what CAIG produces for creators like you — and what it costs.</strong>
+            The personal finance space on YouTube and X is growing. The creators building authority and landing fintech deals are the ones posting consistently — not the ones with more knowledge. Posting volume is the variable that separates them. CAIG is the infrastructure that makes that volume possible.
+            <strong style={{ color: 'var(--t0)' }}> Book a 30-minute call. We show you real finance content examples, walk through the portal live, and give you an honest quote. No obligation.</strong>
           </p>
           <a href="#contact" className="btn btn-amber btn-lg breathe">
             Book the Call — 30 Minutes, No Obligation <Icon.ArrowRight size={17} />
@@ -1228,7 +1232,7 @@ function Contact() {
             <div className="badge"><span className="badge-dot" />Get Started</div>
             <h2 className="section-title">Book a free<br />discovery call</h2>
             <p className="section-sub" style={{ marginBottom: '10px' }}>
-              30 minutes. We show you the portal, walk through what content would look like for your niche and platform, and give you a clear answer on which plan fits. You walk away knowing exactly what you would get.
+              30 minutes. We show you the portal live, walk through real finance content examples from your niche, and give you a clear, honest quote. You leave knowing exactly what you'd get and what it costs.
             </p>
             <p style={{ fontSize: '14px', color: 'var(--amber)', fontWeight: 600, marginBottom: '28px' }}>
               Completely free. No obligation whatsoever.
@@ -1270,7 +1274,7 @@ function Contact() {
                 </div>
               ) : (
                 <>
-              <div className="cform-title">Tell us about yourself</div>
+              <div className="cform-title">Tell us about your creators</div>
                   <div className="cform-sub">We reply within 4 business hours, every time</div>
                   <form onSubmit={submit}>
                     <input type="hidden" name="form-name" value="contact" />
@@ -1281,13 +1285,13 @@ function Contact() {
                       </div>
                       <div className="fg">
                         <label className="fl">Agency / Company (or "Solo Creator")</label>
-                        <input className="fi" name="company" placeholder="Talent Agency Ltd / Solo Creator" value={form.company} onChange={set('company')} />
+                        <input className="fi" name="company" placeholder="Finance Agency Ltd / Solo Creator" value={form.company} onChange={set('company')} />
                       </div>
                     </div>
                     <div className="frow">
                       <div className="fg">
                         <label className="fl">Work Email</label>
-                        <input className="fi" type="email" name="email" placeholder="jane@agency.com" value={form.email} onChange={set('email')} />
+                        <input className="fi" type="email" name="email" placeholder="jane@financeagency.com" value={form.email} onChange={set('email')} />
                       </div>
                       <div className="fg">
                         <label className="fl">Phone Number</label>
@@ -1307,7 +1311,7 @@ function Contact() {
                     </div>
                     <div className="fg">
                       <label className="fl">What is your biggest content challenge right now?</label>
-                      <textarea className="ft" name="message" placeholder="E.g. creators not posting consistently, no time to write content, struggling to get brand proposals out..." value={form.message} onChange={set('message')} />
+                      <textarea className="ft" name="message" placeholder="E.g. finance creators not posting consistently, no time to write YouTube scripts, struggling to land fintech sponsorships..." value={form.message} onChange={set('message')} />
                     </div>
                     {status === 'error' && (
                       <p style={{ fontSize: '13px', color: 'var(--red)', marginBottom: '12px' }}>
@@ -1348,8 +1352,8 @@ function Footer() {
               <Logo height={28} />
             </div>
             <p className="footer-tagline">
-              Done-for-you AI content creation for solo creators, talent managers, and creator agencies.
-              Scripts, captions, and proposals — produced weekly, delivered to your portal.
+              Done-for-you content production for finance creators, talent managers, and creator agencies.
+              YouTube scripts, X threads, hooks, captions, and brand proposals — written for the finance niche and delivered every week.
             </p>
           </div>
           <div>
