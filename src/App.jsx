@@ -660,7 +660,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.55 }}
           >
-            Scripts, hooks, captions — written for every creator on your roster, every week, without you lifting a finger.
+            We handle the one thing holding your entire roster back.
           </motion.p>
 
           <motion.div
