@@ -711,18 +711,18 @@ function ProofBar() {
 const problems = [
   {
     icon: <Icon.Clock />,
-    title: "Your creators go quiet — not because they lack ideas, but because content takes time.",
-    body: "Scripts don't write themselves. Captions need thinking. Hooks need testing. For every creator on your roster, there are hours of writing work sitting between the idea and the post. When that work isn't done, they don't post. When they don't post, they don't grow. And your agency stalls with them.",
+    title: "You know what you should be posting. Finding the time to write it is the problem.",
+    body: "Scripts don't write themselves. Captions need thinking. Hooks need testing. Whether you're a solo creator or managing a full roster, the writing work piles up fast. When it doesn't get done, content doesn't go out. When content doesn't go out, growth stops.",
   },
   {
     icon: <Icon.TrendingDown />,
-    title: "Brand deals are being missed because the outreach never gets written.",
-    body: "You know which creators should be landing partnerships. You know which brands are the right fit. But writing a compelling, tailored proposal for every opportunity takes time nobody has. So the pitch never gets sent. The deal never happens. And the creator stays monetisation-stuck.",
+    title: "Brand deals and opportunities are slipping because the outreach never gets written.",
+    body: "You know which brands are the right fit. You know the pitch that would land. But writing a compelling, tailored proposal takes time nobody has — whether that's you, your manager, or your whole team. So the deal never gets sent. The opportunity disappears.",
   },
   {
     icon: <Icon.AlertCircle />,
-    title: "You are managing relationships, not producing content — but content is what drives everything.",
-    body: "Creator agencies are built on talent relationships. But the output that makes those relationships valuable — the content — requires a production system. Without one, you are paying for strategy without delivery. Your clients want results. Results come from consistent, quality content.",
+    title: "Content is what drives everything — but it's always the last thing that gets done.",
+    body: "The ideas are there. The audience is there. The potential is there. What's missing is someone to actually sit down and produce the content, every single week, without it falling on you. That gap — between knowing what to post and actually posting it — is what CAIG closes.",
   },
 ]
 
@@ -735,7 +735,7 @@ function Problem() {
             <div className="badge"><span className="badge-dot" />The Real Problem</div>
             <h2 className="section-title">You already know what the problem is.<br />You just haven't fixed it yet.</h2>
             <p className="section-sub">
-              Your creators have the audience, the niche, the potential. The only thing stopping them from growing — and stopping your agency from scaling with them — is consistent content. Not ideas. Not strategy. Just someone to actually write it.
+              Whether you're a solo creator or running an agency, the bottleneck is always the same — consistent content. Not ideas. Not talent. Not strategy. Just someone to actually write it, every single week.
             </p>
           </div>
         </FadeUp>
@@ -764,11 +764,11 @@ function Problem() {
 
 /* ── SOLUTION ────────────────────────────────────────────────── */
 const solutions = [
-  { icon: <Icon.Target size={18} />, title: 'We write the content — every week, without being briefed', body: 'Scripts, hooks, captions, and content plans produced by AI and reviewed by our team. Delivered to your portal every week. Your creators get a queue of ready-to-post content without you writing a word.' },
-  { icon: <Icon.Zap size={18} />, title: 'Brand proposals written and sent on your behalf', body: 'On Growth and Enterprise plans, we write tailored brand partnership proposals for your creators — researched, formatted, and ready to send. You approve, we deliver. No more deals falling through because nobody had time to write the pitch.' },
-  { icon: <Icon.Layers size={18} />, title: 'A content strategy built around each creator', body: 'Every creator on your roster gets a content plan built around their niche, platform, and audience. We track what is working, adjust each month, and keep production aligned with what actually grows the account.' },
-  { icon: <Icon.RefreshCw size={18} />, title: 'Everything in one portal — approve, download, post', body: 'All content is delivered through your private CAIG portal. You review, approve, and hand off to your creators. No email chains. No shared docs. No chasing for drafts. One clean interface, updated every week.' },
-  { icon: <Icon.Shield size={18} />, title: 'Fully managed. Nothing to write. Cancel any time.', body: 'You do not brief us each week, chase for drafts, or manage a writing team. We take care of production end to end. You access everything through your portal and manage your creator relationships. That is the split. Cancel with 30 days notice.' },
+  { icon: <Icon.Target size={18} />, title: 'We write the content — every week, without being briefed', body: 'Scripts, hooks, captions, and content plans produced by AI and reviewed by our team. Delivered to your portal every week. Whether you\'re a solo creator or managing a roster, you get a queue of ready-to-post content without writing a word.' },
+  { icon: <Icon.Zap size={18} />, title: 'Brand proposals written and sent on your behalf', body: 'On Growth and Agency plans, we write tailored brand partnership proposals — researched, formatted, and ready to send. You approve, we deliver. No more deals falling through because nobody had time to write the pitch.' },
+  { icon: <Icon.Layers size={18} />, title: 'A content strategy built around you — not a template', body: 'Every creator gets a content plan built around their specific niche, platform, and audience. We track what is working, adjust each month, and keep production aligned with what actually grows the account.' },
+  { icon: <Icon.RefreshCw size={18} />, title: 'Everything in one portal — approve, download, post', body: 'All content is delivered through your private CAIG portal. You review, approve, and post — or hand off to your creators. No email chains. No shared docs. No chasing for drafts. One clean interface, updated every week.' },
+  { icon: <Icon.Shield size={18} />, title: 'Fully managed. Nothing to write. Cancel any time.', body: 'You do not brief us each week, chase for drafts, or manage a writing team. We take care of production end to end. You access everything through your portal. That is the entire workflow on your side. Cancel with 30 days notice.' },
 ]
 
 function Solution() {
@@ -780,7 +780,7 @@ function Solution() {
             <div className="badge"><span className="badge-dot" />What We Do</div>
             <h2 className="section-title">Done-for-you content.<br />Delivered every week.</h2>
             <p className="section-sub" style={{ marginBottom: '36px' }}>
-              Not a tool you log into. Not a template you fill in. A team — powered by AI — that produces content for your creators every single week. You manage the talent. We produce the output.
+              Not a tool you log into. Not a template you fill in. A team — powered by AI — that produces content every single week. Whether you're a solo creator or running a full agency, you manage the talent. We produce the output.
             </p>
             <a href="#contact" className="btn btn-amber btn-lg">
               Get Started <Icon.ArrowRight />
@@ -918,10 +918,10 @@ function Testimonials() {
 const compOptions = [
   {
     title: 'Hire an In-House Content Writer',
-    sub: "A full-time content hire costs £28–40K a year — and still can't cover every creator at the volume you need",
+    sub: "A full-time content hire costs £28–40K a year — and still can't cover every creator at the volume needed",
     winner: false,
     pros: [
-      { yes: false, text: "One person can't scale across a growing roster" },
+      { yes: false, text: "One person can't scale across a growing roster or multiple platforms" },
       { yes: false, text: 'Sick days, holidays, and turnover break the production cycle' },
       { yes: false, text: 'Briefing, feedback, and revision loops eat more time' },
       { yes: true,  text: 'Deep brand knowledge after time' },
@@ -939,22 +939,22 @@ const compOptions = [
     ],
   },
   {
-    title: 'Brief Creators to Write Their Own Content',
-    sub: 'Creators are talent — not copywriters. Writing their own content is often what slows them down most',
+    title: 'Write It Yourself',
+    sub: 'Whether you\'re a creator or a manager — your time is worth more than writing captions every week',
     winner: false,
     pros: [
-      { yes: false, text: 'Most creators find writing the hardest part of the job' },
+      { yes: false, text: 'Writing content is often the hardest and slowest part of the job' },
       { yes: false, text: 'Inconsistent output — some weeks nothing gets posted' },
-      { yes: false, text: 'Quality varies widely and is hard to maintain at scale' },
-      { yes: false, text: 'Puts the burden back on the people you are supposed to be supporting' },
+      { yes: false, text: 'Quality varies and is hard to maintain under pressure' },
+      { yes: false, text: 'The time cost compounds across every creator and every week' },
     ],
   },
   {
     title: 'CAIG — Done For You',
-    sub: 'Content produced weekly by AI, reviewed by our team, delivered to your portal. Your creators just post.',
+    sub: 'Content produced weekly by AI, reviewed by our team, delivered to your portal. You just post.',
     winner: true,
     pros: [
-      { yes: true,  text: 'Scales across your entire roster without adding headcount' },
+      { yes: true,  text: 'Works for solo creators and full agencies — any size' },
       { yes: true,  text: 'Consistent weekly delivery — every creator, every week' },
       { yes: true,  text: 'Built around each creator\'s voice, niche, and platform' },
       { yes: true,  text: 'You review and approve — we handle all production' },
@@ -1012,32 +1012,32 @@ const whyItems = [
   {
     num: '01',
     title: 'We never ask you to brief us.',
-    body: 'Most content solutions still need you to write prompts, fill in templates, or manage a freelancer. We don\'t. You onboard your creators once. After that, content shows up every Monday. No check-ins. No forms. No follow-ups.',
+    body: 'Most content solutions still need you to write prompts, fill in templates, or manage a freelancer. We don\'t. You onboard once — whether you\'re a solo creator or managing twenty. After that, content shows up every Monday. No check-ins. No forms. No follow-ups.',
   },
   {
     num: '02',
-    title: 'Every piece is built for that creator\'s exact niche.',
+    title: 'Every piece is built for your exact niche.',
     body: 'Generic content gets ignored. We build a deep content profile for every creator — their voice, their niche, their audience, their platform. What lands in your portal could only have been written for them.',
   },
   {
     num: '03',
     title: 'A cheaper tool is not a competitor. A system is.',
-    body: 'Anyone can subscribe to an AI writing tool. Running it, prompting it, reviewing it, formatting it, and delivering it for ten creators every week — that\'s what we do. You\'re not paying for AI. You\'re paying for the system that makes it work at scale.',
+    body: 'Anyone can open ChatGPT. Running it, prompting it, reviewing it, formatting it, and delivering it week after week — for yourself or for a roster — that\'s what we do. You\'re not paying for AI. You\'re paying for the system that makes it work.',
   },
   {
     num: '04',
-    title: 'Your portal is a competitive advantage.',
-    body: 'Your clients get a private portal with their content queue, history, and approvals in one place. No other agency offers this. It signals professionalism, justifies your retainer, and makes you harder to replace.',
+    title: 'Your portal is a professional edge.',
+    body: 'You get a private portal with your content queue, history, and approvals in one place. For individual creators it means one clean home for all your content. For agencies, it signals the kind of professionalism that justifies a retainer and makes you harder to replace.',
   },
   {
     num: '05',
     title: 'We grow with you, not against you.',
-    body: 'Sign one new creator? Their content starts the following Monday. No renegotiating. No extra onboarding cost. The system scales with your roster. You focus on signing talent — we handle the delivery.',
+    body: 'Adding a new creator to your roster? Their content starts the following Monday. Growing your own account to a new platform? We expand with you. No renegotiating. No extra onboarding cost. The system scales with you.',
   },
   {
     num: '06',
     title: 'The results compound. The alternatives don\'t.',
-    body: 'Consistent posting builds algorithmic trust, audience loyalty, and brand deal leverage. Every week your creators post, they get easier to monetise. Every week they don\'t — you lose ground that takes months to recover.',
+    body: 'Consistent posting builds algorithmic trust, audience loyalty, and brand deal leverage. Every week you post, your account gets easier to monetise. Every week you don\'t — you lose ground that takes months to recover.',
   },
 ]
 
@@ -1047,10 +1047,10 @@ function WhyCAIG() {
       <div className="container">
         <FadeUp>
           <div className="sh c">
-            <div className="badge"><span className="badge-dot" />Why Agencies Choose CAIG</div>
+            <div className="badge"><span className="badge-dot" />Why Creators & Agencies Choose CAIG</div>
             <h2 className="section-title">This isn't a content tool.<br />It's an unfair advantage.</h2>
             <p className="section-sub">
-              The agencies that win in creator management aren't the ones working harder. They're the ones who solved content production while everyone else is still stuck in it.
+              The creators and agencies that win aren't the ones working harder. They're the ones who solved content production while everyone else is still stuck in it.
             </p>
           </div>
         </FadeUp>
@@ -1083,25 +1083,25 @@ const steps = [
     num: '01',
     label: 'Step One',
     title: 'Discovery call — 30 minutes',
-    text: 'You walk us through your roster, your current content process, and what good looks like for you. We show you a live demo of the portal and what content output looks like in practice. You leave knowing exactly what you would get and what it costs.',
+    text: 'You tell us who you are — a solo creator or an agency — and walk us through your current content process and what good looks like for you. We show you a live demo of the portal and real content output. You leave knowing exactly what you\'d get and what it costs.',
   },
   {
     num: '02',
     label: 'Step Two',
     title: 'We onboard your creators in 48 hours',
-    text: 'You share basic details for each creator — niche, platform, tone, and any existing content. We set up the content engine for each one, configured around their voice and audience. No lengthy briefing process. No forms to fill in.',
+    text: 'You share basic details — niche, platform, tone, and any existing content. Whether that\'s just you or a full roster, we set up the content engine for each creator, configured around their voice and audience. No lengthy briefing process. No forms to fill in.',
   },
   {
     num: '03',
     label: 'Step Three',
     title: 'Content lands in your portal every week',
-    text: 'Every Monday, a fresh batch of scripts, hooks, captions, and content plans is ready in your portal — one batch per creator. You review, approve, and hand off. Your creators post. That is the entire workflow on your side.',
+    text: 'Every Monday, a fresh batch of scripts, hooks, captions, and content plans is ready in your portal. You review, approve, and post — or hand off to your creators. That is the entire workflow on your side.',
   },
   {
     num: '04',
     label: 'Step Four',
     title: 'We improve it every month',
-    text: 'We track what is performing, adjust the content strategy each month, and refine the output based on what is working for each creator. On Growth and Enterprise, you get a monthly strategy session with your dedicated content strategist.',
+    text: 'We track what is performing, adjust the content strategy each month, and refine the output based on what is working. On Growth and Agency plans, you get a monthly strategy session with your dedicated content strategist.',
   },
 ]
 
@@ -1143,8 +1143,8 @@ function HowItWorks() {
 /* ── FAQ ─────────────────────────────────────────────────────── */
 const faqs = [
   {
-    q: 'What kind of agencies do you work with?',
-    a: "Creator management agencies, talent agencies, and brand-side teams managing content across multiple creators or accounts. If you have a roster of creators who need to post consistently and you are responsible for making that happen, CAIG is built for you.",
+    q: 'Who is CAIG for?',
+    a: "Two types of clients. First: individual creators who want consistent content without spending hours writing it themselves — scripts, hooks, captions, and content plans, delivered weekly. Second: creator management agencies and talent managers who need to produce content across a full roster without hiring a writing team. If you need content to go out every week and you don't want to be the one writing it, CAIG is built for you.",
   },
   {
     q: 'What does CAIG actually produce?',
@@ -1168,7 +1168,7 @@ const faqs = [
   },
   {
     q: 'How does pricing work?',
-    a: "Pricing is based on your roster size and content volume. We don't publish rates publicly — every agency is different and we'd rather give you an accurate number on a call than a figure that doesn't fit. Book a free discovery call and we'll give you a clear, honest quote with no obligation.",
+    a: "We offer plans for solo creators as well as agencies managing multiple creators. Pricing depends on how many creators you need covered and what content volume you need each week. We don't publish rates publicly — every situation is different and we'd rather give you an accurate number on a call than a figure that doesn't fit. Book a free discovery call and we'll give you a clear, honest quote with no obligation.",
   },
 ]
 
@@ -1222,11 +1222,11 @@ function UrgencyBanner() {
         <div className="urgency-inner">
           <div className="urgency-eyebrow">The cost of doing nothing</div>
           <h2 className="urgency-title">
-            Every week your creators don't post<br />is a week someone else's do.
+            Every week you don't post<br />is a week someone else does.
           </h2>
           <p className="urgency-body">
-            Algorithms reward creators who show up. Brands sign the ones with consistent output. Audiences forget the ones who go quiet. Right now, somewhere on your roster, a creator hasn't posted in two weeks. Not because they don't want to — because nobody wrote the content.
-            <strong style={{ color: 'var(--t0)' }}> That is a solvable problem. Book a 30-minute call and we will show you exactly what CAIG produces for creators like yours — and what it costs.</strong>
+            Algorithms reward creators who show up. Brands sign the ones with consistent output. Audiences forget the ones who go quiet. Whether you're a solo creator or managing a roster — the content gap costs you every single week it stays open.
+            <strong style={{ color: 'var(--t0)' }}> That is a solvable problem. Book a 30-minute call and we will show you exactly what CAIG produces for creators like you — and what it costs.</strong>
           </p>
           <a href="#contact" className="btn btn-amber btn-lg breathe">
             Book the Call — 30 Minutes, No Obligation <Icon.ArrowRight size={17} />
@@ -1271,7 +1271,7 @@ function Contact() {
             <div className="badge"><span className="badge-dot" />Get Started</div>
             <h2 className="section-title">Book a free<br />discovery call</h2>
             <p className="section-sub" style={{ marginBottom: '10px' }}>
-              30 minutes. We show you the portal, walk through what content would look like for your creators, and give you a clear answer on which plan fits. You walk away knowing exactly what you would get.
+              30 minutes. We show you the portal, walk through what content would look like for your niche and platform, and give you a clear answer on which plan fits. You walk away knowing exactly what you would get.
             </p>
             <p style={{ fontSize: '14px', color: 'var(--amber)', fontWeight: 600, marginBottom: '28px' }}>
               Completely free. No obligation whatsoever.
@@ -1313,7 +1313,7 @@ function Contact() {
                 </div>
               ) : (
                 <>
-                  <div className="cform-title">Tell us about your agency</div>
+              <div className="cform-title">Tell us about yourself</div>
                   <div className="cform-sub">We reply within 4 business hours, every time</div>
                   <form onSubmit={submit}>
                     <input type="hidden" name="form-name" value="contact" />
@@ -1323,8 +1323,8 @@ function Contact() {
                         <input className="fi" name="name" placeholder="Jane Smith" value={form.name} onChange={set('name')} />
                       </div>
                       <div className="fg">
-                        <label className="fl">Agency / Company</label>
-                        <input className="fi" name="company" placeholder="Talent Agency Ltd" value={form.company} onChange={set('company')} />
+                        <label className="fl">Agency / Company (or "Solo Creator")</label>
+                        <input className="fi" name="company" placeholder="Talent Agency Ltd / Solo Creator" value={form.company} onChange={set('company')} />
                       </div>
                     </div>
                     <div className="frow">
@@ -1338,11 +1338,11 @@ function Contact() {
                       </div>
                     </div>
                     <div className="fg">
-                      <label className="fl">How many creators are on your roster?</label>
+                      <label className="fl">How many creators do you need content for?</label>
                       <select className="fi" name="service" value={form.service} onChange={set('service')} style={{ cursor: 'pointer' }}>
-                        <option value="">Select roster size</option>
-                        <option>1–2 creators</option>
-                        <option>3–5 creators</option>
+                        <option value="">Select an option</option>
+                        <option>Just me (solo creator)</option>
+                        <option>2–5 creators</option>
                         <option>6–10 creators</option>
                         <option>11–20 creators</option>
                         <option>20+ creators</option>
@@ -1391,7 +1391,7 @@ function Footer() {
               <Logo height={28} />
             </div>
             <p className="footer-tagline">
-              Done-for-you AI content creation for creator agencies and talent managers.
+              Done-for-you AI content creation for solo creators, talent managers, and creator agencies.
               Scripts, captions, and proposals — produced weekly, delivered to your portal.
             </p>
           </div>
