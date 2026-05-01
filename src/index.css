@@ -172,18 +172,18 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.05em; line-height: 1.06; }
 .nav-inner {
   max-width: var(--max-w); margin: 0 auto; padding: 0 28px;
   height: 100%; display: flex; align-items: center; justify-content: space-between;
-  position: relative;
 }
 .nav-eyebrow {
   font-size: 11px; font-weight: 700; letter-spacing: .12em;
   color: var(--t3); text-transform: uppercase; white-space: nowrap;
 }
-.nav-logo {
-  display: flex; align-items: center; text-decoration: none;
-  position: absolute; left: 50%; transform: translateX(-50%);
-}
-.nav-logo-center { /* alias, same rules apply */ }
 .nav-right { display: flex; align-items: center; gap: 10px; }
+
+/* ── HERO LOGO ───────────────────────────────────────────────── */
+.hero-logo-mark {
+  display: block; text-decoration: none;
+  margin-bottom: 24px;
+}
 
 @media (max-width: 780px) { .nav-links, .nav-sub { display: none; } }
 

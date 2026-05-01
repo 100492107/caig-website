@@ -324,9 +324,6 @@ function Nav() {
     <nav className={`nav${scrolled ? ' scrolled' : ''}`}>
       <div className="nav-inner">
         <div className="nav-eyebrow">CORNERSTONE AI GROUP</div>
-        <a href="/" className="nav-logo nav-logo-center">
-          <Logo height={32} />
-        </a>
         <div className="nav-right">
           <a href="#contact" className="btn btn-amber btn-md breathe">Book a Free Call</a>
         </div>
@@ -635,6 +632,16 @@ function Hero() {
 
       <div className="container">
         <div className="hero-center">
+
+          <motion.a
+            href="/"
+            className="hero-logo-mark"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+          >
+            <Logo height={120} />
+          </motion.a>
 
           <motion.h1
             className="hero-h1"
