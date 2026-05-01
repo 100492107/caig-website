@@ -669,7 +669,7 @@ function Hero() {
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             <a href="#contact" className="btn btn-amber btn-xl breathe">
-              Book a Free Call
+              Find Out How
               <Icon.ArrowRight size={18} />
             </a>
           </motion.div>
