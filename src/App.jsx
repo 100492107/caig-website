@@ -7,7 +7,9 @@ import Terms from './Terms'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
 import { loadSlim } from '@tsparticles/slim'
 
-/* ── PARTICLE NEURAL NETWORK BACKGROUND ─────────────────────── */
+/* ── PARTICLE ENGINE — init once at module level, never again ── */
+const engineReady = initParticlesEngine(async engine => { await loadSlim(engine) })
+
 const PARTICLE_OPTIONS = {
   background: { color: { value: '#02040e' } },
   fpsLimit: 60,
@@ -29,16 +31,13 @@ const PARTICLE_OPTIONS = {
 
 function ParticlesHeroBg() {
   const [ready, setReady] = useState(false)
-  useEffect(() => {
-    initParticlesEngine(async engine => { await loadSlim(engine) }).then(() => setReady(true))
-  }, [])
-  if (!ready) return null
+  useEffect(() => { engineReady.then(() => setReady(true)) }, [])
   return (
-    <Particles
-      id="hero-particles"
-      options={PARTICLE_OPTIONS}
-      style={{ position: 'absolute', inset: 0, zIndex: 0 }}
-    />
+    <div style={{ position: 'absolute', inset: 0, zIndex: 0, opacity: ready ? 1 : 0, transition: 'opacity 0.6s ease' }}>
+      {ready && (
+        <Particles id="hero-particles" options={PARTICLE_OPTIONS} style={{ position: 'absolute', inset: 0 }} />
+      )}
+    </div>
   )
 }
 
