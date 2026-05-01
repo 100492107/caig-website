@@ -237,6 +237,51 @@ function Problem() {
   )
 }
 
+/* ── COST OF INACTION ───────────────────────────────────────── */
+function CostOfInaction() {
+  return (
+    <section className="coi-section">
+      <div className="container">
+        <div className="coi-inner">
+          <div className="coi-left">
+            <div className="label" style={{ color: 'var(--red)' }}>
+              <span className="label-dot" style={{ background: 'var(--red)' }} />
+              The Maths of Doing Nothing
+            </div>
+            <h2 className="section-title" style={{ maxWidth: 480 }}>
+              Waiting isn't free.<br/>It has a monthly invoice.
+            </h2>
+            <p className="section-sub">
+              Most business owners frame the audit as a £2,500 cost. The right frame is: what is the status quo costing you right now, every month, while you're deciding?
+            </p>
+          </div>
+          <div className="coi-right">
+            <div className="coi-calc">
+              <div className="coi-calc-row">
+                <div className="coi-calc-label">3 staff × 5 hrs/week on manual admin</div>
+                <div className="coi-calc-val">60 hrs/month</div>
+              </div>
+              <div className="coi-calc-row">
+                <div className="coi-calc-label">At £25/hr fully-loaded staff cost</div>
+                <div className="coi-calc-val">£1,500/month</div>
+              </div>
+              <div className="coi-calc-divider" />
+              <div className="coi-calc-row coi-calc-total">
+                <div className="coi-calc-label">Annual cost of not fixing this</div>
+                <div className="coi-calc-val coi-calc-red">£18,000/yr</div>
+              </div>
+              <div className="coi-calc-note">
+                Waiting to fix this isn't saving you the £2,500 audit fee.<br/>
+                It's costing you £18,000 a year in wasted payroll — and that's a conservative estimate with modest numbers.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 /* ── AUDIT OFFER ────────────────────────────────────────────── */
 function AuditOffer() {
   return (
@@ -383,6 +428,29 @@ function Industries() {
               </ul>
             </div>
           ))}
+        </div>
+
+        <div className="case-study">
+          <div className="cs-tag">A typical example from our audit process — Recruitment</div>
+          <div className="cs-grid">
+            <div>
+              <div className="cs-eyebrow">The CV Black Hole</div>
+              <h3 className="cs-title">25 hours a week lost to copy-pasting.</h3>
+              <div className="cs-body">
+                A 12-person recruitment firm was manually downloading CVs from job boards, reading them, reformatting them into the agency's branded template, and uploading them to their ATS. 15 minutes per candidate. At 100 candidates a week, that's 25 hours of consultant time spent on copy-pasting instead of making placements.
+              </div>
+            </div>
+            <div className="cs-right">
+              <div className="cs-block cs-block-fix">
+                <div className="cs-block-label">The Fix</div>
+                <div className="cs-block-text">A workflow using Make.com and an AI document parser. When a candidate applies, the AI reads the PDF, extracts the structured data, populates the branded template, and creates the ATS record — automatically, without a human touching it.</div>
+              </div>
+              <div className="cs-block cs-block-roi">
+                <div className="cs-block-label">The ROI</div>
+                <div className="cs-block-text">£1,200 one-off build cost. 25 hours a week handed back to the consultants to get on the phone and close placements. Payback period: under 3 weeks.</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -556,7 +624,7 @@ function FAQ() {
 
 /* ── INTAKE FORM ────────────────────────────────────────────── */
 function IntakeForm() {
-  const [form, setForm] = useState({ name: '', email: '', company: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', company: '', process: '', hours: '', alternative: '' })
   const [status, setStatus] = useState('idle') // idle | loading | success | error
 
   const set = k => e => setForm(f => ({ ...f, [k]: e.target.value }))
@@ -572,7 +640,7 @@ function IntakeForm() {
           name: form.name,
           email: form.email,
           subject: `Audit enquiry — ${form.company}`,
-          message: `Company: ${form.company}\n\n${form.message}`,
+          message: `Company: ${form.company}\n\nBiggest time-wasting process:\n${form.process}\n\nHours wasted per week: ${form.hours}\n\nWhat the team would do instead:\n${form.alternative}`,
         }),
       })
       if (!res.ok) throw new Error()
@@ -588,7 +656,7 @@ function IntakeForm() {
         <div>
           <h2 className="intake-title">Ready to find out what you're missing?</h2>
           <p className="intake-sub">
-            Fill in the form and tell us about the process that costs you the most time. We review every submission personally and respond within one working day.
+            Fill in the form below. The questions are designed to help you quantify the problem — most people find the answers surprising.
           </p>
           <div className="intake-trust">
             {[
@@ -608,15 +676,27 @@ function IntakeForm() {
           {status === 'success' ? (
             <div className="form-success">
               <div className="form-success-icon"><Icon.CheckCircle /></div>
-              <div className="form-success-title">We'll be in touch shortly.</div>
+              <div className="form-success-title">We've received your enquiry.</div>
               <div className="form-success-sub">
-                We've received your enquiry and will respond within one working day. In the meantime, if you have anything to add, email us at <strong>hello@cornerstoneaigroup.com</strong>.
+                We review every submission personally and will respond within one working day. If you know you want to move quickly, you can book a 15-minute qualification call now to secure your slot.
+              </div>
+              <a
+                href="https://calendly.com/YOUR_LINK_HERE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-blue btn-lg"
+                style={{ marginTop: 20, width: '100%', justifyContent: 'center' }}
+              >
+                Book a 15-minute call <Icon.ArrowRight />
+              </a>
+              <div style={{ marginTop: 12, fontSize: 12, color: 'var(--t3)', textAlign: 'center' }}>
+                Or wait — we'll email you within one working day either way.
               </div>
             </div>
           ) : (
             <>
               <div className="iform-title">Apply for an Audit</div>
-              <div className="iform-sub">Takes 2 minutes. No commitment required.</div>
+              <div className="iform-sub">3 quick questions. No commitment required.</div>
               <form onSubmit={submit}>
                 <div className="fg">
                   <label className="fl">Your name</label>
@@ -631,8 +711,21 @@ function IntakeForm() {
                   <input className="fi" type="text" required placeholder="Smith & Co Recruitment" value={form.company} onChange={set('company')} />
                 </div>
                 <div className="fg">
-                  <label className="fl">What's your biggest time-wasting process?</label>
-                  <textarea className="ft" required placeholder="e.g. Every Monday morning we manually pull data from three different systems to build a client report. It takes two people about 3 hours each..." value={form.message} onChange={set('message')} />
+                  <label className="fl">Which process makes you want to pull your hair out?</label>
+                  <textarea className="ft" required placeholder="e.g. Every Monday we manually pull data from three systems to build a client report. Two people. Three hours each. Every single week." value={form.process} onChange={set('process')} />
+                </div>
+                <div className="fg">
+                  <label className="fl">Roughly how many hours a week does your team lose to this?</label>
+                  <select className="fi" required value={form.hours} onChange={set('hours')}>
+                    <option value="" disabled>Select a range…</option>
+                    <option value="5–10 hours">5–10 hours</option>
+                    <option value="10–20 hours">10–20 hours</option>
+                    <option value="20+ hours">20+ hours</option>
+                  </select>
+                </div>
+                <div className="fg">
+                  <label className="fl">What would your team be doing with that time instead?</label>
+                  <input className="fi" type="text" required placeholder="e.g. Calling candidates, closing deals, onboarding new clients…" value={form.alternative} onChange={set('alternative')} />
                 </div>
                 {status === 'error' && (
                   <div style={{ fontSize: 13, color: 'var(--red)', marginBottom: 12 }}>
@@ -721,6 +814,7 @@ function Home() {
       <Hero />
       <ProofStrip />
       <Problem />
+      <CostOfInaction />
       <AuditOffer />
       <Industries />
       <HowItWorks />
