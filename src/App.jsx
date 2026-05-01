@@ -4,55 +4,40 @@ import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { Logo, LogoMark } from './Logo'
 import Privacy from './Privacy'
 import Terms from './Terms'
-import Particles from '@tsparticles/react'
+import Particles, { initParticlesEngine } from '@tsparticles/react'
 import { loadSlim } from '@tsparticles/slim'
 
 /* ── PARTICLE NEURAL NETWORK BACKGROUND ─────────────────────── */
+const PARTICLE_OPTIONS = {
+  background: { color: { value: '#02040e' } },
+  fpsLimit: 60,
+  interactivity: {
+    events: { onHover: { enable: true, mode: 'grab' } },
+    modes: { grab: { distance: 160, links: { opacity: 0.35 } } },
+  },
+  particles: {
+    color: { value: ['#f7b034', '#7c7fff', '#34d8a4'] },
+    links: { color: '#ffffff', distance: 145, enable: true, opacity: 0.07, width: 1 },
+    move: { enable: true, speed: 0.6, direction: 'none', random: true, straight: false, outModes: { default: 'bounce' } },
+    number: { value: 90, density: { enable: true, area: 900 } },
+    opacity: { value: { min: 0.2, max: 0.7 }, animation: { enable: true, speed: 0.5, sync: false } },
+    shape: { type: 'circle' },
+    size: { value: { min: 1, max: 2.5 } },
+  },
+  detectRetina: true,
+}
+
 function ParticlesHeroBg() {
-  const init = useCallback(async engine => { await loadSlim(engine) }, [])
+  const [ready, setReady] = useState(false)
+  useEffect(() => {
+    initParticlesEngine(async engine => { await loadSlim(engine) }).then(() => setReady(true))
+  }, [])
+  if (!ready) return null
   return (
     <Particles
       id="hero-particles"
-      init={init}
+      options={PARTICLE_OPTIONS}
       style={{ position: 'absolute', inset: 0, zIndex: 0 }}
-      options={{
-        background: { color: { value: '#02040e' } },
-        fpsLimit: 60,
-        interactivity: {
-          events: {
-            onHover: { enable: true, mode: 'grab' },
-          },
-          modes: {
-            grab: { distance: 160, links: { opacity: 0.35 } },
-          },
-        },
-        particles: {
-          color: { value: ['#f7b034', '#7c7fff', '#34d8a4'] },
-          links: {
-            color: '#ffffff',
-            distance: 145,
-            enable: true,
-            opacity: 0.07,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 0.6,
-            direction: 'none',
-            random: true,
-            straight: false,
-            outModes: { default: 'bounce' },
-          },
-          number: { value: 90, density: { enable: true, area: 900 } },
-          opacity: {
-            value: { min: 0.2, max: 0.7 },
-            animation: { enable: true, speed: 0.5, sync: false },
-          },
-          shape: { type: 'circle' },
-          size: { value: { min: 1, max: 2.5 } },
-        },
-        detectRetina: true,
-      }}
     />
   )
 }
