@@ -1,9 +1,61 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { Logo, LogoMark } from './Logo'
 import Privacy from './Privacy'
 import Terms from './Terms'
+import Particles from '@tsparticles/react'
+import { loadSlim } from '@tsparticles/slim'
+
+/* ── PARTICLE NEURAL NETWORK BACKGROUND ─────────────────────── */
+function ParticlesHeroBg() {
+  const init = useCallback(async engine => { await loadSlim(engine) }, [])
+  return (
+    <Particles
+      id="hero-particles"
+      init={init}
+      style={{ position: 'absolute', inset: 0, zIndex: 0 }}
+      options={{
+        background: { color: { value: '#02040e' } },
+        fpsLimit: 60,
+        interactivity: {
+          events: {
+            onHover: { enable: true, mode: 'grab' },
+          },
+          modes: {
+            grab: { distance: 160, links: { opacity: 0.35 } },
+          },
+        },
+        particles: {
+          color: { value: ['#f7b034', '#7c7fff', '#34d8a4'] },
+          links: {
+            color: '#ffffff',
+            distance: 145,
+            enable: true,
+            opacity: 0.07,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 0.6,
+            direction: 'none',
+            random: true,
+            straight: false,
+            outModes: { default: 'bounce' },
+          },
+          number: { value: 90, density: { enable: true, area: 900 } },
+          opacity: {
+            value: { min: 0.2, max: 0.7 },
+            animation: { enable: true, speed: 0.5, sync: false },
+          },
+          shape: { type: 'circle' },
+          size: { value: { min: 1, max: 2.5 } },
+        },
+        detectRetina: true,
+      }}
+    />
+  )
+}
 
 /* ── FRAMER HELPERS ──────────────────────────────────────────── */
 const fadeUp = {
@@ -570,10 +622,11 @@ function HeroStats() {
 function Hero() {
   return (
     <section className="hero">
-      <div className="hero-bg">
+      <ParticlesHeroBg />
+      <div className="hero-overlay" />
+      <div className="hero-orbs">
         <div className="hero-orb hero-orb-1" />
         <div className="hero-orb hero-orb-2" />
-        <div className="hero-orb hero-orb-3" />
       </div>
 
       <div className="container">
