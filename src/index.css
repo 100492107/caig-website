@@ -203,102 +203,22 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.05em; line-height: 1.06; }
 }
 .hero-bg {
   position: absolute; inset: 0; overflow: hidden; pointer-events: none;
-  background: radial-gradient(ellipse 80% 80% at 50% 50%, #0a0c20 0%, #02040e 100%);
+  background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1800&q=80&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  animation: kenburns 20s ease-in-out infinite alternate;
+  transform-origin: center center;
+}
+@keyframes kenburns {
+  0%   { transform: scale(1)    translateX(0)    translateY(0); }
+  100% { transform: scale(1.08) translateX(-1%)  translateY(-1%); }
 }
 .hero-bg::after {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(245,166,35,.07) 0%, transparent 60%);
-}
-
-/* ── SPINNING PLANET ─────────────────────────────────────────── */
-.hero-planet-wrap {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -52%);
-  width: min(900px, 110vw);
-  height: min(900px, 110vw);
-  pointer-events: none;
-  z-index: 0;
-}
-.hero-planet {
-  width: 100%; height: 100%;
-  border-radius: 50%;
   background:
-    radial-gradient(ellipse 80% 80% at 30% 35%, rgba(120,140,255,.18) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 60% at 70% 65%, rgba(245,166,35,.10) 0%, transparent 50%),
-    radial-gradient(ellipse 100% 100% at 50% 50%, #0d1035 0%, #060818 40%, #02040e 70%, transparent 100%);
-  box-shadow:
-    0 0 120px 40px rgba(100,110,255,.12),
-    0 0 300px 80px rgba(245,166,35,.06),
-    inset 0 0 80px rgba(255,255,255,.03);
-  animation: planet-spin 40s linear infinite;
-  overflow: hidden;
-}
-.hero-planet::before {
-  content: '';
-  position: absolute; inset: 0;
-  border-radius: 50%;
-  background:
-    repeating-linear-gradient(
-      8deg,
-      transparent 0%,
-      transparent 6%,
-      rgba(255,255,255,.015) 6%,
-      rgba(255,255,255,.015) 7%,
-      transparent 7%,
-      transparent 13%
-    );
-  animation: planet-bands 40s linear infinite;
-}
-.hero-planet::after {
-  content: '';
-  position: absolute; inset: 0;
-  border-radius: 50%;
-  background: radial-gradient(ellipse 55% 100% at 28% 50%,
-    rgba(255,255,255,.07) 0%,
-    transparent 60%);
-}
-.hero-planet-ring {
-  position: absolute;
-  width: 140%; height: 28%;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%) rotateX(75deg);
-  border-radius: 50%;
-  border: 2px solid rgba(245,166,35,.15);
-  box-shadow: 0 0 40px rgba(245,166,35,.08);
-}
-.hero-planet-glow {
-  position: absolute; inset: -20%;
-  border-radius: 50%;
-  background: radial-gradient(ellipse 60% 60% at 50% 50%,
-    rgba(80,90,255,.10) 0%,
-    transparent 70%);
-  filter: blur(40px);
-  animation: planet-glow 6s ease-in-out infinite alternate;
-}
-@keyframes planet-spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-@keyframes planet-bands {
-  from { background-position: 0 0; }
-  to   { background-position: 200px 0; }
-}
-@keyframes planet-glow {
-  from { opacity: .7; }
-  to   { opacity: 1; }
-}
-/* fade planet out toward edges so it blends */
-.hero-planet-wrap::after {
-  content: '';
-  position: absolute; inset: 0;
-  border-radius: 50%;
-  background: radial-gradient(ellipse 100% 100% at 50% 50%,
-    transparent 45%,
-    rgba(2,4,14,.6) 70%,
-    rgba(2,4,14,1) 100%);
-  pointer-events: none;
+    linear-gradient(to bottom, rgba(2,4,14,.72) 0%, rgba(2,4,14,.55) 40%, rgba(2,4,14,.92) 100%),
+    linear-gradient(135deg, rgba(245,166,35,.12) 0%, transparent 60%);
 }
 
 .hero-grid {
