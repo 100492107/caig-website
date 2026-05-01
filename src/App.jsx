@@ -253,8 +253,8 @@ function StickyBar() {
         >
           <div className="sticky-bar-inner">
             <div className="sticky-bar-text">
-              <span className="sticky-bar-title">Ready to stop being the bottleneck?</span>
-              <span className="sticky-bar-sub">30-min call · Live portal demo · No obligation</span>
+              <span className="sticky-bar-title">See exactly what CAIG delivers — before you commit to anything.</span>
+              <span className="sticky-bar-sub">30-min call · Live portal demo · Real content examples for your niche</span>
             </div>
             <a href="#contact" className="btn btn-amber btn-md breathe">
               Book Free Call <Icon.ArrowRight size={14} />
@@ -325,7 +325,7 @@ function Nav() {
       <div className="nav-inner">
         <div className="nav-eyebrow">CORNERSTONE AI GROUP</div>
         <div className="nav-right">
-          <a href="#contact" className="btn btn-amber btn-md breathe">Book a Free Call</a>
+          <a href="#contact" className="btn btn-amber btn-md breathe">See a Live Demo</a>
         </div>
       </div>
     </nav>
@@ -569,34 +569,24 @@ function HeroTicker() {
   )
 }
 
-/* ── HERO STATS (count-up) ───────────────────────────────────── */
-function StatItem({ target, prefix = '', suffix = '', label, amber }) {
-  const [count, ref] = useCountUp(target)
+/* ── HERO PROCESS STRIP ──────────────────────────────────────── */
+function HeroProcessStrip() {
+  const steps = [
+    { n: '01', label: 'Onboard once', body: 'One setup call. We build the content profile.' },
+    { n: '02', label: 'We write it', body: 'AI drafts, our team reviews every piece.' },
+    { n: '03', label: 'Delivered Mondays', body: 'Scripts, hooks, captions — in your portal.' },
+    { n: '04', label: 'You approve & post', body: 'Review, approve, hand off. Nothing to write.' },
+  ]
   return (
-    <div className="hero-stat" ref={ref}>
-      <div className="hero-stat-val">
-        <span style={{ color: amber ? 'var(--amber)' : 'var(--t0)' }}>
-          {prefix}{count}{suffix}
-        </span>
-      </div>
-      <div className="hero-stat-lbl">{label}</div>
+    <div className="hero-process-strip">
+      {steps.map((s, i) => (
+        <div key={i} className="hps-item">
+          <div className="hps-num">{s.n}</div>
+          <div className="hps-label">{s.label}</div>
+          <div className="hps-body">{s.body}</div>
+        </div>
+      ))}
     </div>
-  )
-}
-
-function HeroStats() {
-  return (
-    <motion.div
-      className="hero-stats"
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.9, duration: 0.6 }}
-    >
-      <StatItem target={4}   suffix="+ hrs"  label="Saved per creator per week — no briefing, no chasing, no rewriting" amber />
-      <StatItem target={20}  suffix="+"       label="Pieces of content per creator per month on Foundation — scripts, hooks, captions" />
-      <StatItem target={100} suffix="%"       label="Written and delivered by CAIG — you review, approve, your creators post" />
-      <StatItem target={30}  suffix=" days"   label="Notice to cancel — no contracts, no lock-in, no penalty. Ever." />
-    </motion.div>
   )
 }
 
@@ -633,34 +623,33 @@ function Hero() {
       <div className="container">
         <div className="hero-center">
 
-          <motion.a
-            href="/"
-            className="hero-logo-mark"
+          <motion.div
+            className="hero-what"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.5 }}
+            transition={{ delay: 0.18, duration: 0.5 }}
           >
-            <Logo height={120} />
-          </motion.a>
+            Done-for-you content creation — for creators &amp; agencies
+          </motion.div>
 
           <motion.h1
             className="hero-h1"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ delay: 0.28, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            You Know The Scale.<br />
-            Content Is The Wall.<br />
-            <span className="hl">We Break It.</span>
+            Scripts. Captions. Proposals.<br />
+            <span className="hl">Delivered every week.</span><br />
+            <span className="hero-h1-sub">Without you writing a word.</span>
           </motion.h1>
 
           <motion.p
             className="hero-sub"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35, duration: 0.55 }}
+            transition={{ delay: 0.42, duration: 0.55 }}
           >
-            We handle the one thing holding your entire roster back.
+            CAIG is a done-for-you content service. We produce weekly scripts, hooks, captions, and brand proposals for creators and creator agencies — AI-generated, human-reviewed, delivered to your private portal every Monday.
           </motion.p>
 
           <motion.div
@@ -669,9 +658,17 @@ function Hero() {
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             <a href="#contact" className="btn btn-amber btn-xl breathe">
-              Find Out How
+              Book a Free Discovery Call
               <Icon.ArrowRight size={18} />
             </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.5 }}
+          >
+            <HeroProcessStrip />
           </motion.div>
 
         </div>
@@ -689,14 +686,14 @@ function ProofBar() {
       <div className="container">
         <div className="proof-bar-inner">
         {[
-          { text: '20+',  suffix: ' pieces',  label: 'Of content produced per creator per month on Foundation — scripts, hooks, captions', amber: true },
-          { text: '4+',   suffix: ' hrs',     label: 'Saved per creator per week — no more briefing writers or chasing copy', amber: false },
-          { text: '100%', suffix: '',          label: 'Of content written by our team and delivered to your portal — ready to approve and post', amber: false },
-          { text: '30',   suffix: ' days',    label: 'Notice to cancel — no long-term contracts, no lock-in, no penalty', amber: false },
+          { text: 'Weekly',   label: 'Content delivered every Monday — scripts, hooks, captions, content plans', amber: true },
+          { text: '48 hrs',   label: 'From discovery call to first content batch in your portal', amber: false },
+          { text: 'AI + human', label: 'Every piece AI-generated and reviewed by our team before delivery', amber: false },
+          { text: '30 days',  label: 'Notice to cancel — no contracts, no lock-in, no penalty', amber: false },
         ].map((s, i) => (
           <div className="proof-stat" key={i}>
             <div className="proof-val">
-              <span className={s.amber ? 'av' : ''}>{s.text}{s.suffix}</span>
+              <span className={s.amber ? 'av' : ''}>{s.text}</span>
             </div>
             <div className="proof-lbl">{s.label}</div>
           </div>
@@ -805,107 +802,67 @@ function Solution() {
   )
 }
 
-/* ── TESTIMONIALS ────────────────────────────────────────────── */
-const stars = ['★', '★', '★', '★', '★']
-
-const smallTestis = [
-  {
-    quote: "Before CAIG, getting content out of our creators was like pulling teeth. They had the ideas but not the time to write it all up. CAIG changed that completely — every Monday our portal has a fresh batch of scripts and captions ready. The creators just review, approve, and post. Consistency went from two posts a week to five.",
-    name: 'Priya Nair',
-    role: 'Founder',
-    co: 'Nair Talent Management',
-    av: '#7c7fff',
-    initials: 'PN',
-    metric: '5×/week',
-    metricLbl: 'avg posting frequency per creator',
-  },
-  {
-    quote: "We were managing twelve creators but the content output looked like we had three. CAIG set up the content engine in two weeks. Now every creator has a weekly batch of hooks, captions, and scripts waiting for them. The quality is genuinely better than what we were producing in-house — and it costs less.",
-    name: 'Tom Aldridge',
-    role: 'Head of Talent',
-    co: 'Aldridge Creative',
-    av: '#34d8a4',
-    initials: 'TA',
-    metric: '12 creators',
-    metricLbl: 'fully content-serviced every week',
-  },
-  {
-    quote: "The brand proposals alone have paid for the retainer three times over. CAIG writes them, we send them, brands sign. Before, we were leaving deals on the table because nobody had bandwidth to write a proper pitch. Now we pitch every opportunity.",
-    name: 'Sofia Reyes',
-    role: 'Partnerships Director',
-    co: 'Reyes Creator Agency',
-    av: '#f5a623',
-    initials: 'SR',
-    metric: '3×',
-    metricLbl: 'retainer ROI from brand deals alone',
-  },
-]
-
-function Testimonials() {
+/* ── PROCESS CREDIBILITY ─────────────────────────────────────── */
+function ProcessCredibility() {
+  const pillars = [
+    {
+      icon: <Icon.Layers size={22} />,
+      title: 'AI-generated. Human-reviewed.',
+      body: 'Every piece of content starts with our AI system, trained around the creator\'s niche, platform, tone, and audience. Then our team reviews every output before it lands in your portal. You never receive raw AI. You receive edited, ready-to-post content.',
+    },
+    {
+      icon: <Icon.RefreshCw size={22} />,
+      title: 'Monday delivery. Every week. Without being briefed.',
+      body: 'You do the onboarding once. After that, content appears in your portal every Monday — no check-in call, no weekly brief, no prompting required. If something changes, you tell us and we adjust. That is the entire workflow on your side.',
+    },
+    {
+      icon: <Icon.Shield size={22} />,
+      title: 'One private portal. Everything in one place.',
+      body: 'All content — scripts, captions, hooks, content plans, brand proposals — is delivered through your private CAIG portal. You review, approve, and hand off. No email chains, no shared documents, no chasing for drafts.',
+    },
+    {
+      icon: <Icon.Target size={22} />,
+      title: 'Built for your niche. Not a template.',
+      body: 'We build a content profile for every creator — platform, niche, audience demographics, tone, and format preferences. What gets delivered is built specifically for them. The same system cannot produce the same output for a different creator. That is by design.',
+    },
+    {
+      icon: <Icon.Zap size={22} />,
+      title: 'Brand proposals included — on higher plans.',
+      body: 'On Growth and Agency plans, we write tailored brand partnership proposals for your creators. Researched, formatted, and ready to send. You approve. We deliver. The deals that used to fall through because nobody had time to write the pitch stop falling through.',
+    },
+    {
+      icon: <Icon.Check size={22} />,
+      title: 'No lock-in. Cancel with 30 days\' notice.',
+      body: 'There are no long-term contracts. You can cancel any plan with 30 days\' written notice, no penalty, no questions. We keep clients because the output is good — not because we trap them in a contract.',
+    },
+  ]
   return (
-    <section className="section testi-section" id="testimonials">
+    <section className="section cred-section" id="how-we-work">
       <div className="container">
         <FadeUp>
           <div className="sh c">
-            <div className="badge"><span className="badge-dot" />Client Results</div>
-            <h2 className="section-title">Real agencies.<br />Real content output.</h2>
+            <div className="badge"><span className="badge-dot" />How It Actually Works</div>
+            <h2 className="section-title">What you get.<br />How we deliver it.</h2>
             <p className="section-sub">
-              From creator managers tired of chasing copy to talent agencies scaling their roster without scaling their headcount — here is what CAIG looks like in practice.
+              No vague promises. Here is exactly what CAIG produces, how it gets produced, and what the process looks like on your side.
             </p>
           </div>
         </FadeUp>
-
-        <FadeUp delay={0.05}>
-          <div className="testi-featured">
-            <div className="testi-mark">"</div>
-            <div className="testi-quote-big">
-              We went from six creators posting sporadically to all six posting five times a week — consistently, on-brand, with hooks that actually work. I thought that would require a full content team. CAIG replaced what would have been three full-time hires. The content comes into the portal every Monday, the creators pick it up, and it goes out. That is genuinely all we do now.
-            </div>
-            <div className="testi-meta">
-              <div className="testi-av" style={{ background: '#5b5ef4' }}>MW</div>
-              <div className="testi-who">
-                <div className="testi-name">Marcus Webb</div>
-                <div className="testi-role">Managing Director &middot; Webb Talent Group</div>
-              </div>
-              <div className="testi-result-tag">
-                <div>
-                  <div className="trt-val">6 creators</div>
-                  <div className="trt-lbl">posting 5×/week consistently</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </FadeUp>
-
-        <StaggerGrid className="testi-grid" delay={0.1}>
-          {smallTestis.map((t, i) => (
+        <StaggerGrid className="cred-grid">
+          {pillars.map((p, i) => (
             <FadeItem key={i}>
-              <div className="testi-card">
-                <div className="testi-stars">
-                  {stars.map((s, j) => <span key={j} className="testi-star">{s}</span>)}
-                </div>
-                <div className="testi-quote">"{t.quote}"</div>
-                <div className="testi-div" />
-                <div className="testi-person">
-                  <div className="testi-av-sm" style={{ background: t.av }}>{t.initials}</div>
-                  <div>
-                    <div className="testi-name-sm">{t.name}</div>
-                    <div className="testi-role-sm">{t.role} &middot; {t.co}</div>
-                  </div>
-                  <div className="testi-metric">
-                    <div className="testi-metric-val">{t.metric}</div>
-                    <div className="testi-metric-lbl">{t.metricLbl}</div>
-                  </div>
-                </div>
+              <div className="cred-card">
+                <div className="cred-icon">{p.icon}</div>
+                <div className="cred-title">{p.title}</div>
+                <div className="cred-body">{p.body}</div>
               </div>
             </FadeItem>
           ))}
         </StaggerGrid>
-
         <FadeUp delay={0.15}>
-          <div style={{ textAlign: 'center', marginTop: '52px' }}>
+          <div style={{ textAlign: 'center', marginTop: '56px' }}>
             <a href="#contact" className="btn btn-amber btn-lg">
-              Get results like this <Icon.ArrowRight />
+              See it live — book a 30-min demo <Icon.ArrowRight />
             </a>
           </div>
         </FadeUp>
@@ -1399,16 +1356,16 @@ function Footer() {
             <div className="footer-col-h">What We Do</div>
             <ul className="footer-links">
               <li><a href="#portal">Inside Your Portal</a></li>
-              <li><a href="#solution">How It Works</a></li>
+              <li><a href="#solution">What We Do</a></li>
               <li><a href="#why">Why CAIG</a></li>
-              <li><a href="#testimonials">Client Results</a></li>
+              <li><a href="#how-we-work">How It Works</a></li>
             </ul>
           </div>
           <div>
             <div className="footer-col-h">Company</div>
             <ul className="footer-links">
               <li><a href="#how-it-works">How It Works</a></li>
-              <li><a href="#testimonials">Client Results</a></li>
+              <li><a href="#how-we-work">How We Deliver</a></li>
               <li><a href="#faq">FAQ</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1446,7 +1403,7 @@ function MainSite() {
         <PortalGrid />
         <Solution />
         <WhyCAIG />
-        <Testimonials />
+        <ProcessCredibility />
         <Comparison />
         <HowItWorks />
         <FAQ />
