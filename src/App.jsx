@@ -681,7 +681,7 @@ function IntakeForm() {
                 We review every submission personally and will respond within one working day. If you know you want to move quickly, you can book a 15-minute qualification call now to secure your slot.
               </div>
               <a
-                href="https://calendly.com/YOUR_LINK_HERE"
+                href="https://calendly.com/hello-cornerstoneaigroup/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-blue btn-lg"
