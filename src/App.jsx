@@ -17,12 +17,12 @@ const PARTICLE_OPTIONS = {
   },
   particles: {
     color: { value: ['#f7b034', '#7c7fff', '#34d8a4'] },
-    links: { color: '#ffffff', distance: 145, enable: true, opacity: 0.07, width: 1 },
+    links: { color: '#ffffff', distance: 145, enable: true, opacity: 0.18, width: 1.2 },
     move: { enable: true, speed: 0.6, direction: 'none', random: true, straight: false, outModes: { default: 'bounce' } },
     number: { value: 90, density: { enable: true, area: 900 } },
-    opacity: { value: { min: 0.2, max: 0.7 }, animation: { enable: true, speed: 0.5, sync: false } },
+    opacity: { value: { min: 0.5, max: 1 }, animation: { enable: true, speed: 0.5, sync: false } },
     shape: { type: 'circle' },
-    size: { value: { min: 1, max: 2.5 } },
+    size: { value: { min: 2, max: 4 } },
   },
   detectRetina: true,
 }
