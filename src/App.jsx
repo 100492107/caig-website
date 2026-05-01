@@ -595,7 +595,8 @@ function Hero() {
             transition={{ delay: 0.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             You Know The Scale.<br />
-            <span className="hl">Content Is The Wall.</span>
+            Content Is The Wall.<br />
+            <span className="hl">We Break It.</span>
           </motion.h1>
 
           <motion.p
@@ -604,7 +605,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.55 }}
           >
-            We break it. Scripts, hooks, captions — written for every creator on your roster, every week, without you lifting a finger.
+            Scripts, hooks, captions — written for every creator on your roster, every week, without you lifting a finger.
           </motion.p>
 
           <motion.div
