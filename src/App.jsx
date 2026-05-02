@@ -102,7 +102,7 @@ function Hero() {
             <em>software should be doing.</em>
           </h1>
           <p className="hero-sub">
-            We audit your business, find the repetitive processes costing you the most time, and show you exactly what to automate — in plain English, with a clear return on investment.
+            We spend two weeks inside your business, find the admin that's quietly eating your payroll, and hand you a costed plan to fix it. No jargon. No sales pitch. Just the answer.
           </p>
           <div className="hero-ctas">
             <a href="#intake" className="btn btn-blue btn-xl">
@@ -115,31 +115,31 @@ function Hero() {
           <div className="hero-trust">
             <span className="hero-trust-item">
               <span className="hero-trust-icon"><Icon.Check /></span>
-              Fixed fee. No surprises.
+              £2,500 fixed. Nothing else.
             </span>
             <span className="hero-trust-item">
               <span className="hero-trust-icon"><Icon.Check /></span>
-              Results in 2 weeks
+              Done in 2 weeks
             </span>
             <span className="hero-trust-item">
               <span className="hero-trust-icon"><Icon.Check /></span>
-              No technical knowledge needed
+              No tech knowledge required
             </span>
           </div>
         </div>
 
         <div className="hero-card">
           <div className="hc-label">The AI Workflow Audit</div>
-          <div className="hc-title">Find out exactly what to automate — and what it's worth.</div>
+          <div className="hc-title">Stop guessing which parts of your business to automate.</div>
           <div className="hc-price">£2,500</div>
           <div className="hc-price-note">Fixed fee. Delivered in 2 weeks.</div>
           <ul className="hc-items">
             {[
-              'Full map of your highest-cost manual processes',
-              '3–5 automation opportunities ranked by ROI',
-              'Plain-English report — no jargon, no fluff',
-              'Vendor recommendations with setup costs',
-              'Optional: we implement it for you',
+              'A map of where your time is actually going',
+              '3–5 specific automations, ranked by payback period',
+              'The maths — hours saved, cost to build, time to break even',
+              'Exact tools to use and what each one costs to run',
+              'A report your whole team can understand and act on',
             ].map((t, i) => (
               <li key={i} className="hc-item">
                 <span className="hc-tick"><Icon.Check /></span>
@@ -149,7 +149,7 @@ function Hero() {
           </ul>
           <div className="hc-divider" />
           <div className="hc-note">
-            Most clients recover the audit fee within the first month of implementation. We'll show you the maths before you commit.
+            Most clients earn the fee back within the first month of implementation. We show you the maths before you spend a penny.
           </div>
         </div>
       </div>
@@ -160,10 +160,10 @@ function Hero() {
 /* ── PROOF STRIP ────────────────────────────────────────────── */
 function ProofStrip() {
   const items = [
-    { val: '15+', accent: false, lbl: 'hours saved per week, on average' },
-    { val: '2', accent: false, lbl: 'weeks from intake to final report' },
-    { val: '£2,500', accent: true, lbl: 'fixed fee — no scope creep' },
-    { val: '3–5', accent: false, lbl: 'automation wins identified per audit' },
+    { val: '15+', accent: false, lbl: 'hours handed back per week, on average' },
+    { val: '2', accent: false, lbl: 'weeks start to finish, every time' },
+    { val: '£2,500', accent: true, lbl: 'flat fee — the number never changes' },
+    { val: '3–5', accent: false, lbl: 'concrete fixes found in every audit' },
   ]
   return (
     <div className="proof-strip">
@@ -185,28 +185,28 @@ function ProofStrip() {
 function Problem() {
   const cards = [
     {
-      title: 'Your staff are doing the same things, over and over',
-      body: 'Copying data between systems. Chasing the same documents. Compiling the same weekly reports. None of it requires human judgement — it just requires a human to be there.',
+      title: 'Someone on your team does the same thing every single week',
+      body: 'Pulling the same report. Copying data from one system into another. Chasing the same email thread. It keeps happening because nobody\'s ever sat down and asked whether it needs to happen at all.',
     },
     {
-      title: 'You know it\'s a problem. Nobody\'s had time to fix it.',
-      body: 'It\'s not that you haven\'t thought about it. It\'s that the people who would solve it are the same ones too busy doing the work. That\'s the trap.',
+      title: 'You know it\'s a problem. It\'s just never urgent enough to fix.',
+      body: 'The people who would solve it are the same ones too busy doing the work. So it stays on the list. Month after month. Meanwhile the hours keep disappearing.',
     },
     {
-      title: 'AI tools are everywhere. The right ones for you aren\'t obvious.',
-      body: 'ChatGPT, Zapier, Make, n8n, custom code — the options are endless and the sales pitches are identical. Picking wrong costs more time than doing nothing.',
+      title: 'The AI tool market is a mess and everyone\'s selling something',
+      body: 'ChatGPT, Zapier, Make, n8n, custom-built — the options are endless and the pitches are identical. Picking the wrong one doesn\'t just waste money. It wastes the six months you spend finding out it doesn\'t work.',
     },
     {
-      title: 'You don\'t need another tool. You need a diagnosis.',
-      body: 'Before you spend a pound on software, you need to know which processes to fix first, in what order, and what each one is actually costing you. That\'s what we do.',
+      title: 'You don\'t have an AI problem. You have a diagnosis problem.',
+      body: 'Before you buy anything, you need to know which processes are actually worth fixing, which order to tackle them in, and what each one is costing you right now. That\'s the part nobody sells you.',
     },
     {
-      title: 'Implementation risk is real — and often underestimated',
-      body: 'Bad automation is worse than no automation. Broken workflows, lost data, staff who don\'t trust the system. We plan around the failure modes before we build anything.',
+      title: 'Bad automation is worse than no automation',
+      body: 'A broken workflow that staff don\'t trust is harder to unpick than the manual process it replaced. We think through the failure modes before anything gets built — not after.',
     },
     {
-      title: 'The ROI should be calculable before you commit',
-      body: 'Every recommendation we make comes with a time-saving estimate and a payback period. If it doesn\'t stack up, we\'ll tell you — and we won\'t build it.',
+      title: 'You should know the payback period before you spend anything',
+      body: 'Every recommendation we make comes with a time-saving estimate and a break-even date. If it doesn\'t stack up on paper, we won\'t recommend it. Simple as that.',
     },
   ]
 
@@ -221,7 +221,7 @@ function Problem() {
         <div className="sh">
           <div className="label"><span className="label-dot" />The Problem</div>
           <h2 className="section-title">Manual work is the most expensive line<br/>item you're not tracking.</h2>
-          <p className="section-sub">Most business owners can point to where the pain is. Almost none have quantified it.</p>
+          <p className="section-sub">Most owners can point to where the pain is. Almost none have put a number on it.</p>
         </div>
         <div className="problem-grid">
           {cards.map((c, i) => (
@@ -252,7 +252,7 @@ function CostOfInaction() {
               Waiting isn't free.<br/>It has a monthly invoice.
             </h2>
             <p className="section-sub">
-              Most business owners frame the audit as a £2,500 cost. The right frame is: what is the status quo costing you right now, every month, while you're deciding?
+              Most owners think of the audit as a £2,500 spend. The better question is: what is the current situation costing you, right now, every month you leave it alone?
             </p>
           </div>
           <div className="coi-right">
@@ -267,12 +267,11 @@ function CostOfInaction() {
               </div>
               <div className="coi-calc-divider" />
               <div className="coi-calc-row coi-calc-total">
-                <div className="coi-calc-label">Annual cost of not fixing this</div>
+                <div className="coi-calc-label">Annual cost of leaving it as-is</div>
                 <div className="coi-calc-val coi-calc-red">£18,000/yr</div>
               </div>
               <div className="coi-calc-note">
-                Waiting to fix this isn't saving you the £2,500 audit fee.<br/>
-                It's costing you £18,000 a year in wasted payroll — and that's a conservative estimate with modest numbers.
+                That's a conservative example with modest numbers. The £2,500 audit fee isn't a cost — it's the thing that stops you spending £18,000 on a problem that doesn't need to exist.
               </div>
             </div>
           </div>
@@ -292,29 +291,29 @@ function AuditOffer() {
             <div className="label"><span className="label-dot" />The Service</div>
             <h2 className="section-title">The AI Workflow Audit</h2>
             <p className="section-sub">
-              A structured, two-week engagement. We go into your business, map what's actually happening, and come back with a prioritised plan — costed, sequenced, and ready to act on.
+              Two weeks. We go into the business, talk to the people doing the work, and come back with a written report that tells you exactly what to automate, in what order, and what it'll cost.
             </p>
             <div className="offer-deliverables">
               {[
                 {
                   title: 'Process Map',
-                  body: 'A clear diagram of your 10–15 highest-cost manual processes, showing where time is lost and where handoffs break down.',
+                  body: 'A clear picture of your 10–15 most time-intensive manual processes — where time is lost, where handoffs break, and where the same mistakes keep happening.',
                 },
                 {
                   title: 'Automation Shortlist',
-                  body: '3–5 specific opportunities ranked by time saved, cost to implement, and implementation risk. Not every idea — the right ones.',
+                  body: '3–5 specific fixes ranked by how quickly they pay for themselves. Not a list of everything that\'s technically possible — the ones that actually make sense for your business.',
                 },
                 {
-                  title: 'ROI Estimate',
-                  body: 'For each opportunity: hours saved per week, annualised cost saving, estimated payback period. Built from your actual numbers, not industry averages.',
+                  title: 'The Maths',
+                  body: 'For each recommendation: hours saved per week, what that\'s worth annually, what it costs to build, and when you break even. Figures based on your numbers, not industry benchmarks.',
                 },
                 {
                   title: 'Tool Recommendations',
-                  body: 'Specific software or custom build options for each opportunity, with setup costs, ongoing costs, and honest trade-offs.',
+                  body: 'The exact software or build approach for each fix — with setup costs, monthly running costs, and honest trade-offs between the options.',
                 },
                 {
-                  title: 'Plain-English Report',
-                  body: 'A written report you can share with your team, your accountant, or your board — with zero technical jargon.',
+                  title: 'The Report',
+                  body: 'A written document your team, your accountant, or your board can read and understand. No acronyms, no technical assumptions. Just the findings and the plan.',
                 },
               ].map((d, i) => (
                 <div key={i} className="od-item">
@@ -331,14 +330,14 @@ function AuditOffer() {
           <div className="offer-right">
             <div className="offer-price-block">
               <div className="opb-price">£2,500</div>
-              <div className="opb-label">Fixed fee. No hourly billing. No scope creep.</div>
+              <div className="opb-label">One price. No hourly billing. No surprises.</div>
               <ul className="opb-items">
                 {[
-                  'Kick-off call within 5 working days',
-                  'Two structured discovery sessions with your team',
-                  'Draft report shared for comment',
-                  'Final report and debrief call',
-                  'Follow-on questions answered for 30 days',
+                  'Kick-off call booked within 5 working days',
+                  'Two working sessions with your team',
+                  'Draft report for your review before we finalise',
+                  'Final report and a call to walk through it together',
+                  'Any follow-up questions answered for 30 days',
                 ].map((t, i) => (
                   <li key={i} className="opb-item">
                     <span className="opb-tick"><Icon.Check /></span>
@@ -349,9 +348,9 @@ function AuditOffer() {
             </div>
 
             <div className="offer-next">
-              <div className="offer-next-title">What happens after the audit?</div>
+              <div className="offer-next-title">What comes after?</div>
               <div className="offer-next-body">
-                Nothing, if you want. The report is yours — take it to any developer or agency. Most clients choose to work with us on implementation, which we run as a monthly retainer starting from £2,500/month. There's no obligation and no hard sell.
+                Nothing you don't choose. The report is yours — take it to any developer or agency you like. Most clients ask us to handle the build, which we do on a monthly retainer from £2,500. There's no pitch at the end and no pressure to continue.
               </div>
             </div>
           </div>
@@ -367,7 +366,7 @@ function Industries() {
     {
       icon: '📋',
       title: 'Recruitment Agencies',
-      body: 'High-volume, deadline-driven, and drowning in admin. The gap between a great candidate experience and a mediocre one is almost always a process gap.',
+      body: 'Consultants should be on the phone, not reformatting CVs. Most agencies we talk to have 10–20 hours a week quietly vanishing into admin that nobody\'s ever questioned.',
       examples: [
         'CV screening and candidate shortlisting',
         'Data entry between ATS and CRM systems',
@@ -379,7 +378,7 @@ function Industries() {
     {
       icon: '🧾',
       title: 'Accountants & Bookkeepers',
-      body: 'The work is precise, deadline-sensitive, and highly repetitive. Most firms are leaving significant capacity on the table in their practice management workflows.',
+      body: 'The work is deadline-driven and unforgiving of errors. It\'s also deeply repetitive — which makes it one of the highest-ROI sectors for workflow automation, if you pick the right things to fix.',
       examples: [
         'Invoice chasing and payment reconciliation',
         'Client onboarding document collection',
@@ -391,7 +390,7 @@ function Industries() {
     {
       icon: '🏠',
       title: 'Estate Agents & Property Managers',
-      body: 'A high volume of similar transactions, lots of document management, and communication chains that fall through the cracks. Automation impact here is fast and visible.',
+      body: 'High transaction volumes, lots of document handling, communication threads that go cold. The problems here are unglamorous, visible, and fixable faster than most people expect.',
       examples: [
         'Tenancy renewal tracking and notice generation',
         'Maintenance request logging and contractor routing',
@@ -409,7 +408,7 @@ function Industries() {
           <div className="label"><span className="label-dot" />Who We Work With</div>
           <h2 className="section-title">We focus on three industries.</h2>
           <p className="section-sub">
-            Not because the problems are unique to them — but because we know them well enough to find the right answers fast.
+            Not because the problems are unique to them — but because we know them well enough to find the answers quickly.
           </p>
         </div>
         <div className="ind-grid">
@@ -462,33 +461,33 @@ function HowItWorks() {
   const steps = [
     {
       num: '01',
-      title: 'You fill in a short intake form',
-      text: 'Name, company, and a brief description of the process you find most painful. Takes two minutes. We review every submission personally.',
+      title: 'Tell us what\'s broken',
+      text: 'Fill in the form below. Describe the process that costs you the most time. Takes two minutes. We read every submission ourselves.',
     },
     {
       num: '02',
-      title: 'We confirm fit and book a kick-off call',
-      text: 'If we think we can help, we\'ll confirm the engagement and schedule the kick-off within 5 working days. If we don\'t think the audit will pay for itself, we\'ll tell you before you spend anything.',
+      title: 'We tell you whether we can help',
+      text: 'If the audit makes sense for your situation, we confirm and get a kick-off call in the diary within 5 working days. If we don\'t think it\'ll pay for itself, we\'ll say so before you spend anything.',
     },
     {
       num: '03',
-      title: 'Two discovery sessions with your team',
-      text: 'We run structured interviews with the people doing the work. Not a survey — a real conversation about what they do, how long it takes, and where it breaks.',
+      title: 'We talk to the people doing the work',
+      text: 'Two sessions with your team — not a survey, an actual conversation. What do they do, how long does it take, where does it go wrong. We come prepared so your team\'s time isn\'t wasted.',
     },
     {
       num: '04',
-      title: 'We map, analyse, and build the report',
-      text: 'We process everything we\'ve learned, identify the highest-ROI opportunities, and write up the full report with our recommendations and the maths behind each one.',
+      title: 'We build the report',
+      text: 'We take everything we\'ve learned, identify the highest-payback fixes, and write it up. Every recommendation includes the maths — what it costs, what it saves, when it breaks even.',
     },
     {
       num: '05',
-      title: 'Draft review, then final debrief',
-      text: 'You see the draft first. We incorporate your feedback. Then we run a final call to walk through the report and answer every question your team has.',
+      title: 'You see the draft before we finalise',
+      text: 'We share the draft for your comments. Then we incorporate your feedback, finalise the report, and walk through it together on a call.',
     },
     {
       num: '06',
-      title: 'You decide what to do next',
-      text: 'Implement it yourself, take it to another supplier, or engage us for the build. The report is yours. There\'s no pressure and no follow-up sales process.',
+      title: 'You do whatever you want with it',
+      text: 'Build it yourself, hand it to another supplier, or ask us to implement. The report is yours. We don\'t follow up with a pitch.',
     },
   ]
 
@@ -500,7 +499,7 @@ function HowItWorks() {
             <div className="label"><span className="label-dot" />How It Works</div>
             <h2 className="section-title">Six steps. Two weeks. One clear answer.</h2>
             <p className="section-sub" style={{ marginBottom: 0 }}>
-              The process is designed to be low-effort for you and high-signal for us. We do the heavy lifting. You answer questions honestly.
+              We do the heavy lifting. You show up to two sessions and answer questions honestly. That's about it.
             </p>
           </div>
           <div className="hiw-steps">
@@ -525,27 +524,27 @@ function Objections() {
   const objs = [
     {
       q: '"Can\'t I just use ChatGPT for this?"',
-      a: 'ChatGPT is a tool, not a strategy. It\'s excellent at certain tasks and useless at others. The question isn\'t whether to use AI — it\'s which processes are worth automating, in what order, and with which tools. That\'s the work the audit does.',
+      a: 'ChatGPT is a tool, not a plan. The question isn\'t whether to use AI — it\'s which of your processes are worth automating, in what order, and with what. That\'s the actual work. The audit does it so you don\'t have to figure it out by trial and error.',
     },
     {
-      q: '"We already have a member of staff who handles this."',
-      a: 'That\'s the most common situation we find. The staff member exists because the process exists — not because a human is the best person for the job. The audit shows you whether that\'s true for your specific workflows.',
+      q: '"We already have someone who handles this."',
+      a: 'That\'s the most common thing we hear. That person exists because the process exists — not because a human is necessarily the right way to run it. The audit tells you which parts of their job shouldn\'t be their job.',
     },
     {
-      q: '"We\'ve tried automation before and it didn\'t work."',
-      a: 'Usually because it was picked based on a sales demo rather than a proper diagnosis. The tool was fine. The process it was applied to wasn\'t suitable, or wasn\'t ready. That\'s exactly what we\'re designed to prevent.',
+      q: '"We\'ve tried automation before and it didn\'t stick."',
+      a: 'Usually because the tool was chosen before the problem was properly understood. The software wasn\'t wrong — it was applied to the wrong process, or the process wasn\'t ready for it. That\'s the thing the audit is designed to prevent.',
     },
     {
-      q: '"Is this just Zapier and some prompts?"',
-      a: 'Sometimes, yes — and that\'s a good thing, not a bad one. If the right answer is a £50/month Zapier workflow, we\'ll tell you. We have no financial interest in recommending expensive custom builds.',
+      q: '"Is this just Zapier and some ChatGPT prompts?"',
+      a: 'Sometimes, honestly, yes. And when that\'s the right answer, we\'ll tell you — because a £50/month Zapier workflow that works is better than a £10,000 custom build that does the same thing. We don\'t have any reason to oversell.',
     },
     {
-      q: '"What if the audit doesn\'t find anything useful?"',
-      a: 'It hasn\'t happened yet. But if we genuinely cannot identify opportunities that cover the audit fee in time savings within a year, we\'ll refund it. We\'ll tell you this before you book.',
+      q: '"What if you don\'t find anything worth fixing?"',
+      a: 'It hasn\'t happened. But if we genuinely can\'t identify opportunities that pay back the audit fee within a year, we\'ll refund it. We\'ll say this explicitly before you commit.',
     },
     {
-      q: '"We\'re too small / too niche / too busy for this."',
-      a: 'The busy part is exactly why you need it. Most of the businesses we work with have 5–30 staff. The smaller you are, the more each wasted hour costs — because it\'s usually a senior person doing the work.',
+      q: '"We\'re too small / too busy / too niche for this."',
+      a: 'The businesses we work with typically have between 5 and 30 people. The smaller you are, the more each wasted hour costs — because it\'s usually someone senior doing the work. Busy is exactly the reason to look at this, not a reason to wait.',
     },
   ]
 
@@ -575,27 +574,27 @@ function FAQ() {
   const items = [
     {
       q: 'Do I need to know anything about AI or technology?',
-      a: 'No. The audit is designed for business owners and managers, not technical staff. We translate everything into plain language and explain our reasoning at every step. You don\'t need to understand how the automation works — just whether it\'s worth doing.',
+      a: 'No. We write everything in plain language and explain every recommendation as if you\'ve never thought about automation before. You don\'t need to know how any of it works — just whether it\'s worth doing.',
     },
     {
-      q: 'How disruptive is the process for my team?',
-      a: 'Minimal. The two discovery sessions typically take 90 minutes each. We schedule them around your team\'s workload and prepare structured questions in advance so there\'s no wasted time. Most teams find the sessions useful even before the report arrives.',
+      q: 'How much of my team\'s time does this take up?',
+      a: 'Two sessions of about 90 minutes each. We come prepared with specific questions, so there\'s no rambling and no wasted time. Most teams tell us they found the sessions useful in themselves — just putting words to the problems they\'ve been sitting with.',
     },
     {
-      q: 'What industries do you work with outside your three focus areas?',
-      a: 'We do take on work outside recruitment, accountancy, and property — particularly in professional services more broadly. If you\'re unsure, fill in the intake form and describe your situation. We\'ll tell you honestly whether we can add value.',
+      q: 'Do you work with businesses outside those three industries?',
+      a: 'Yes, occasionally — particularly in professional services. If you\'re not sure whether we\'re a fit, fill in the form and describe your situation. We\'ll give you an honest answer rather than a sales pitch.',
     },
     {
-      q: 'How long does implementation take after the audit?',
-      a: 'It depends on what we find. Simple workflow automations (Zapier, Make) can be live within a week. More complex integrations or custom builds take 4–10 weeks. The report will give you realistic timelines for each opportunity.',
+      q: 'How long does implementation take once we have the report?',
+      a: 'Depends entirely on what we find. A Zapier workflow can be live in a week. A more complex integration typically takes four to ten weeks. The report will give you realistic timelines for each specific fix.',
     },
     {
       q: 'Do you sign NDAs?',
-      a: 'Yes. We sign a mutual NDA before the first discovery session. Everything your team shares with us is treated as confidential and used only for the purposes of the audit.',
+      a: 'Yes. A mutual NDA is signed before the first session. Everything your team tells us is confidential and used only for the audit.',
     },
     {
-      q: 'What happens to the report if we don\'t proceed with implementation?',
-      a: 'It\'s yours, unconditionally. We don\'t retain any rights to it, and we don\'t share findings with third parties. You\'re free to take the recommendations to any developer or agency you choose.',
+      q: 'If we don\'t use you for implementation, do we still keep the report?',
+      a: 'Completely. It\'s yours. No strings, no licensing, no "you can only act on this with us." Take it to whoever you want.',
     },
   ]
 
@@ -654,9 +653,9 @@ function IntakeForm() {
     <section className="intake-section" id="intake">
       <div className="intake-inner">
         <div>
-          <h2 className="intake-title">Ready to find out what you're missing?</h2>
+          <h2 className="intake-title">Tell us what's costing you the most time.</h2>
           <p className="intake-sub">
-            Fill in the form below. The questions are designed to help you quantify the problem — most people find the answers surprising.
+            Three questions. Two minutes. We read every submission personally and come back to you within one working day.
           </p>
           <div className="intake-trust">
             {[
@@ -676,9 +675,9 @@ function IntakeForm() {
           {status === 'success' ? (
             <div className="form-success">
               <div className="form-success-icon"><Icon.CheckCircle /></div>
-              <div className="form-success-title">We've received your enquiry.</div>
+              <div className="form-success-title">Got it. We'll be in touch.</div>
               <div className="form-success-sub">
-                We review every submission personally and will respond within one working day. If you know you want to move quickly, you can book a 15-minute qualification call now to secure your slot.
+                We read every submission ourselves and respond within one working day. If you want to move faster, book a 30-minute call now and we'll work out whether the audit makes sense for you.
               </div>
               <a
                 href="https://calendly.com/hello-cornerstoneaigroup/30min"
@@ -687,10 +686,10 @@ function IntakeForm() {
                 className="btn btn-blue btn-lg"
                 style={{ marginTop: 20, width: '100%', justifyContent: 'center' }}
               >
-                Book a 15-minute call <Icon.ArrowRight />
+                Book a 30-minute call <Icon.ArrowRight />
               </a>
               <div style={{ marginTop: 12, fontSize: 12, color: 'var(--t3)', textAlign: 'center' }}>
-                Or wait — we'll email you within one working day either way.
+                No rush — we'll email you either way.
               </div>
             </div>
           ) : (
@@ -756,8 +755,8 @@ function StickyBar() {
   return (
     <div className="sticky-bar">
       <div className="sticky-bar-text">
-        <div className="sticky-bar-title">The AI Workflow Audit — £2,500 fixed fee</div>
-        <div className="sticky-bar-sub">Find out exactly what to automate, and what it's worth.</div>
+        <div className="sticky-bar-title">AI Workflow Audit — £2,500 flat fee</div>
+        <div className="sticky-bar-sub">Two weeks. A report that tells you exactly what to fix and what it's worth.</div>
       </div>
       <a href="#intake" className="btn btn-blue btn-md">Apply now</a>
     </div>
@@ -773,7 +772,7 @@ function Footer() {
           <div>
             <a href="/" className="footer-wordmark">Cornerstone<span>AI</span> Group</a>
             <div className="footer-tagline">
-              AI workflow consulting for recruitment agencies, accountants, and property managers. We find the automation that pays for itself.
+              We go into recruitment agencies, accountants, and property businesses, find the admin that's eating their payroll, and show them exactly what to do about it.
             </div>
           </div>
           <div>
